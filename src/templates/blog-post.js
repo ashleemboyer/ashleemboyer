@@ -9,14 +9,17 @@ export default ({ data }) => {
     <Layout>
       <div>
         {post.frontmatter.image && (
-          <img src={post.frontmatter.image} alt={post.frontmatter.alt} />
+          <img
+            src={post.frontmatter.image}
+            alt={post.frontmatter.alt}
+            css={{ borderRadius: "4px" }}
+          />
         )}
-        <h1>{post.frontmatter.title}</h1>
-        <p css={{ color: "#888" }}>
-          <em>
-            {post.frontmatter.date} &mdash; {post.timeToRead} minute read
-          </em>
+        <h1 css={{ marginBottom: "12px" }}>{post.frontmatter.title}</h1>
+        <p className="light" css={{ fontStyle: "italic" }}>
+          {post.frontmatter.date} &mdash; {post.timeToRead} minute read
         </p>
+        {/* todo: probably need to parse this stuff for display purposes */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>

@@ -28,12 +28,13 @@ export default ({ children }) => {
             marginBottom: rhythm(0.4),
             display: "inline-block",
             fontStyle: "normal",
+            color: "#212121",
           }}
         >
           {data.site.siteMetadata.title}
         </h3>
       </Link>
-      <p css={{ marginBottom: rhythm(2) }}>
+      <p css={{ marginBottom: rhythm(1.4) }}>
         Dog mom to Trooper | Engineer of software | Lover of learning | Partner
         of Zach | She/her/hers | HOH 👂🏻
       </p>

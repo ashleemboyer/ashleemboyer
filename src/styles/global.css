@@ -1,0 +1,16 @@
+html {
+  background-color: #ffebee;
+}
+
+* {
+  color: #212121;
+}
+
+*.light {
+  color: #505050;
+}
+
+hr {
+  border: none;
+  background-color: #bdbdbd;
+}
