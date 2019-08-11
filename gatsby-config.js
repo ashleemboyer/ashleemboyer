@@ -1,14 +1,15 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
   siteMetadata: {
     title: "Ashlee M Boyer",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-129788768-1`,
+        head: true,
+      },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
