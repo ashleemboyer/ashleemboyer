@@ -29,6 +29,8 @@ export default ({ children, title, description, image, url }) => {
     >
       <Helmet title={bigTitle}>
         <meta charSet="utf-8" />
+        <meta name="twitter:creator" content="@ashleemboyer" />
+        <meta name="twitter:card" content="summary_large_image" />
 
         {title && <meta name="title" content={title} />}
         {title && <meta property="og:title" content={title} />}
