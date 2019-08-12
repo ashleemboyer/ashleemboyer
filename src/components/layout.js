@@ -19,8 +19,6 @@ export default ({ children, title, description, image, url }) => {
     ? `${data.site.siteMetadata.title} | ${title}`
     : data.site.siteMetadata.title
 
-  console.log(title, description, image, url)
-
   return (
     <div
       css={{
