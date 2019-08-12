@@ -46,7 +46,12 @@ export default ({ children, title, description, image, url }) => {
         {image && <meta property="og:image" content={image} />}
         {image && <meta name="twitter:image" content={image} />}
 
-        {url && <meta property="og:url" content={url} />}
+        {url && (
+          <meta
+            property="og:url"
+            content={`https://ashleemboyer.netlify.com/${url}`}
+          />
+        )}
 
         {/* {image && (
           <>
