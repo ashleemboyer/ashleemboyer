@@ -3,6 +3,7 @@ module.exports = {
     title: "Ashlee M Boyer",
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
