@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 
 export default ({ data }) => (
   <Layout>
-    <div>
+    <div css={{ maxWidth: 700, margin: "0 auto" }}>
       <h1 css={{ fontSize: rhythm(2.4), marginBottom: rhythm(0.8) }}>
         Journey of a Disabled Web Developer
       </h1>
@@ -37,7 +37,11 @@ export default ({ data }) => (
               <img
                 src={node.frontmatter.image}
                 alt={node.frontmatter.alt}
-                css={{ borderRadius: "4px 4px 0 0", margin: 0, width: "100%" }}
+                css={{
+                  borderRadius: "4px 4px 0 0",
+                  margin: 0,
+                  width: "100%",
+                }}
               />
             )}
             <div css={{ padding: "12px" }}>

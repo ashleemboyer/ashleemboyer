@@ -11,6 +11,14 @@ html {
 }
 
 hr {
+  max-width: 500px;
+  margin: 32px auto;
   border: none;
   background-color: #bdbdbd;
+}
+
+code {
+  color: #c2185b;
+  background-color: #c2185b22;
+  font-size: inherit;
 }
