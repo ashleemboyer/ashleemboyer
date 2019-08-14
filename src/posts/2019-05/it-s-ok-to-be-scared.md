@@ -1,7 +1,7 @@
 ---
-title: It's OK to be Scared
+title: It's OK to Be Scared
 date: "2019-05-01"
-description: The unkown is absolutely terrifying, probably because we can't control what we don't know. But that's OK.
+description: The unknown is absolutely terrifying, probably because we can't control what we don't know. But that's OK.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2FItsOKToBeScared.png?alt=media&token=586a9f2b-f91e-4291-91d0-5a81454e7b73
 alt: "A black and white image of a cat with short ears gazing out of the window of a brick building with a seemingly fearful look."
 ---
