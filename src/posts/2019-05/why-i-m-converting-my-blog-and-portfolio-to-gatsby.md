@@ -9,7 +9,7 @@ alt: "Looking at the horizon of a brown and green landscape from the center of a
 
 Why, yes, I would love to be done with the set up of my sites so I could focus more on the side projects I want to post on my portfolio.
 
-_Didn't you_ just _[post about perfectionism](https://dev.to/ashleemboyer/neither-you-nor-your-work-has-to-be-perfect-10p4) yesterday?_
+_Didn't you_ just _[post about perfectionism](https://ashleemboyer.com/neither-you-nor-your-work-has-to-be-perfect) yesterday?_
 
 Sure did! But this is different. Software will forever be a road with many twists, turns, and hills. 😉
 
