@@ -55,15 +55,6 @@ export default ({ children, title, description, image, url }) => {
             content={`https://ashleemboyer.netlify.com/${url}`}
           />
         )}
-
-        {/* {image && (
-          <>
-            <meta name="image" content={image} />
-            <meta property="og:image" content={image} />
-            <meta name="twitter:image" content={image} />
-          </>
-        )} */}
-        {/* {url && <meta name="og:url" content={url} />} */}
       </Helmet>
       <div css={{ maxWidth: 700, margin: "0 auto" }}>
         <Link to={`/`}>
