@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import { rhythm } from "../utils/typography"
-import Layout from "../components/layout"
+import { rhythm } from "../utils/typography";
+import Layout from "../components/layout";
 
 export default ({ data }) => (
   <Layout>
@@ -56,7 +56,7 @@ export default ({ data }) => (
       ))}
     </div>
   </Layout>
-)
+);
 
 export const query = graphql`
   query {
@@ -80,4 +80,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
