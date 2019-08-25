@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
+import React from "react";
+import { useStaticQuery, Link, graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../utils/typography";
 
 export default ({ children, title, description, image, url }) => {
   const data = useStaticQuery(graphql`
@@ -13,11 +13,11 @@ export default ({ children, title, description, image, url }) => {
         }
       }
     }
-  `)
+  `);
 
   const bigTitle = title
     ? `${data.site.siteMetadata.title} | ${title}`
-    : data.site.siteMetadata.title
+    : data.site.siteMetadata.title;
 
   return (
     <div
@@ -71,10 +71,13 @@ export default ({ children, title, description, image, url }) => {
         </Link>
         <p css={{ marginBottom: rhythm(1.4) }}>
           Dog mom to Trooper | Engineer of software | Lover of learning |
-          Partner of Zach | She/her/hers | HOH 👂🏻
+          Partner of Zach | She/her/hers | HOH{" "}
+          <span role="img" aria-label="ear emoji">
+            👂🏻
+          </span>
         </p>
       </div>
       {children}
     </div>
-  )
-}
+  );
+};
