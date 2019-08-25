@@ -2,7 +2,7 @@
 title: How to Identify Your Knowledge Gaps in Under an Hour
 date: "2019-04-30"
 description: "Whether you're looking to move up in your career or are simply interested in learning more about your field, finding the gaps in your knowledge is a lot easier than you think."
-image: https://thepracticaldev.s3.amazonaws.com/i/7qow979gx88j48flgwfu.jpg
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fknowledge.jpg?alt=media&token=7346c71a-a3fc-48fc-9b21-6882166632dd
 alt: "Stacks of open books laying in different directions."
 ---
 
@@ -18,4 +18,4 @@ Use all of these flashy and intimidating job listings to your benefit. The more 
 
 ---
 
-_[Image](https://unsplash.com/photos/Oaqk7qqNh_c) by [Patrick Tomasso](https://unsplash.com/@impatrickt) on [Unsplash](https://unsplash.com)_
+*[Image](https://unsplash.com/photos/Oaqk7qqNh_c) by [Patrick Tomasso](https://unsplash.com/@impatrickt) on [Unsplash](https://unsplash.com)*

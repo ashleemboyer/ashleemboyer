@@ -15,7 +15,7 @@ _Quick note: There will be a CodeSandbox at the end of every step so you can fol
 2. Draw Your Image on the `canvas`
 3. Get the `ImageData`
 4. Iterate to Get Pixel Colors
-5. Append Some containers
+5. Append Some Containers
 6. Resources
 
 ---
@@ -69,7 +69,7 @@ With this knowledge, we can loop over `ImageData.data` in increments of 4 and gr
 
 <iframe src="https://codesandbox.io/embed/step4-rql19?fontsize=14&view=split&module=index.js" title="step2" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-## 5. Append Some containers
+## 5. Append Some Containers
 
 Now we're ready to use our color data! Remember that we've stored them in a 2-dimensional array, so we're going to have to do some nested looping. To continuously display the correct letter of your desired string (I used my name!), we need to keep track of how many letters we've already added to the page. We use the remainder (`%`) operator to wrap through the string multiple times.
 
