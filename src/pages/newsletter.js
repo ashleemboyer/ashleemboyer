@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { navigate } from "gatsby";
 
 import Layout from "../components/layout";
+import { addSubscriber } from "../firebase";
 
-export default () => {
+const Newsletter = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
@@ -37,8 +39,7 @@ export default () => {
 
         <p>Both fields are required.</p>
 
-        <form
-          target="/"
+        <section
           css={{
             border: "1px solid #C2185B",
             padding: "24px",
@@ -100,13 +101,22 @@ export default () => {
                 return;
               }
 
-              // add user to email list
+              addSubscriber({ name, email }).then(result => {
+                if (result.success) {
+                  alert("Subscribe successful! Expect an email soon.");
+                  navigate("/");
+                } else {
+                  alert(`Could not subscribe. ${result.reason}`);
+                }
+              });
             }}
           >
             Sign Me Up!
           </button>
-        </form>
+        </section>
       </div>
     </Layout>
   );
 };
+
+export default Newsletter;
