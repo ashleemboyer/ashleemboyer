@@ -22,3 +22,17 @@ code {
   background-color: #c2185b22;
   font-size: inherit;
 }
+
+pre {
+  background-color: #c2185b22;
+  padding: 12px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+pre code {
+  background-color: transparent;
+}
