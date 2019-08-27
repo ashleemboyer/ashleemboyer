@@ -58,7 +58,7 @@ You can clone the starter code by running the following command in a terminal:
 git clone https://github.com/ashleemboyer/react-firebase-blog-starter.git
 ```
 
-Let's see what we've got! Go ahead and get the project rolling by changing into the `react-firebase-blog-starter` directory and running `npm run start`. Here's what you should see:
+Let's see what we've got! Go ahead and get the project rolling by changing into the `react-firebase-blog-starter` directory, running `npm install`, and finally running `npm run start`. Here's what you should see:
 
 ![](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Freact-firebase-blog%2Fpart-01%2Fstarter-site.png?alt=media&token=a0e21d1e-a951-4871-a98f-a9c42f588697)
 
