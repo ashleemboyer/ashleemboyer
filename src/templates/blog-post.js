@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from "../components/layout"
+import Layout from "../components/layout";
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   return (
     <Layout
       title={post.frontmatter.title}
@@ -26,15 +26,12 @@ export default ({ data }) => {
             {post.frontmatter.date} &mdash; {post.timeToRead} minute read
           </p>
           {/* todo: probably need to parse this stuff for display purposes */}
-          <div
-            css={{ textAlign: "justify" }}
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          ></div>
+          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query($slug: String!) {
@@ -53,4 +50,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
