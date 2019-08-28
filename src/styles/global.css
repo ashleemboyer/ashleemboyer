@@ -36,3 +36,15 @@ pre {
 pre code {
   background-color: transparent;
 }
+
+blockquote {
+  margin: 0;
+  padding: 24px;
+  border-left: 4px solid #c2185b;
+  font-size: 1.6rem;
+  margin: 40px 0;
+}
+
+blockquote p {
+  color: #c2185b;
+}
