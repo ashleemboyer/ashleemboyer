@@ -239,6 +239,7 @@ Briefly fill in all of these fields and see what happens when you click the "Cre
 ## 4. Write a Create Function
 
 Neat! This is also what I mean by incremental changes to code. Take it step by step. Let's get to the exciting part! We're going to send some stuff back to the database. First, we need to import our `getFirebase` function from `src/firebase.js`.
+
 ```
 import { getFirebase } from "../firebase";
 ```
@@ -252,6 +253,7 @@ const generateDate = () => {
   return now.toLocaleDateString("en-US", options);
 };
 ```
+
 ```
 const createPost = () => {
   const date = generateDate();
