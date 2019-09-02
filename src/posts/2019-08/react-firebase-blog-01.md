@@ -195,6 +195,7 @@ if (loading && !blogPosts.length) {
 
       const newestFirst = posts.reverse();
       setBlogPosts(newestFirst);
+      setLoading(false);
     });
 }
 
