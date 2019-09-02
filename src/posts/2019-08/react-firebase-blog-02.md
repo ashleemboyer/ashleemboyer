@@ -51,8 +51,6 @@ Now you can run `npm install` and then `npm run start` to see your project in a 
 
 ## 2. Add a Page for Creating Posts
 
-_You don't have to do this step first. I'm just writing these steps in the order of the acronym._
-
 To get started on implementing a "Create Post" feature, let's first make a page we'll use to create posts. Add a `create.js` file in `src/pages`. We're going to keep it really simple for now to make sure everything is still working.
 
 > Developing code is most easy when you take incremental steps and check your work along the way.
