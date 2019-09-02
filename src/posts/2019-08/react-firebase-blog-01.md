@@ -8,7 +8,7 @@ alt: "Header reading the this blog post's title."
 
 Welcome! This is the first in a series of posts that will teach you how to build a blog site using React and Firebase. This one will probably be the longest because there are few things to do to set everything up.
 
-At the end of this post, you'll have learned how to connect your app to Firebase and pull some data from [Firebase's Realtime Database](https://firebase.google.com/docs/database). Next time, we'll set up all of our CRUD (create, read, update, & delete) functions. After that, we'll see what we can do to make an interface on the frontend that will make it easy to call our CRUD functions and easy to create more interesting functions.
+At the end of this post, you'll have learned how to connect your app to Firebase and pull some data from [Firebase's Realtime Database](https://firebase.google.com/docs/database). Next time, we'll start setting up our CRUD functions with a "Create Post" feature. After that, we'll see what we can do to make an interface on the frontend that will make it easy to call our CRUD functions and easy to create more interesting functions.
 
 Ready to get started? :)
 
@@ -169,26 +169,38 @@ import React, { useState } from "react";
 import { getFirebase } from "../firebase";
 ```
 
-Now, let's get `blogPosts` into a state and try to read them from the database. You can read more about the `useState` hook over [here](https://reactjs.org/docs/hooks-state.html). Replace the `blogPosts` constant with the following code:
+Now, let's get `blogPosts` into a state and try to read them from the database. You can read more about the `useState` hook over [here](https://reactjs.org/docs/hooks-state.html). We're also going to add a `loading` state so we can easily do two things:
+
+1. Make sure we only call `getFirebase` once
+2. Show the user a loading screen while we wait for data
+
+Replace the `blogPosts` constant with the following code:
 
 ```
+const [loading, setLoading] = useState(true);
 const [blogPosts, setBlogPosts] = useState([]);
 
-getFirebase()
-  .database()
-  .ref("/posts")
-  .orderByChild("date")
-  .once("value")
-  .then(snapshot => {
-    let posts = [];
-    const snapshotVal = snapshot.val();
-    for (let slug in snapshotVal) {
-      posts.push(snapshotVal[slug]);
-    }
+if (loading && !blogPosts.length) {
+  getFirebase()
+    .database()
+    .ref("/posts")
+    .orderByChild("dateFormatted")
+    .once("value")
+    .then(snapshot => {
+      let posts = [];
+      const snapshotVal = snapshot.val();
+      for (let slug in snapshotVal) {
+        posts.push(snapshotVal[slug]);
+      }
 
-    const newestFirst = posts.reverse();
-    setBlogPosts(newestFirst);
-  });
+      const newestFirst = posts.reverse();
+      setBlogPosts(newestFirst);
+    });
+}
+
+if (loading) {
+  return <h1>Loading...</h1>;
+}
 ```
 
 Tada! You should see the exact same thing we had before. 🎉
