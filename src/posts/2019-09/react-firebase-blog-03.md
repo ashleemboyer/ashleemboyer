@@ -127,6 +127,8 @@ return (
 );
 ```
 
+I also added a `12px` margin to the top of `<p>` elements in `src/index.js`.
+
 Now, when you click a "Continue reading..." link or manually navigate to one of your posts, you should see something like this:
 
 ![Screenshot of a single blog post's page.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Freact-firebase-blog%2Fpart-03%2Fpost.png?alt=media&token=4a9abd6a-9549-467f-a473-ff86ae47357a)
