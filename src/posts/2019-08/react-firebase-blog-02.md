@@ -248,14 +248,38 @@ Now, add the `generateDate()` function and update the `createPost` function:
 const generateDate = () => {
   const now = new Date();
   const options = { month: "long", day: "numeric", year: "numeric" };
-  return now.toLocaleDateString("en-US", options);
+
+  const year = now.getFullYear();
+
+  let month = now.getMonth() + 1;
+  if (month < 10) {
+    month = `0${month}`; // prepend with a 0
+  }
+
+  const day = now.getDate();
+  if (day < 10) {
+    day = `0${day}`; // prepend with a 0
+  }
+
+  return {
+    formatted: `${year}-${month}-${day}`,             // used for sorting
+    pretty: now.toLocaleDateString("en-US", options)  // used for displaying
+  };
 };
 ```
 
 ```
 const createPost = () => {
   const date = generateDate();
-  const newPost = { title, date, slug, coverImage, coverImageAlt, content };
+  const newPost = {
+    title,
+    dateFormatted: date.formatted,
+    datePretty: date.pretty,
+    slug,
+    coverImage,
+    coverImageAlt,
+    content
+  };
   getFirebase()
     .database()
     .ref()
