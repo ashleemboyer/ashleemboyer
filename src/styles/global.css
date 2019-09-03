@@ -48,3 +48,9 @@ blockquote {
 blockquote p {
   color: #c2185b;
 }
+
+.twitter-tweet,
+.twitter-tweet-rendered {
+  margin-left: auto;
+  margin-right: auto;
+}
