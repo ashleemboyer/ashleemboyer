@@ -70,11 +70,25 @@ export default ({ children, title, description, image, url }) => {
           </h3>
         </Link>
         <p css={{ marginBottom: rhythm(1.4) }}>
-          Dog mom to Trooper | Engineer of software | Lover of learning |
-          Partner of Zach | She/her/hers | HOH{" "}
+          Dog mom to Trooper & Tango | Engineer of software | Lover of learning
+          | Partner of Zach | She/her | HOH{" "}
           <span role="img" aria-label="ear emoji">
             👂🏻
-          </span>
+          </span>{" "}
+          | Owner of all views |{" "}
+          <a
+            href="https://twitter.com/search?q=%23SpooniesWhoCode&f=live"
+            target="_blank"
+          >
+            #SpooniesWhoCode
+          </a>{" "}
+          | Creator of{" "}
+          <a
+            href="https://twitter.com/search?q=%23textua11y&f=live"
+            target="_blank"
+          >
+            #textua11y
+          </a>
         </p>
       </div>
       {children}
