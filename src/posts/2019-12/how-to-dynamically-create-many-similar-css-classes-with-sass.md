@@ -56,9 +56,9 @@ Here's one way you can introduce a `@for` to do this:
     $calculated-size: $base-size + ($i * $increment);
 
     &--size-#{$calculated-size} {
-      width: #{$calculated-size};
-      height: #{$calculated-size};
-      font-size: #{$calculated-size};
+      width: #{$calculated-size}px;
+      height: #{$calculated-size}px;
+      font-size: #{$calculated-size}px;
     }
   }
 }
