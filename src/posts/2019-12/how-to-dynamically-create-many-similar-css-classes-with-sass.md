@@ -42,7 +42,7 @@ Let's say you allow 5 sizes of icons in your web application and they're in 6-pi
 }
 ```
 
-This all look really similar, right? The class names all have the same format, and each one sets a `width`, `height`, and `font-size` to be the same thing. Would you believe me if I told you that it's possible to dynamically create blocks of CSS for class names in Sass?
+These all look really similar, right? The class names all have the same format, and each one sets a `width`, `height`, and `font-size` to be the same thing. Would you believe me if I told you that it's possible to dynamically create blocks of CSS for class names in Sass?
 
 Well, believe me! It's true!
 
