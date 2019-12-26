@@ -15,7 +15,6 @@ If you haven't read the first two posts, I have some starter code you can use in
 1. Clone the (Part 3) Starter Code [Optional]
 2. Inspect the `Post` Component
 3. Connect the `Post` Component to Firebase
-4. Wrapping Up
 
 ---
 
@@ -133,8 +132,6 @@ Now, when you click a "Continue reading..." link or manually navigate to one of 
 
 ![Screenshot of a single blog post's page.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Freact-firebase-blog%2Fpart-03%2Fpost.png?alt=media&token=4a9abd6a-9549-467f-a473-ff86ae47357a)
 
-## 4. Wrapping Up
-
-Hooray! You made it through another part of the series. Next time, we'll cover updating and deleting posts. Those should both be more straightforward than what we've covered this far, and good news! We already have part of the work done for making updates with the `Create` component from [part two](https://ashleemboyer.com/react-firebase-blog-02).
+---
 
 Please [send me an email](mailto:hello@ashleemboyer.com) or [a Twitter DM](https://twitter.com/ashleemboyer) if you have any questions or concerns. I love hearing from you! 😊
