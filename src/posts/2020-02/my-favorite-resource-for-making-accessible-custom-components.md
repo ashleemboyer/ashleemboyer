@@ -10,7 +10,7 @@ I'll admit: making web apps accessible can be challenging, especially when you'r
 
 # W3C's WAI-ARIA Authoring Practices
 
-If you don't already know, W3C (The World Wide Web Consortium) is "an international community that develops open standards to ensure the long-term growth of the Web." The have an initiative called The Web Accessibility Initiative (WAI), which provides "strategies, standards, and resources" for making the web more accessible to disabled people. There is a wealth of information here and it's easy to get overwhelmed by it. That's why I recommend starting with the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) when you're ready to start looking at some technical documentation on accessibility.
+If you don't already know, W3C (The World Wide Web Consortium) is "an international community that develops open standards to ensure the long-term growth of the Web." They have an initiative called The Web Accessibility Initiative (WAI), which provides "strategies, standards, and resources" for making the web more accessible to disabled people. There is a wealth of information here and it's easy to get overwhelmed by it. That's why I recommend starting with the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices/) when you're ready to start looking at some technical documentation on accessibility.
 
 ![Screenshot of the WAI-ARIA Authoring Practices webpage.](https://dev-to-uploads.s3.amazonaws.com/i/n12gavis3ns73vbhfx7i.png)
 
@@ -48,7 +48,7 @@ Sometimes there will be NOTE sections that discuss caveats or additional resourc
 
 ![Screenshot of the note for the Button widget.](https://dev-to-uploads.s3.amazonaws.com/i/zlp5ppilfkehbqpliufj.png)
 
-Next up, there will be a list of links to examples. [The Button widget examples](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html) show how to correctly make a `div` element a button and a toggle button created with an `a` element. I like to read the code examples then use them as a reference when I make a rough initial version of component in a code sandbox. Making an isolated practice copy prevents any unexpected behavior caused by my codebase and I can do manual testing with assistive technologies with ease.
+Next up, there will be a list of links to examples. [The Button widget examples](https://www.w3.org/TR/wai-aria-practices/examples/button/button.html) show how to correctly make a `div` element a button and a toggle button created with an `a` element. I like to read the code examples then use them as a reference when I make a rough initial version of the component in a code sandbox. Making an isolated practice copy prevents any unexpected behavior caused by my codebase and I can do manual testing with assistive technologies with ease.
 
 ![Screenshot of the examples section for the Button widget.](https://dev-to-uploads.s3.amazonaws.com/i/tynhp8eh33i2laie7rmb.png)
 
@@ -56,7 +56,7 @@ After that, there's a section about keyboard interaction. For the Button widget,
 
 ![Screenshot of the keyboard interaction section for the Button widget.](https://dev-to-uploads.s3.amazonaws.com/i/r39znxw9eupjd1apt3nd.png)
 
-Finally, you'll come across a section about the WAI-ARIA roles, states, and properties associated with the component. Like the previous section, it's formatted in such a way that let's me test the effects of each role, state, or property one-by-one in my isolated code sandbox. There are also links to the main documentation for each which I use to better understand their purpose.
+Finally, you'll come across a section about the WAI-ARIA roles, states, and properties associated with the component. Like the previous section, it's formatted in such a way that lets me test the effects of each role, state, or property one-by-one in my isolated code sandbox. There are also links to the main documentation for each which I use to better understand their purpose.
 
 ![Screenshot of the WAI-ARIA roles, states, and properties section for the Button widget.](https://dev-to-uploads.s3.amazonaws.com/i/x5ntbkr93815gs4y3m3p.png)
 
