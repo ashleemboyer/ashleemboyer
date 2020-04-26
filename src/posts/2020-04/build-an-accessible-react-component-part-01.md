@@ -352,18 +352,18 @@ const testLinks = [
 
 describe("<Breadcrumb />", () => {
   it("renders successfully with the correct aria attributes", () => {
-    const wrapper = shallow(<Breadcrumb links={links} />);
+    const wrapper = shallow(<Breadcrumb links={testLinks} />);
 
     const nav = wrapper.find("nav");
     expect(nav).toHaveLength(1);
     expect(nav.props()["aria-label"]).toBe("Breadcrumb");
 
     const anchorElements = wrapper.find("a");
-    expect(anchorElements).toHaveLength(links.length);
+    expect(anchorElements).toHaveLength(testLinks.length);
 
     const firstAnchor = anchorElements.first();
-    expect(firstAnchor.text()).toBe(links[0].label);
-    expect(firstAnchor.props()["href"]).toBe(links[0].href);
+    expect(firstAnchor.text()).toBe(testLinks[0].label);
+    expect(firstAnchor.props()["href"]).toBe(testLinks[0].href);
 
     const lastAnchor = anchorElements.last();
     expect(lastAnchor.props()["aria-current"]).toBe("page");
@@ -371,7 +371,7 @@ describe("<Breadcrumb />", () => {
 });
 ```
 
-After all the necessary imports, we have a `links` constant that holds the test values we need to perform our tests. It's good practice to store test values rather than hardcoding them inline for the same reason we don't want to do it in other code: it makes it easier to modify the test values. It's not fun trying to update a bunch of strings in a test file with a few hundred lines of code. Variables are so easy to reference in tests!
+After all the necessary imports, we have a `testLinks` constant that holds the test values we need to perform our tests. It's good practice to store test values rather than hardcoding them inline for the same reason we don't want to do it in other code: it makes it easier to modify the test values. It's not fun trying to update a bunch of strings in a test file with a few hundred lines of code. Variables are so easy to reference in tests!
 
 Then, we have our main [`describe`](https://jestjs.io/docs/en/api#describename-fn) block that groups all of the tests for this component. We have a single `it` block (alias for [`test`](https://jestjs.io/docs/en/api#testname-fn-timeout)) which runs our single test. In our test, we can then call as many [`expect`s](https://jestjs.io/docs/en/expect#expectvalue) as we want. We've got quite a few here, so let's see what each one testing.
 
