@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "ashleemboyer-com",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Ashlee's personal website.",
   "version": "0.1.0",
-  "license": "MIT",
   "scripts": {
     "build": "npm run build:lambda && npm run build:gatsby",
     "build:gatsby": "gatsby build",
@@ -16,31 +15,39 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
-    "firebase": "^6.4.0",
-    "gatsby": "^2.13.39",
+    "@types/webpack": "^4.41.13",
+    "bufferutil": "^4.0.1",
+    "firebase": "^7.14.4",
+    "gatsby": "^2.21.33",
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-google-analytics": "^2.1.7",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-typography": "^2.3.2",
-    "gatsby-source-filesystem": "^2.1.6",
+    "gatsby-source-filesystem": "^2.3.3",
     "gatsby-transformer-remark": "^2.6.9",
     "netlify-lambda": "^1.6.3",
-    "react": "^16.8.6",
+    "react": "^16.13.1",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-refresh": "^0.8.2",
     "react-router-dom": "^5.0.1",
     "react-typography": "^0.16.19",
+    "sockjs-client": "^1.4.0",
+    "type-fest": "^0.13.1",
+    "typescript": "^3.9.2",
     "typography": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "typography-theme-kirkham": "^0.16.19",
+    "utf-8-validate": "^5.0.2",
+    "webpack-plugin-serve": "^1.0.0"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/ashleemboyer/ashleemboyer"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/ashleemboyer/ashleemboyer/issues"
   }
 }
