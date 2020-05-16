@@ -1,8 +1,8 @@
-import React from "react";
-import { useStaticQuery, Link, graphql } from "gatsby";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { useStaticQuery, Link, graphql, withPrefix } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
-import { rhythm } from "../utils/typography";
+import { rhythm } from '../utils/typography';
 
 export default ({ children, title, description, image, url }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,7 @@ export default ({ children, title, description, image, url }) => {
   return (
     <div
       css={{
-        margin: "0 auto",
+        margin: '0 auto',
         maxWidth: 900,
         padding: rhythm(1),
       }}
@@ -55,15 +55,20 @@ export default ({ children, title, description, image, url }) => {
             content={`https://ashleemboyer.netlify.com/${url}`}
           />
         )}
+
+        <script
+          src={withPrefix('mailerlite.js')}
+          type="text/javascript"
+        ></script>
       </Helmet>
-      <div css={{ maxWidth: 700, margin: "0 auto" }}>
+      <div css={{ maxWidth: 700, margin: '0 auto' }}>
         <Link to={`/`}>
           <h3
             css={{
               marginBottom: rhythm(0.4),
-              display: "inline-block",
-              fontStyle: "normal",
-              color: "#212121",
+              display: 'inline-block',
+              fontStyle: 'normal',
+              color: '#212121',
             }}
           >
             {data.site.siteMetadata.title}
@@ -71,18 +76,18 @@ export default ({ children, title, description, image, url }) => {
         </Link>
         <p css={{ marginBottom: rhythm(1.4) }}>
           Dog mom to Trooper & Tango | Engineer of software | Lover of learning
-          | Partner of Zach | She/her | HOH{" "}
+          | Partner of Zach | She/her | HOH{' '}
           <span role="img" aria-label="ear emoji">
             👂🏻
-          </span>{" "}
-          | Owner of all views |{" "}
+          </span>{' '}
+          | Owner of all views |{' '}
           <a
             href="https://twitter.com/search?q=%23SpooniesWhoCode&f=live"
             target="_blank"
           >
             #SpooniesWhoCode
-          </a>{" "}
-          | Creator of{" "}
+          </a>{' '}
+          | Creator of{' '}
           <a
             href="https://twitter.com/search?q=%23textua11y&f=live"
             target="_blank"

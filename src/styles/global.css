@@ -53,3 +53,32 @@ blockquote p {
 .twitter-tweet-rendered {
   margin: 16px auto;
 }
+
+button {
+  max-width: fit-content;
+}
+
+.ml-form-embedWrapper {
+  max-width: 100% !important;
+}
+
+.ml-form-embedContent h4,
+.ml-form-successContent h4 {
+  font-family: 'Lora' !important;
+}
+
+.ml-form-successContent p {
+  font-family: 'Open Sans' !important;
+  line-height: 1.5rem !important;
+  font-size: 1rem !important;
+}
+
+.ml-form-embedBody form {
+  margin: 0 auto !important;
+  margin-top: 48px !important;
+  max-width: 400px !important;
+}
+
+.ml-form-embedSubmit {
+  margin-top: 32px !important;
+}
