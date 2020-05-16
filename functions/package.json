@@ -1,6 +1,0 @@
-{
-  "name": "functions",
-  "dependencies": {
-    "node-fetch": "^2.6.0"
-  }
-}
