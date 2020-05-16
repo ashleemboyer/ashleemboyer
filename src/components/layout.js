@@ -82,15 +82,17 @@ export default ({ children, title, description, image, url }) => {
           </span>{' '}
           | Owner of all views |{' '}
           <a
-            href="https://twitter.com/search?q=%23SpooniesWhoCode&f=live"
+            href="https://twitter.com/search?q=%23SpooniesWhoCode"
             target="_blank"
+            rel="noopener noreferrer"
           >
             #SpooniesWhoCode
           </a>{' '}
           | Creator of{' '}
           <a
-            href="https://twitter.com/search?q=%23textua11y&f=live"
+            href="https://twitter.com/search?q=%23textua11y"
             target="_blank"
+            rel="noopener noreferrer"
           >
             #textua11y
           </a>
