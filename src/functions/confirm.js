@@ -1,5 +1,17 @@
 const fetch = require('node-fetch');
 
+const getIdFromJSONString = jsonString => {
+  const searchString = `"id":`;
+  const indexOfSearchString = jsonString.indexOf(searchString);
+  const shortenedJSONString = jsonString.substring(
+    indexOfSearchString + searchString.length
+  );
+  const indexOfComma = shortenedJSONString.indexOf(',');
+  const id = shortenedJSONString.substring(0, indexOfComma);
+
+  return id;
+};
+
 exports.handler = async (event, context, callback) => {
   const API_URL = 'https://api.mailerlite.com/api/v2';
 
@@ -13,8 +25,13 @@ exports.handler = async (event, context, callback) => {
       'Content-Type': 'application/json',
     },
   })
-    .then(response => response.json())
-    .then(data => data)
+    .then(response => response.text())
+    .then(data => {
+      const subscriberId = getIdFromJSONString(data);
+      const subscriberAsJSON = JSON.parse(data);
+      subscriberAsJSON.id = subscriberId;
+      return subscriberAsJSON;
+    })
     .catch(err => console.error(err));
 
   if (!subscriber.email) {
@@ -28,7 +45,7 @@ exports.handler = async (event, context, callback) => {
   }
 
   // remove from "Needs to Confirm" group
-  await fetch(
+  const deleteResponse = await fetch(
     `${API_URL}/groups/${process.env.MAILERLITE_NEEDS_TO_CONFIRM_GROUP_ID}/subscribers/${subscriber.id}`,
     {
       method: 'DELETE',
@@ -38,9 +55,21 @@ exports.handler = async (event, context, callback) => {
       },
     }
   )
-    .then(response => response.json())
-    .then(data => data)
+    .then(response => ({
+      status: response.status,
+      statusText: response.statusText,
+    }))
     .catch(err => console.error(err));
+
+  if (deleteResponse.status !== 204) {
+    return {
+      statusCode: deleteResponse.status,
+      body: JSON.stringify({
+        success: false,
+        message: deleteResponse.status,
+      }),
+    };
+  }
 
   // add to "Newsletter" group
   await fetch(
