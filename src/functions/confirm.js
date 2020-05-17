@@ -37,7 +37,10 @@ exports.handler = async (event, context, callback) => {
         'Content-Type': 'application/json',
       },
     }
-  ).catch(err => console.error(err));
+  )
+    .then(response => response.json())
+    .then(data => data)
+    .catch(err => console.error(err));
 
   // add to "Newsletter" group
   await fetch(
@@ -50,7 +53,10 @@ exports.handler = async (event, context, callback) => {
         'Content-Type': 'application/json',
       },
     }
-  ).catch(err => console.error(err));
+  )
+    .then(response => response.json())
+    .then(data => data)
+    .catch(err => console.error(err));
 
   return {
     statusCode: 200,
