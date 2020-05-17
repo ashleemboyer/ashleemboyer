@@ -3,16 +3,11 @@ const fetch = require('node-fetch');
 exports.handler = async (event, context, callback) => {
   const API_URL = 'https://api.mailerlite.com/api/v2';
 
-  console.log(event.body);
-
   const parsedBody = JSON.parse(event.body);
   const email = parsedBody.email;
 
   const subscriber = await fetch(`${API_URL}/subscribers/${email}`, {
-    method: 'PUT',
-    body: JSON.stringify({
-      type: 'active',
-    }),
+    method: 'GET',
     headers: {
       'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
       'Content-Type': 'application/json',
