@@ -1,35 +1,9 @@
 import React, { useState } from 'react';
-
-import Layout from '../components/layout';
+import Layout from '../components/Layout/Layout';
+import Form from '../components/Form/Form';
 
 const Loading = () => {
   return <h1>Loading...</h1>;
-};
-
-const Form = ({ name, setName, email, setEmail, submitForm }) => {
-  return (
-    <form onSubmit={submitForm}>
-      <label>Name</label>
-      <input
-        type="text"
-        value={name}
-        onChange={e => {
-          e.preventDefault();
-          setName(e.target.value);
-        }}
-      />
-      <label>Email</label>
-      <input
-        type="email"
-        value={email}
-        onChange={e => {
-          e.preventDefault();
-          setEmail(e.target.value);
-        }}
-      />
-      <button type="submit">Subscribe</button>
-    </form>
-  );
 };
 
 const Message = ({ message }) => {
@@ -37,7 +11,7 @@ const Message = ({ message }) => {
     <>
       <h1>
         You're in!{' '}
-        <span role="img" aria-label="party popper emoji">
+        <span role="img" aria-label="Party popper emoji.">
           🎉
         </span>
       </h1>
@@ -102,20 +76,58 @@ const Newsletter = () => {
       return <Message message={message} />;
     } else {
       return (
-        <Form
-          name={name}
-          setName={setName}
-          email={email}
-          setEmail={setEmail}
-          submitForm={submitForm}
-        />
+        <>
+          <h1 css>
+            Did you know I have a newsletter?{' '}
+            <span role="img" aria-label="Open mailbox with raised flag emoji.">
+              📬
+            </span>
+          </h1>
+          <p css={{ marginBottom: 32, lineHeight: '1.8rem' }}>
+            If you want to get notified when I publish new blog posts or make
+            major project announcements, this is the right place! All I need is
+            your name and email address.
+          </p>
+          <Form submitForm={submitForm}>
+            <h2 css={{ marginBottom: 32, fontSize: '1.8rem' }}>
+              Sign up here{' '}
+              <span
+                role="img"
+                aria-label="Index finger pointing downward emoji."
+              >
+                👇
+              </span>
+            </h2>
+            <label>Name</label>
+            <input
+              type="text"
+              value={name}
+              onChange={e => {
+                e.preventDefault();
+                setName(e.target.value);
+              }}
+            />
+            <label>Email</label>
+            <input
+              type="email"
+              value={email}
+              onChange={e => {
+                e.preventDefault();
+                setEmail(e.target.value);
+              }}
+            />
+            <button type="submit">Subscribe</button>
+          </Form>
+        </>
       );
     }
   };
 
   return (
     <Layout>
-      <div css={{ maxWidth: 700, margin: '0 auto' }}>{getPageContents()}</div>
+      <div css={{ textAlign: 'center', paddingTop: 32 }}>
+        {getPageContents()}
+      </div>
     </Layout>
   );
 };
