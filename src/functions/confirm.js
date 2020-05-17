@@ -18,7 +18,9 @@ exports.handler = async (event, context, callback) => {
   const parsedBody = JSON.parse(event.body);
   const email = parsedBody.email;
 
-  const subscriber = await fetch(`${API_URL}/subscribers/${email}`, {
+  const getSubscriberByEmailUrl = `${API_URL}/subscribers/${email}`;
+  console.log(`Starting GET: ${getSubscriberByEmailUrl}`);
+  const subscriber = await fetch(getSubscriberByEmailUrl, {
     method: 'GET',
     headers: {
       'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
@@ -27,6 +29,7 @@ exports.handler = async (event, context, callback) => {
   })
     .then(response => response.text())
     .then(data => {
+      console.log(`Got subscriber: ${data}`);
       const subscriberId = getIdFromJSONString(data);
       const subscriberAsJSON = JSON.parse(data);
       subscriberAsJSON.id = subscriberId;
@@ -35,6 +38,7 @@ exports.handler = async (event, context, callback) => {
     .catch(err => console.error(err));
 
   if (!subscriber.email) {
+    console.log('Subscriber not found in the system.');
     return {
       statusCode: 200,
       body: JSON.stringify({
@@ -45,23 +49,29 @@ exports.handler = async (event, context, callback) => {
   }
 
   // remove from "Needs to Confirm" group
-  const deleteResponse = await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEEDS_TO_CONFIRM}/subscribers/${subscriber.id}`,
-    {
-      method: 'DELETE',
-      headers: {
-        'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
-        'Content-Type': 'application/json',
-      },
-    }
-  )
-    .then(response => ({
-      status: response.status,
-      statusText: response.statusText,
-    }))
+  const deleteFromGroupUrl = `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEEDS_TO_CONFIRM}/subscribers/${subscriber.id}`;
+  console.log(`Starting DELETE: ${deleteFromGroupUrl}`);
+  const deleteResponse = await fetch(deleteFromGroupUrl, {
+    method: 'DELETE',
+    headers: {
+      'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(response => {
+      let responseAsJSON = {
+        status: response.status,
+        statusText: response.statusText,
+      };
+      console.log(`DELETE response: ${JSON.stringify(responseAsJSON)}`);
+      return responseAsJSON;
+    })
     .catch(err => console.error(err));
 
   if (deleteResponse.status !== 204) {
+    console.log(
+      'Something went wrong with deleting the subscriber from the first group.'
+    );
     return {
       statusCode: deleteResponse.status,
       body: JSON.stringify({
@@ -72,21 +82,24 @@ exports.handler = async (event, context, callback) => {
   }
 
   // add to "Newsletter" group
-  await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEWSLETTER}/subscribers`,
-    {
-      method: 'POST',
-      body: JSON.stringify({ ...subscriber }),
-      headers: {
-        'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
-        'Content-Type': 'application/json',
-      },
-    }
-  )
-    .then(response => response.json())
-    .then(data => data)
+  const addToGroupUrl = `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEWSLETTER}/subscribers`;
+  console.log(`Starting POST: ${addToGroupUrl}`);
+  await fetch(addToGroupUrl, {
+    method: 'POST',
+    body: JSON.stringify({ ...subscriber }),
+    headers: {
+      'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(response => response.text())
+    .then(data => {
+      console.log(`Got subscriber: ${data}`);
+      return JSON.parse(data);
+    })
     .catch(err => console.error(err));
 
+  console.log('Subscriber successfully confirmed.');
   return {
     statusCode: 200,
     body: JSON.stringify({

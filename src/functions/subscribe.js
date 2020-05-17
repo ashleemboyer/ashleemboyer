@@ -8,18 +8,24 @@ exports.handler = async (event, context, callback) => {
   const email = parsedBody.email;
   const tags = parsedBody.tags;
 
-  const existingSubscriber = await fetch(`${API_URL}/subscribers/${email}`, {
+  const getSubscriberByEmailUrl = `${API_URL}/subscribers/${email}`;
+  console.log(`Starting GET: ${getSubscriberByEmailUrl}`);
+  const existingSubscriber = await fetch(getSubscriberByEmailUrl, {
     method: 'GET',
     headers: {
       'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
       'Content-Type': 'application/json',
     },
   })
-    .then(response => response.json())
-    .then(result => result)
+    .then(response => response.text())
+    .then(data => {
+      console.log(`Got subscriber: ${data}\n`);
+      return JSON.parse(data);
+    })
     .catch(err => console.error(err));
 
   if (existingSubscriber.email) {
+    console.error('This subscriber is already in the system.');
     return {
       statusCode: 200,
       body: JSON.stringify({
@@ -29,28 +35,33 @@ exports.handler = async (event, context, callback) => {
     };
   }
 
-  const newSubscriber = await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEEDS_TO_CONFIRM}/subscribers`,
-    {
-      method: 'POST',
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        fields: {
-          tags,
-        },
-      }),
-      headers: {
-        'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
-        'Content-Type': 'application/json',
-      },
-    }
-  )
-    .then(response => response.json())
-    .then(result => result)
+  const postSubscriberUrl = `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEEDS_TO_CONFIRM}/subscribers`;
+  const postParams = {
+    name: name,
+    email: email,
+    fields: {
+      tags,
+    },
+  };
+  console.log(`Starting POST: ${postSubscriberUrl}`);
+  console.log(`  With params: ${JSON.stringify(postParams)}`);
+  const newSubscriber = await fetch(postSubscriberUrl, {
+    method: 'POST',
+    body: JSON.stringify(postParams),
+    headers: {
+      'X-MailerLite-ApiKey': process.env.MAILERLITE_API_KEY,
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(response => response.text())
+    .then(data => {
+      console.log(`Got new subscriber: ${data}`);
+      return JSON.parse(data);
+    })
     .catch(err => console.error(err));
 
   if (newSubscriber.email) {
+    console.log('Subscriber successfully added.');
     return {
       statusCode: 200,
       body: JSON.stringify({
@@ -60,6 +71,7 @@ exports.handler = async (event, context, callback) => {
     };
   }
 
+  console.log('There was a problem adding the subscriber.');
   return {
     statusCode: 500,
     body: JSON.stringify({
