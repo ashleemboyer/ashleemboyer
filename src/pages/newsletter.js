@@ -88,7 +88,7 @@ const Newsletter = () => {
             major project announcements, this is the right place! All I need is
             your name and email address.
           </p>
-          <Form submitForm={submitForm}>
+          <Form>
             <h2 css={{ marginBottom: 32, fontSize: '1.8rem' }}>
               Sign up here{' '}
               <span
@@ -98,25 +98,31 @@ const Newsletter = () => {
                 👇
               </span>
             </h2>
-            <label>Name</label>
+            <label htmlFor="name">First name</label>
             <input
               type="text"
+              name="name"
+              id="name"
               value={name}
               onChange={e => {
                 e.preventDefault();
                 setName(e.target.value);
               }}
             />
-            <label>Email</label>
+            <label htmlFor="email">Email address</label>
             <input
               type="email"
+              name="email"
+              id="email"
               value={email}
               onChange={e => {
                 e.preventDefault();
                 setEmail(e.target.value);
               }}
             />
-            <button type="submit">Subscribe</button>
+            <button type="button" onClick={submitForm}>
+              Subscribe
+            </button>
           </Form>
         </>
       );
