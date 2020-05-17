@@ -46,7 +46,7 @@ exports.handler = async (event, context, callback) => {
 
   // remove from "Needs to Confirm" group
   const deleteResponse = await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_NEEDS_TO_CONFIRM_GROUP_ID}/subscribers/${subscriber.id}`,
+    `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEEDS_TO_CONFIRM}/subscribers/${subscriber.id}`,
     {
       method: 'DELETE',
       headers: {
@@ -73,7 +73,7 @@ exports.handler = async (event, context, callback) => {
 
   // add to "Newsletter" group
   await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_NEWSLETTER_GROUP_ID}/subscribers`,
+    `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEWSLETTER}/subscribers`,
     {
       method: 'POST',
       body: JSON.stringify({ ...subscriber }),

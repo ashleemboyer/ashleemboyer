@@ -30,7 +30,7 @@ exports.handler = async (event, context, callback) => {
   }
 
   const newSubscriber = await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_NEEDS_TO_CONFIRM_GROUP_ID}/subscribers`,
+    `${API_URL}/groups/${process.env.MAILERLITE_GROUP_ID_NEEDS_TO_CONFIRM}/subscribers`,
     {
       method: 'POST',
       body: JSON.stringify({
