@@ -45,10 +45,10 @@ export default ({ children, title, description, image, url }) => {
         {image && <meta name="twitter:image" content={image} />}
 
         {url && (
-          <meta
-            property="og:url"
-            content={`https://ashleemboyer.netlify.com/${url}`}
-          />
+          <meta property="og:url" content={`https://ashleemboyer.com/${url}`} />
+        )}
+        {url && (
+          <link rel="canonical" href={`https://ashleemboyer.com/${url}`} />
         )}
 
         <script
