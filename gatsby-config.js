@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Ashlee M Boyer",
+    title: 'Ashlee M Boyer',
   },
   plugins: [
+    'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -12,9 +13,9 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "src",
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
@@ -27,4 +28,4 @@ module.exports = {
       },
     },
   ],
-}
+};
