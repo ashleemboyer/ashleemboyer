@@ -36,6 +36,7 @@ exports.handler = async (event, context, callback) => {
       body: JSON.stringify({
         name: name,
         email: email,
+        type: 'unconfirmed',
         fields: {
           tags,
         },
