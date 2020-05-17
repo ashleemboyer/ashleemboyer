@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react';
 
-import Layout from "../components/layout"
+import Layout from '../components/Layout/Layout';
 
 export default () => (
   <Layout>
@@ -9,4 +9,4 @@ export default () => (
       <p>That page doesn't exist here!</p>
     </div>
   </Layout>
-)
+);

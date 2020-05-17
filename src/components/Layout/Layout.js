@@ -1,8 +1,9 @@
 import React from 'react';
 import { useStaticQuery, Link, graphql, withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
+import { rhythm } from '../../utils/typography';
 
-import { rhythm } from '../utils/typography';
+import styles from './Layout.module.scss';
 
 export default ({ children, title, description, image, url }) => {
   const data = useStaticQuery(graphql`
@@ -20,13 +21,7 @@ export default ({ children, title, description, image, url }) => {
     : data.site.siteMetadata.title;
 
   return (
-    <div
-      css={{
-        margin: '0 auto',
-        maxWidth: 900,
-        padding: rhythm(1),
-      }}
-    >
+    <div className={styles.Layout}>
       <Helmet title={bigTitle}>
         <meta charSet="utf-8" />
         <meta name="twitter:site" content="@ashleemboyer" />
@@ -61,7 +56,7 @@ export default ({ children, title, description, image, url }) => {
           type="text/javascript"
         ></script>
       </Helmet>
-      <div css={{ maxWidth: 700, margin: '0 auto' }}>
+      <div>
         <Link to={`/`}>
           <h3
             css={{

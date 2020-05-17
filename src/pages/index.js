@@ -1,12 +1,12 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
 
-import { rhythm } from "../utils/typography";
-import Layout from "../components/layout";
+import { rhythm } from '../utils/typography';
+import Layout from '../components/Layout/Layout';
 
 export default ({ data }) => (
   <Layout>
-    <div css={{ maxWidth: 700, margin: "0 auto" }}>
+    <div>
       <h1 css={{ fontSize: rhythm(2.4), marginBottom: rhythm(0.8) }}>
         Journey of a Disabled Web Developer
       </h1>
@@ -19,34 +19,34 @@ export default ({ data }) => (
           css={{
             // todo: selector for all but last?
             marginBottom: rhythm(1.6),
-            border: "1px solid #bdbdbd",
-            borderRadius: "4px",
-            transition: "all 0.3s cubic-bezier(.25,.8,.25,1)",
-            ":hover": {
+            border: '1px solid #bdbdbd',
+            borderRadius: '4px',
+            transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)',
+            ':hover': {
               boxShadow:
-                "0 10px 16px rgba(0,0,0,0.26), 0 6px 6px rgba(0,0,0,0.22)",
+                '0 10px 16px rgba(0,0,0,0.26), 0 6px 6px rgba(0,0,0,0.22)',
             },
-            backgroundColor: "#fff",
+            backgroundColor: '#fff',
           }}
         >
           <Link
             to={node.fields.slug}
-            css={{ textDecoration: "none", color: "inherit" }}
+            css={{ textDecoration: 'none', color: 'inherit' }}
           >
             {node.frontmatter.image && (
               <img
                 src={node.frontmatter.image}
                 alt={node.frontmatter.alt}
                 css={{
-                  borderRadius: "4px 4px 0 0",
+                  borderRadius: '4px 4px 0 0',
                   margin: 0,
-                  width: "100%",
+                  width: '100%',
                 }}
               />
             )}
-            <div css={{ padding: "12px" }}>
+            <div css={{ padding: '12px' }}>
               <h2 css={{ marginBottom: rhythm(1 / 4) }}>
-                {node.frontmatter.title}{" "}
+                {node.frontmatter.title}{' '}
                 <span className="light">- {node.frontmatter.date}</span>
               </h2>
               <p css={{ margin: 0 }}>{node.excerpt}</p>
