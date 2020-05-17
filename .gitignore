@@ -69,4 +69,4 @@ yarn-error.log
 .yarn-integrity
 
 # My test files
-test.js
+test*.js
