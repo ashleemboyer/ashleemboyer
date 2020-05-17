@@ -29,7 +29,7 @@ exports.handler = async (event, context, callback) => {
 
   // remove from "Needs to Confirm" group
   await fetch(
-    `${API_URL}/groups/${process.env.MAILERLITE_NEEDS_TO_CONFIRM_GROUP_ID}/subscribers/${subscriber.email}`,
+    `${API_URL}/groups/${process.env.MAILERLITE_NEEDS_TO_CONFIRM_GROUP_ID}/subscribers/${subscriber.id}`,
     {
       method: 'DELETE',
       headers: {
