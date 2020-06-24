@@ -4,11 +4,11 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sass',
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: `UA-129788768-1`,
+        trackingId: 'UA-129788768-1',
         head: true,
       },
     },
@@ -19,12 +19,25 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-emotion`,
+    'gatsby-transformer-remark',
+    'gatsby-plugin-emotion',
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        pathToConfigModule: 'src/utils/typography',
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-autolink-headers',
+            options: {
+              offsetY: '24',
+            },
+          },
+        ],
       },
     },
   ],
