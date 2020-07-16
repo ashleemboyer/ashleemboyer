@@ -1,7 +1,6 @@
 import React from 'react';
 import { useStaticQuery, Link, graphql, withPrefix } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import { rhythm } from '../../utils/typography';
 
 import styles from './Layout.module.scss';
 
@@ -56,44 +55,22 @@ export default ({ children, title, description, image, url }) => {
           type="text/javascript"
         ></script>
       </Helmet>
-      <div>
-        <Link to={`/`}>
-          <h3
-            css={{
-              marginBottom: rhythm(0.4),
-              display: 'inline-block',
-              fontStyle: 'normal',
-              color: '#212121',
-            }}
-          >
-            {data.site.siteMetadata.title}
-          </h3>
-        </Link>
-        <p css={{ marginBottom: rhythm(1.4) }}>
-          Dog mom to Trooper & Tango | Engineer of software | Lover of learning
-          | Partner of Zach | She/her | HOH{' '}
-          <span role="img" aria-label="ear emoji">
-            👂🏻
-          </span>{' '}
-          | Owner of all views |{' '}
-          <a
-            href="https://twitter.com/search?q=%23SpooniesWhoCode"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            #SpooniesWhoCode
-          </a>{' '}
-          | Creator of{' '}
-          <a
-            href="https://twitter.com/search?q=%23textua11y"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            #textua11y
-          </a>
-        </p>
-      </div>
-      {children}
+      <header>
+        <img src="/me.jpg" />
+        <div>
+          <Link to={`/`}>
+            <h2>{data.site.siteMetadata.title}</h2>
+          </Link>
+          <p>
+            You can find me talking about issues surrounding Disability,
+            Accessibililty, & Mental Health on{' '}
+            <a href="https://twitter.com/ashleemboyer">Twitter</a>, or you can
+            find me regularly live-knitting or live-coding on{' '}
+            <a href="https://twitch.tv/ashleemboyer">Twitch</a>.
+          </p>
+        </div>
+      </header>
+      <main>{children}</main>
     </div>
   );
 };
