@@ -129,13 +129,7 @@ const Newsletter = () => {
     }
   };
 
-  return (
-    <Layout>
-      <div css={{ textAlign: 'center', paddingTop: 32 }}>
-        {getPageContents()}
-      </div>
-    </Layout>
-  );
+  return <Layout>{getPageContents()}</Layout>;
 };
 
 export default Newsletter;

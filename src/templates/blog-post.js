@@ -12,22 +12,20 @@ export default ({ data }) => {
       image={post.frontmatter.image}
       url={post.fields.slug}
     >
+      {post.frontmatter.image && (
+        <img
+          src={post.frontmatter.image}
+          alt={post.frontmatter.alt}
+          css={{ borderRadius: '4px' }}
+        />
+      )}
       <div>
-        {post.frontmatter.image && (
-          <img
-            src={post.frontmatter.image}
-            alt={post.frontmatter.alt}
-            css={{ borderRadius: '4px' }}
-          />
-        )}
-        <div>
-          <h1 css={{ marginBottom: '12px' }}>{post.frontmatter.title}</h1>
-          <p className="light" css={{ fontStyle: 'italic' }}>
-            {post.frontmatter.date} &mdash; {post.timeToRead} minute read
-          </p>
-          {/* todo: probably need to parse this stuff for display purposes */}
-          <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
-        </div>
+        <h1 css={{ marginBottom: '12px' }}>{post.frontmatter.title}</h1>
+        <p className="light" css={{ fontStyle: 'italic' }}>
+          {post.frontmatter.date} &mdash; {post.timeToRead} minute read
+        </p>
+        {/* todo: probably need to parse this stuff for display purposes */}
+        <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </div>
     </Layout>
   );

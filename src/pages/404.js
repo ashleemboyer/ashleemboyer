@@ -4,9 +4,7 @@ import Layout from '../components/Layout/Layout';
 
 export default () => (
   <Layout>
-    <div>
-      <h1>You might be lost.</h1>
-      <p>That page doesn't exist here!</p>
-    </div>
+    <h1>You might be lost.</h1>
+    <p>That page doesn't exist here!</p>
   </Layout>
 );
