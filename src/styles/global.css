@@ -11,10 +11,10 @@ html {
 }
 
 hr {
-  max-width: 500px;
+  height: 0;
   margin: 32px auto;
   border: none;
-  background-color: #bdbdbd;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 code {
