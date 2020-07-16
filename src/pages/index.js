@@ -12,8 +12,8 @@ export default ({ data }) => {
   const allPosts = data.allMarkdownRemark.edges;
   const numPages = Math.ceil(data.allMarkdownRemark.totalCount / PAGE_SIZE) - 1;
   const paginatedPosts = allPosts.slice(
-    PAGE_SIZE * currentPage + 1,
-    PAGE_SIZE * currentPage + 1 + PAGE_SIZE
+    PAGE_SIZE * currentPage,
+    PAGE_SIZE * currentPage + PAGE_SIZE
   );
 
   return (
