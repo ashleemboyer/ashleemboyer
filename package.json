@@ -20,7 +20,7 @@
     "firebase": "^7.14.4",
     "gatsby": "^2.21.33",
     "gatsby-plugin-emotion": "^4.1.2",
-    "gatsby-plugin-google-analytics": "^2.1.7",
+    "gatsby-plugin-google-analytics": "^2.3.11",
     "gatsby-plugin-react-helmet": "^3.1.3",
     "gatsby-plugin-sass": "^2.3.1",
     "gatsby-plugin-typography": "^2.3.2",
