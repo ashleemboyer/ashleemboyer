@@ -24,23 +24,25 @@ export default ({ data }) => {
         <p className="light" css={{ fontStyle: 'italic', marginBottom: '8px' }}>
           {post.frontmatter.date} &mdash; {post.timeToRead} minute read
         </p>
-        <div css={{ marginBottom: '24px' }}>
-          {post.frontmatter.tags.map(tag => (
-            <Link
-              to={`/tags/${tag}`}
-              css={{
-                marginRight: '6px',
-                backgroundColor: '#c2185b',
-                color: 'white',
-                padding: '2px 8px',
-                fontSize: '0.8rem',
-                borderRadius: '1.75rem',
-              }}
-            >
-              #{tag}
-            </Link>
-          ))}
-        </div>
+        {post.frontmatter.tags && (
+          <div css={{ marginBottom: '24px' }}>
+            {post.frontmatter.tags.map(tag => (
+              <Link
+                to={`/tags/${tag}`}
+                css={{
+                  marginRight: '6px',
+                  backgroundColor: '#c2185b',
+                  color: 'white',
+                  padding: '2px 8px',
+                  fontSize: '0.8rem',
+                  borderRadius: '1.75rem',
+                }}
+              >
+                #{tag}
+              </Link>
+            ))}
+          </div>
+        )}
         {/* todo: probably need to parse this stuff for display purposes */}
         <div dangerouslySetInnerHTML={{ __html: post.html }}></div>
       </div>
