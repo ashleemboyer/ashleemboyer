@@ -23,7 +23,7 @@ export default ({ data, pageContext }) => {
           marginBottom: '16px',
         }}
       >
-        Posts with "{pageContext.tag}" tag
+        Posts with the "{pageContext.tag}" tag
       </h1>
       <h3 className="light" css={{ marginBottom: '48px' }}>
         She's written {data.allMarkdownRemark.totalCount} posts
