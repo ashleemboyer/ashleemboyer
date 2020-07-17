@@ -5,7 +5,7 @@ import Layout from '../components/Layout/Layout';
 
 const PAGE_SIZE = 5;
 
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
   const [currentPage, setCurrentPage] = useState(0);
 
   const allPosts = data.allMarkdownRemark.edges;
@@ -23,10 +23,10 @@ export default ({ data }) => {
           marginBottom: '16px',
         }}
       >
-        Journey of a Disabled Web Developer
+        Posts with "{pageContext.tag}" tag
       </h1>
       <h3 className="light" css={{ marginBottom: '48px' }}>
-        She's written {data.allMarkdownRemark.totalCount} Posts
+        She's written {data.allMarkdownRemark.totalCount} posts
       </h3>
       {paginatedPosts.map(({ node }) => (
         <div
@@ -112,8 +112,8 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query($tag: String) {
+    allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } } }) {
       totalCount
       edges {
         node {
@@ -124,6 +124,7 @@ export const query = graphql`
             description
             image
             alt
+            tags
           }
           fields {
             slug
