@@ -1,9 +1,10 @@
 ---
-title: "Build a React & Firebase Blog Site: Part 1"
-date: "2019-08-26"
+title: 'Build a React & Firebase Blog Site: Part 1 - Setup and Read Data'
+date: '2019-08-26'
 description: Learn how to build a blog site with React and Firebase.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Freact-firebase-blog%2Fpart-01%2Fheader.png?alt=media&token=bda16bb0-6a59-4216-936c-2d4f24be991b
 alt: "Header reading the this blog post's title."
+tags: [react, firebase, web development]
 ---
 
 Welcome! This is the first in a series of posts that will teach you how to build a blog site using React and Firebase. This one will probably be the longest because there are few things to do to set everything up.
