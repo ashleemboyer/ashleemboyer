@@ -113,7 +113,7 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
   query($tag: String) {
-    allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } } }) {
+    allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } } }, sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
       edges {
         node {
