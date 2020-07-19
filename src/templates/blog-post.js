@@ -25,13 +25,6 @@ export default ({ data }) => {
       image={post.frontmatter.image}
       url={post.fields.slug}
     >
-      {post.frontmatter.image && (
-        <img
-          src={post.frontmatter.image}
-          alt={post.frontmatter.alt}
-          css={{ borderRadius: '4px' }}
-        />
-      )}
       <div>
         <h1 css={{ marginBottom: '12px' }}>{post.frontmatter.title}</h1>
         <p className="light" css={{ fontStyle: 'italic', marginBottom: '8px' }}>
