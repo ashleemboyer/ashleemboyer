@@ -1,8 +1,8 @@
 ---
 title: My Favorite Resource for Making Accessible Custom Components
-date: "2020-02-07"
+date: '2020-02-07'
 description: Want to make your components accessible but not sure about the technical feasibility or how to get started? Take a look at the WAI-ARIA Authoring Practices by W3C!
-image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2020%2F02%2Fa11y-resource.png?alt=media&token=c42e566a-e4cd-463a-8632-3940beb52fb0
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FMy%20Favorite%20Resource%20for%20Making%20Accessible%20Custom%20Components.png?alt=media&token=fa982680-b3b2-4a27-a1b3-63c23db8da4e
 alt: "Header reading this blog post's title."
 ---
 
