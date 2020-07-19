@@ -1,12 +1,12 @@
 ---
-title: "Build an Accessible React Component: Part 1 - Breadcrumbs"
-date: "2020-04-25"
-description: "The first accessible React component in the live series is a breadcrumb."
-image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2020%2F04%2Fbarc%2Fbarc-01-ashleemboyer.png?alt=media&token=0b92ad9b-86e2-4818-821a-ca766c147502
-alt: "Header reading this blog post's title."
+title: 'Build an Accessible Breadcrumb Component: Part 1 Part 1 in the Accessible React Component Series'
+date: '2020-04-25'
+description: 'The first accessible React component in the live series is a breadcrumb.'
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FBuild%20an%20Accessible%20Breadcrumb%20Component.png?alt=media&token=fa786a6e-c227-4458-92df-13129ce4ce86
+tags: [a11y, react, barc]
 ---
 
-This past Tuesday, [the first stream](https://www.twitch.tv/videos/598816211) in [a series for building accessible React components](), we spun the wheel and it chose the breadcrumb component for us! While the component was extremely straightforward, I think it was a great one to kick off the series. Let's dive right in, shall we?
+During the first stream in the accessible React component live coding series, we spun the wheel and it chose the breadcrumb component for us! While the component was extremely straightforward, I think it was a great one to kick off the series. Let's dive right in, shall we?
 
 ## Setup
 
@@ -17,7 +17,7 @@ You can skip this part if you already have your own React project set up. This s
 3. Replace your `src/App.js` file with this code:
 
 ```jsx
-import React from "react";
+import React from 'react';
 
 const App = () => <div>Hello, world!</div>;
 
@@ -36,20 +36,19 @@ Now, you should see a "Failed to compile" error in your browser and it should be
 
 Your browser should say "Hello, world!" now. We're all set up!
 
-## My process
+## My process (ToC)
 
-1. Read through the WAI-ARIA Authoring Practices documentation
-2. Create a minimal React component that says "Hello"
-3. Flesh out the React component with the necessary HTML elements
-4. Figure out what inputs (props) the React component needs
-5. Add the props to the component
-6. Add the necessary WAI-ARIA Roles, States, and Properties
-7. Add keyboard interaction
-8. Perform manual tests (listen with a screen reader, navigate with a keyboard, etc.)
-9. Add automated tests
-10. Write the documentation
+1. [Read through the WAI-ARIA Authoring Practices documentation](#1-the-wai-aria-authoring-practices-documentation)
+2. [Create a minimal React component that says "Hello"](#2-a-minimal-react-component)
+3. [Flesh out the React component with the necessary HTML elements](#3-add-html-elements-to-the-react-component)
+4. [Figure out what inputs (props) the React component needs](#4-add-props-to-the-react-component)
+5. [Add the necessary WAI-ARIA Roles, States, and Properties](#5-wai-aria-roles-states-and-properties)
+6. [Add keyboard interaction](#6-add-keyboard-interaction)
+7. [Perform manual tests (listen with a screen reader, navigate with a keyboard, etc.)](#7-perform-manual-tests)
+8. [Add automated tests](#8-add-automated-tests)
+9. [Write the documentation](#9-write-the-documentation)
 
-## The WAI-ARIA Authoring Practices Documentation
+## 1. The WAI-ARIA Authoring Practices Documentation
 
 The first thing we have to do is read [the available documentation for this component](https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb) on the WAI-ARIA Authoring Practices web page. There's not too much to this component.
 
@@ -57,7 +56,7 @@ The first thing we have to do is read [the available documentation for this comp
 
 There's no keyboard interaction to add here since you can use the Tab and Shift+Tab keys by default to navigation through links. We just have to make sure we're using the correct HTML elements in our component and we have one ARIA state ([`aria-current`](https://www.w3.org/TR/wai-aria-1.1/#aria-current)) and one ARIA property ([`aria-label`](https://www.w3.org/TR/wai-aria-1.1/#aria-label)) to include as well.
 
-## A Minimal React Component
+## 2. A Minimal React Component
 
 This series of blog posts will use the file structure I have laid out in my [`a11y-components`](https://www.w3.org/TR/wai-aria-1.1/#aria-current) GitLab repository. It looks a bit like this:
 
@@ -84,7 +83,7 @@ Let's add a `Breadcrumb` folder under `components`. You need to create the `comp
 This file will have all of our React code. Let's start with something minimal to check if our setup is correct:
 
 ```jsx
-import React from "react";
+import React from 'react';
 
 const Breadcrumb = () => <h1>Breadcrumb works!</h1>;
 
@@ -104,7 +103,7 @@ Don't forget to write tests! They're not only important for making sure your com
 This file is for exporting everything we need from the Breadcrumb component so it can be used elsewhere in the application. More complex components might have multiple exports in this file but ours will stay simple for this component:
 
 ```jsx
-export { default as Breadcrumb } from "./Breadcrumb";
+export { default as Breadcrumb } from './Breadcrumb';
 ```
 
 ### README.md
@@ -116,15 +115,15 @@ This is where we'll document our component. It's important to detail a component
 First add the following to the `src/components/index.js` file:
 
 ```jsx
-export { Breadcrumb } from "./Breadcrumb";
+export { Breadcrumb } from './Breadcrumb';
 ```
 
 Then update `src/App.js` to use the component:
 
 ```jsx
-import React from "react";
+import React from 'react';
 
-import { Breadcrumb } from "./components";
+import { Breadcrumb } from './components';
 
 const App = () => <Breadcrumb />;
 
@@ -133,7 +132,7 @@ export default App;
 
 Check your browser. It should say "Breadcrumb works!" with an `<h1>` element.
 
-## Add HTML elements to the React Component
+## 3. Add HTML elements to the React Component
 
 Now that our component has all its files created and we've got a minimal version of it working and showing in our browser, we can start building it out to specification. Let's head back over to [the documentation](https://www.w3.org/TR/wai-aria-practices-1.1/#breadcrumb) and see what elements we need to use. You should see an "Example" section for the widget and a single link to the example. Let's [go there](https://www.w3.org/TR/wai-aria-practices-1.1/examples/breadcrumb/index.html).
 
@@ -170,7 +169,7 @@ Yay! Now we need to style the list horizontally and add a separator between each
 1. Import the SCSS file in `Breadcrumb.jsx`:
 
 ```jsx
-import styles from "./Breadcrumb.module.scss";
+import styles from './Breadcrumb.module.scss';
 ```
 
 2. Give the `nav` element in the component a `className`:
@@ -210,14 +209,14 @@ import styles from "./Breadcrumb.module.scss";
     transform: rotate(15deg);
     border-right: 2px solid black;
     height: 0.8em;
-    content: "";
+    content: '';
   }
 }
 ```
 
 The links should be listed horizontally on a gray background have separators between each.
 
-## Add Props to the React Component
+## 4. Add Props to the React Component
 
 Let's make our component accept a list of links so it's dynamic and can be reused. It looks like each link has two pieces: a readable label and an `href`. We first need to update `src/App.js` and pass an array of links to the component like this:
 
@@ -225,16 +224,16 @@ Let's make our component accept a list of links so it's dynamic and can be reuse
 <Breadcrumb
   links={[
     {
-      label: "Link 1",
-      href: "",
+      label: 'Link 1',
+      href: '',
     },
     {
-      label: "Link 2",
-      href: "",
+      label: 'Link 2',
+      href: '',
     },
     {
-      label: "Link 3",
-      href: "",
+      label: 'Link 3',
+      href: '',
     },
   ]}
 />
@@ -258,7 +257,7 @@ const Breadcrumb = ({ links }) => (
 
 When you look at the browser, it should look exactly as it did before this step if you're using the same links as you previously hardcoded.
 
-## WAI-ARIA Roles, States, and Properties
+## 5. WAI-ARIA Roles, States, and Properties
 
 We have two ARIA attributes to discuss for this component: `aria-label` and `aria-current`.
 
@@ -284,7 +283,7 @@ Here's what the `<ol>` element should look like now:
     const isLastLink = index === links.length - 1;
     return (
       <li key={`breadcrumb-link-${index}`}>
-        <a href={link.href} aria-current={isLastLink ? "page" : undefined}>
+        <a href={link.href} aria-current={isLastLink ? 'page' : undefined}>
           {link.label}
         </a>
       </li>
@@ -296,7 +295,7 @@ Here's what the `<ol>` element should look like now:
 We also probably want to style the current page's link differently to indicate that it's the page we're on. We can do this in our SCSS file by selecting on the `aria-current` attribute. You'll want to add this to the `ol` section of the file:
 
 ```scss
-[aria-current="page"] {
+[aria-current='page'] {
   font-weight: bold;
   text-decoration: none;
 }
@@ -304,11 +303,11 @@ We also probably want to style the current page's link differently to indicate t
 
 You can read more about the `aria-current` state [here](https://www.w3.org/TR/wai-aria-1.1/#aria-current).
 
-## Add Keyboard Interaction
+## 6. Add Keyboard Interaction
 
 We don't have any keyboard interaction to add to this component! We just need to make sure that Tab and Tab+Shift work as expected with `<a>` elements.
 
-## Perform Manual Tests
+## 7. Perform Manual Tests
 
 I use the [ChromeVox Classic Extension](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) to to do screen reader testing. It's easy to turn on only when I want to do tests by going to `chrome://extensions/` in my browser and toggling the extension on and off.
 
@@ -316,7 +315,7 @@ Here's a video of what the component looks and sounds like when you tab through 
 
 <video controls style="width: 100%;"><source src="https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2020%2F04%2Fbarc%2Fbarc-01-screen-screen-reader.mov?alt=media&token=a7170255-f499-44c8-b7ab-f4a0a44da728" /></video>
 
-## Add Automated Tests
+## 8. Add Automated Tests
 
 The tests for this component should be very straightforward since there's no interaction or state changes going on. We don't need to test what happens on click and there's no computation or anything of like going on. This component just loads and shows things, that means the only thing we can really test for is that everything shows correctly on load. We'll be using [Jest](https://jestjs.io/docs/en/getting-started.html) and [Enzyme](https://enzymejs.github.io/enzyme/docs/guides/jest.html) for testing.
 
@@ -329,8 +328,8 @@ First, we need to [install and configure Enzyme](https://enzymejs.github.io/enzy
 2. Add the following code to the end of the `setupTests.js` file to configure Enyzme:
 
 ```js
-import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 ```
@@ -340,33 +339,33 @@ configure({ adapter: new Adapter() });
 Since the file is short, I'll paste it now and then walk through what's going on.
 
 ```js
-import React from "react";
-import { shallow } from "enzyme";
+import React from 'react';
+import { shallow } from 'enzyme';
 
-import Breadcrumb from "./Breadcrumb";
+import Breadcrumb from './Breadcrumb';
 
 const testLinks = [
-  { label: "Test Link 1", href: "test-link-1" },
-  { label: "Test Link 2", href: "test-link-2" },
+  { label: 'Test Link 1', href: 'test-link-1' },
+  { label: 'Test Link 2', href: 'test-link-2' },
 ];
 
-describe("<Breadcrumb />", () => {
-  it("renders successfully with the correct aria attributes", () => {
+describe('<Breadcrumb />', () => {
+  it('renders successfully with the correct aria attributes', () => {
     const wrapper = shallow(<Breadcrumb links={testLinks} />);
 
-    const nav = wrapper.find("nav");
+    const nav = wrapper.find('nav');
     expect(nav).toHaveLength(1);
-    expect(nav.props()["aria-label"]).toBe("Breadcrumb");
+    expect(nav.props()['aria-label']).toBe('Breadcrumb');
 
-    const anchorElements = wrapper.find("a");
+    const anchorElements = wrapper.find('a');
     expect(anchorElements).toHaveLength(testLinks.length);
 
     const firstAnchor = anchorElements.first();
     expect(firstAnchor.text()).toBe(testLinks[0].label);
-    expect(firstAnchor.props()["href"]).toBe(testLinks[0].href);
+    expect(firstAnchor.props()['href']).toBe(testLinks[0].href);
 
     const lastAnchor = anchorElements.last();
-    expect(lastAnchor.props()["aria-current"]).toBe("page");
+    expect(lastAnchor.props()['aria-current']).toBe('page');
   });
 });
 ```
@@ -385,7 +384,7 @@ Then, we have our main [`describe`](https://jestjs.io/docs/en/api#describename-f
 
 5. Last but not least, we need to make sure the last anchor element has the `aria-current` attribute set to `"page"`. And you guessed it! Enzyme also has a [`last`]() method to go with `first`. Similar to how we checked the `aria-label` prop in 2, we expect it to have the string value of `"page"`.
 
-## Write the Documentation
+## 9. Write the Documentation
 
 We're almost done! Let's get the documentation written out and then we can admire our beautiful new component as a whole.
 
@@ -436,14 +435,14 @@ Not applicable.
 ## Usage
 
 <Breadcrumb
-  links={[
-    { label: "Link 1", href: "" },
-    { label: "Link 2", href: "" },
-    { label: "Link 3", href: "" }
-  ]}
+links={[
+{ label: "Link 1", href: "" },
+{ label: "Link 2", href: "" },
+{ label: "Link 3", href: "" }
+]}
 />
 ```
 
 ## Conclusion
 
-And that's it! We have an accessible Breadcrumb component. Join me on Twitch every Tuesday at 7pm EDT for live coding! We still have many more accessible React components to make and it's been so much fun this far. Make sure to [follow my channel](https://twitch.tv/ashleemboyer) so you're notified every time I go live!
+And that's it! We have an accessible Breadcrumb component. We still have many more accessible React components to make and it's been so much fun this far. Make sure to [follow my channel](https://twitch.tv/ashleemboyer) so you're notified every time I go live!

@@ -1,23 +1,25 @@
 ---
-title: "Build an Accessible React Component: The Live Series"
-date: "2020-04-19"
-description: "Join me every Tuesday as I add to my accessible React component library!"
-image: https://dev-to-uploads.s3.amazonaws.com/i/01ezxyfitq5a51i4jvsb.png
-alt: "Header reading this blog post's title."
+title: 'Build an Accessible React Component: The Live Series'
+date: '2020-04-19'
+description: 'This is where you can find all the details for my accessible React component live coding series.'
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FBuild%20an%20Accessible%20React%20Component%20The%20Live%20Series.png?alt=media&token=6b90bff4-abbd-4c40-98a2-2222ae2a3b21
+tags: [a11y, react, barc]
 ---
 
-# Thank you!! 🎉
+## First of all, Thank you so much! 🎉
 
-[Last Tuesday's stream](https://dev.to/ashleemboyer/live-tonight-build-a-react-firebase-blog-site-pp8) was fantastic! I now have two posts to add to my ["Build a React & Firebase Blog Site" Series](https://dev.to/ashleemboyer/build-a-react-firebase-blog-site-part-1-4gn0) and am considering packaging the series up in an ebook format!
+The "Build a React & Firebase Blog Site" live stream was fantastic! I now have two posts to add to my ["Build a React & Firebase Blog Site" Series](https://dev.to/ashleemboyer/build-a-react-firebase-blog-site-part-1-4gn0) and am considering packaging the series up in an ebook format! You can watch the video on YouTube!
 
-# What's this about? 🤔
+<iframe width="100%" height="400px" src="https://www.youtube.com/embed/UA0-DWfIuts" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-In the meantime, I've been thinking about topics for upcoming Tuesdays and have decided to make a whole series about building accessible React components. I have [an `a11y-components` repository](https://gitlab.com/ashleemboyer/a11y-components) with a couple of things in it already, but needed a break from all things outside of work for a while. What better way to pick things back up than with a live series to add to the repository?
+## What's this about? 🤔
 
-# Neat! How's it going to work? ✨
+In the meantime, I've been thinking about topics for upcoming live coding streams and have decided to make a whole series about building accessible React components. I have GitHub repository with a couple of things in it already, but needed a break from all things outside of work for a while. What better way to pick things back up than with a live series to add to the repository?
+
+## Neat! How's it going to work? ✨
 
 Here's the idea: we'll pick a random widget from the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices) with an on-screen wheel, then build it in React! If a really complex component is chosen, it might take an extra stream to finish it, but we'll walk through the whole thing from start to finish!
 
-# Let's gooo! 🏃‍♀️
+## Let's gooo! 🏃‍♀️
 
-To get notified when I go live on stream, you can [follow me on Twitch](https://twitch.tv/ashleemboyer). If you can't catch the stream live, it'll still be available afterwards to re-watch! I also plan on uploading my videos to YouTube really soon since they don't stay on Twitch forever.
+To get notified when I go live on stream, you can [follow me on Twitch](https://twitch.tv/ashleemboyer). If you can't catch the stream live, it'll still be available afterwards to re-watch! I also plan on uploading my videos to YouTube since they don't stay on Twitch forever. I'll also add to the bottom of this post as we make it though the series so everything is nicely grouped together.
