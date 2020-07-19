@@ -1,9 +1,9 @@
 ---
 title: Things You Shouldn't Say to a Disabled Person About Why Your App Isn't Accessible
-date: "2019-05-06"
+date: '2019-05-06'
 description: I'm a disabled woman and have a few thoughts about how able-bodied people speak to people like me about accessibility.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fno.jpg?alt=media&token=11530a14-26de-46b4-b290-1ecaf939e4ff
-alt: "Me hands-on-hips, standing in front of a brick building, looking sassily at the word No painted in large yellow letters."
+alt: 'Me hands-on-hips, standing in front of a brick building, looking sassily at the word No painted in large yellow letters.'
 ---
 
 Not that I feel the need to explain myself, but I want to share that I'm hard-of-hearing. It's genetic and just about everyone on my family's maternal side suffers significant hearing loss. I've had hearing aids since I was 10 years old, and as I've grown up, it becomes more and more clear to me how little people understand about the importance of accessibility.
@@ -25,7 +25,3 @@ No, you obviously don't. If you did, you wouldn't be saying any of these things 
 ## "There's no point if no one is using it."
 
 So, when people start using it, how do you plan on figuring out how many of them need a more accessible tool if we can't actually use it to tell you? We don't have the time for you to play catch up. We'll just go somewhere else.
-
----
-
-_Image by DSB._

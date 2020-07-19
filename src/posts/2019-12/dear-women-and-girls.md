@@ -28,7 +28,3 @@ We're socially trained to soften our language, but we can change that.
 Signed,
 
 A Tired Woman in Tech
-
----
-
-_[Image](https://unsplash.com/photos/Oz_J_FXKvIs) by [Kelly Sikkema](https://unsplash.com/@kellysikkema) on [Unsplash](https://unsplash.com)._

@@ -1,9 +1,9 @@
 ---
 title: Just do The Thing
-date: "2019-05-14"
+date: '2019-05-14'
 description: We all procrastinate from time to time at varying degrees. Sometimes you just have to go do whatever it is that you're avoiding.
 image: https://thepracticaldev.s3.amazonaws.com/i/m1j1j0d4hsnoein4r9ab.jpg
-alt: "An empty wooden desk and chair on a dark background."
+alt: 'An empty wooden desk and chair on a dark background.'
 ---
 
 I don't know where [Joshua Fields Millburn](https://twitter.com/JFM) was inspired by his advice, but [Steven Pressfield](https://twitter.com/SPressfield), Nike, and he all have roughly the same thing to say: "Just do it."
@@ -25,7 +25,3 @@ This is the 15th day of my 30-day blogging challenge, so I'm over halfway there.
 But all of those things will be there _after_ The Thing is done. You might also find that The Thing wasn't so bad or it didn't take as long as you thought it would. Just sit down and do it. You've got this!
 
 ![Jake Peralta excitedly giving Amy Santiago an encouraging thumbs up](https://media.giphy.com/media/d2ZeMUDQSSsCP9FC/giphy.gif)
-
----
-
-_[Image](https://unsplash.com/photos/9NI6PEGWxEc) by [GoaShape](https://unsplash.com/@goashape) on [Unsplash](https://unsplash.com)._

@@ -1,6 +1,6 @@
 ---
 title: Minimalism and Habits
-date: "2019-05-26"
+date: '2019-05-26'
 description: Good habits not only keep us on track, but they save us time and energy.
 image: https://thepracticaldev.s3.amazonaws.com/i/hovctbcvi5xfu1hw4cjj.jpg
 ---
@@ -22,7 +22,3 @@ Think of it as clearing mental space for doing what's most important. If you nee
 {% link https://dev.to/ashleemboyer/throw-all-of-your-email-subscriptions-in-the-garbage-25ah %}
 
 What habits are you working on or wanting to get started? Where could spend time minimizing things to make room for the habits you want to create?
-
----
-
-_[Image](https://unsplash.com/photos/ZOWgBZHi6Bg) by [mohssine chnaf](https://unsplash.com/@mohssinechnaf) on [Unsplash](https://unsplash.com)._

@@ -1,6 +1,6 @@
 ---
 title: Don't be Afraid to Ask Questions
-date: "2019-05-17"
+date: '2019-05-17'
 description: I'm an engineer and a natural-born master of asking questions. I used to be afraid of it, but there's really no reason to be.
 image: https://thepracticaldev.s3.amazonaws.com/i/om47qocu0lb2cgzd7u0g.jpg
 alt: 'Graffiti on a concrete wall that reads "Question every thing/body/day".'
@@ -25,7 +25,3 @@ I can't tell you how many people I've met through the DEV Community site and Twi
 Sometimes the scariest part about asking questions is knowing _how_ to ask them. You can make 10 attempts at Googling something and Google isn't going to judge you for doing it. Re-wording a question to a human a few times to make sure you're getting the right information? That can potentially be frustrating for both of you. But good news! The more you ask questions, the better you get at wording them.
 
 Have any insight on questions that you'd like to share? Leave a comment or [send me a tweet](https://twitter.com/ashleemboyer)! :)
-
----
-
-_[Image](https://unsplash.com/photos/gn5EmRwZb_Y) by [kgrkz](https://unsplash.com/@pepitaphotos) on [Unsplash](https://unsplash.com)._

@@ -1,9 +1,9 @@
 ---
 title: It's OK to Be Scared
-date: "2019-05-01"
+date: '2019-05-01'
 description: The unknown is absolutely terrifying, probably because we can't control what we don't know. But that's OK.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2FItsOKToBeScared.png?alt=media&token=586a9f2b-f91e-4291-91d0-5a81454e7b73
-alt: "A black and white image of a cat with short ears gazing out of the window of a brick building with a seemingly fearful look."
+alt: 'A black and white image of a cat with short ears gazing out of the window of a brick building with a seemingly fearful look.'
 ---
 
 _Originally written in late February 2019_
@@ -23,7 +23,3 @@ It took a while for everything to feel OK. But it got there, and I made it too. 
 Fear keeps us moving, whether or not it's in the right direction. What's important is that we look at our surroundings periodically to make sure we're on the right track. When you see something scary looking you dead in the eyes, just keep faith that you _will_ be OK.
 
 Everything will turn out exactly as it should.
-
----
-
-_[Image](https://unsplash.com/photos/n5zPMiIpX-M) by [irosmagelav](https://unsplash.com/@irosmagelav) on [Unsplash](unsplash.com)_

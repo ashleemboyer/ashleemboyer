@@ -1,9 +1,9 @@
 ---
 title: Don't be Afraid to Admit Your Weaknesses
-date: "2019-05-15"
+date: '2019-05-15'
 description: Listing out your flaws can feel awkward and uncomfortable, but guess what? We all have them, so let's bond with that discussion.
 image: https://thepracticaldev.s3.amazonaws.com/i/844vqwg32l16d5i5p5o7.jpg
-alt: "A black and white image of a woman curling a dumbbell."
+alt: 'A black and white image of a woman curling a dumbbell.'
 ---
 
 Do you know what it means when you can admit your weaknesses? It means you've probably recognized the following:
@@ -22,7 +22,3 @@ I get that they are my family and the dynamic is different than that of one in t
 A few years ago, I attended a weekend-long leadership workshop at my school. At one of the follow-up dinners, we went around the room and named something we wanted to spend 30 days improving. I named "road rage" because that's something I can be pretty bad about. The speaker was very surprised and we all laughed about it because it was relieving to hear such an honest answer.
 
 People appreciate honesty and vulnerability. Good people will thank you for being open. It's how we relate.
-
----
-
-_[Image](https://unsplash.com/photos/i5HmKogqjyw) by [Limor Zellermayer](https://unsplash.com/@limorganon) on [Unsplash](https://unsplash.com)._

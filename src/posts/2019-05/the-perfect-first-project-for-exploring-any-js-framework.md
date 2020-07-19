@@ -1,6 +1,6 @@
 ---
 title: The Perfect First Project for Exploring Any JS Framework
-date: "2019-05-07"
+date: '2019-05-07'
 description: Do you ever feel stumped on what project to create in a new framework after you finish your first tutorial? This one is simple and also a productive use of your time.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fyouvegotthis.jpg?alt=media&token=1261fcc4-889a-45c3-a7f3-30e7771a44b8
 alt: 'A laptop, mug of pencils, headphones, and a sign with the words "You''ve got this" sitting on a fluffy pink rug.'
@@ -28,7 +28,3 @@ Still feeling a little uninspired about design? Take a look at these sites for s
 - [Awwwards](https://www.awwwards.com/inspiration/search?text=resume)
 
 If you have any other ideas, or would like to share your work, please do leave it in the comments below or [send me a tweet](https://twitter.com/ashleemboyer)! I love seeing what other people create. 😊
-
----
-
-_[Image](https://unsplash.com/photos/O_CLjxjzN3M) by [Emma Matthews](https://unsplash.com/@emmamatthews) on [Unsplash](https://unsplash.com)._

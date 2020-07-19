@@ -1,6 +1,6 @@
 ---
 title: Yes, You Should Have Hobbies Outside of Code
-date: "2019-05-25"
+date: '2019-05-25'
 description: Hobbies give us a break from the real world. Take all you can get.
 image: https://thepracticaldev.s3.amazonaws.com/i/8tg3fiv9qyhdbj5lzyoe.jpg
 ---
@@ -16,7 +16,3 @@ Let's start by acknowledging we'll never learn everything. First of all, it's im
 You _must_ balance learning with other activities. Without balance, you risk burnout, as is the case with most things. So, find some hobbies! I personally enjoy knitting, crocheting, cross-stitching, and reading memoirs. Creative hobbies are very beneficial. You can meet new people who share the same hobby, have interesting things to talk about yourself in job interviews, and clear your mind for a while from stressful things.
 
 Have any non-code hobbies you'd like to share? Drop a comment! :)
-
----
-
-_[Image](https://unsplash.com/photos/P6-S4QZtAvA) by [Olliss](https://unsplash.com/@fomaolea) on [Unsplash](https://unsplash.com)._

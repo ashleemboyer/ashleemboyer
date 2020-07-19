@@ -1,9 +1,9 @@
 ---
 title: What it Means to Learn Out Loud
-date: "2019-05-09"
+date: '2019-05-09'
 description: You don't have to know all of the answers right now.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Floud.jpg?alt=media&token=f2357842-5db0-444d-9991-82a46115b752
-alt: "A black and white image of a young boy, eyes closed, singingly loudly into a microphone."
+alt: 'A black and white image of a young boy, eyes closed, singingly loudly into a microphone.'
 tags: [learning, interviews]
 ---
 
@@ -24,7 +24,3 @@ Some days, you're going to be visiting Google and Stack Overflow dozens of times
 Since learning is the expectation of any job, what _should_ be important to interviewers is how someone learns, not whether or not they have every Big O notation memorized. The best way for you to showcase your learning skills is by doing so out loud. When you get a difficult question during your whiteboard pseudocode test, step through your thought process. If you get stuck, say so! Then proceed by explaining what you would do next.
 
 What will your search terms be? Have you seen this kind of problem before? What questions would you ask a fellow teammate? Answer these questions well by _doing_, and your chances of impressing the interviewer are huge.
-
----
-
-_[Image](https://unsplash.com/photos/ASKeuOZqhYU) by [Jason Rosewell](https://unsplash.com/@jasonrosewell) on [Unsplash](https://unsplash.com)._

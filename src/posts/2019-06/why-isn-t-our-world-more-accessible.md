@@ -1,6 +1,6 @@
 ---
 title: Why isn't our world more accessible?
-date: "2019-06-25"
+date: '2019-06-25'
 description: Slow down, look around.
 image: https://thepracticaldev.s3.amazonaws.com/i/sbqg8qdag2tae28cwllg.jpg
 ---
@@ -14,7 +14,3 @@ If there are stores and restaurants, are they at the ground level or is there a 
 These are some of the thoughts that have gone through my head over the past few days. It's actually pretty appalling, the quality of some of our sidewalks and crosswalks. These are just the visible issues most people could see if they'd just stop and look.
 
 Can you imagine what accessibility issues exist that aren't as visible?
-
----
-
-_[Image](https://unsplash.com/photos/9FfJW5Tu_qk) by [Rikki Chan](https://unsplash.com/@rikkichan89) on [Unsplash](https://unsplash.com)._

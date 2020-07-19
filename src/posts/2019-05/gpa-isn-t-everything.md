@@ -1,9 +1,9 @@
 ---
 title: GPA Isn't Everything
-date: "2019-05-13"
+date: '2019-05-13'
 description: Employers put far too much weight on GPA as an indicator of work ethic, intelligence, and capability when really, it has almost nothing to do with it.
 image: https://thepracticaldev.s3.amazonaws.com/i/5ftagp29fvcgxphvjhh4.jpg
-alt: "A silhouette of several people on a hill at sunset throwing their graduation caps into the sky."
+alt: 'A silhouette of several people on a hill at sunset throwing their graduation caps into the sky.'
 ---
 
 I'm finishing up my degree at one of the top undergraduate engineering schools in the country. Applicants are typically at the very top of their high school class and have great SAT and ACT scores. I did pretty well during the last few years of high school and worked extremely hard to get into the school.
@@ -27,7 +27,3 @@ I also always emphasized the fact that I had a plan for correcting my path. When
 My GPA never even reached a 3.0. I tried _so hard_ to get it there. But things just kept happening. Life got in the way over and over again, but you know what? I'm almost there, and I'm doing just fine. GPA is not the only factor to the kind of person someone is, and if a company filters you out based on what that number is? Forget them. There's a 90% chance they aren't the kind of company you want to work for anyways.
 
 You have a **story**. It is **important**. Anyone who isn't willing to listen to it before shrugging you off isn't **worth your time**.
-
----
-
-_[Image](https://unsplash.com/photos/pYWuOMhtc6k) by [Baim Hanif](https://unsplash.com/@baim) on [Unsplash](https://unsplash.com)._

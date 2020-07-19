@@ -31,7 +31,3 @@ So what's starting to bring me out of this now?
 If you're struggling with burnout, I suggest trying all of these things. Some of them will work and some of them won't. Everyone is different and even every time you experience burnout can be different. The people who matter will understand what you're going through. The ones who don't might judge you and try to make you feel bad rather than lend a hand.
 
 Stick around the folks that lend a hand and support you. They'll see you through this. You'll make it to the other side.
-
----
-
-<em>[Image](https://unsplash.com/photos/t8T_yUgCKSM) by [Elijah O'Donnell](https://unsplash.com/@elijahsad) on [Unsplash](https://unsplash.com)</em>

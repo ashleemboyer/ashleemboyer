@@ -1,6 +1,6 @@
 ---
 title: How to Accept Rejection in Your Professional Life
-date: "2019-05-11"
+date: '2019-05-11'
 description: Rejection can be really painful, but there are a few things you can try to move forward in a healthy and positive direction.
 image: https://thepracticaldev.s3.amazonaws.com/i/v8vyphl2fei9auffc0cu.jpg
 alt: 'Close-up of a cross-walk sign with the orange "Do not walk" hand displayed.'
@@ -17,7 +17,3 @@ Once you've thanked them, then consider some potential questions for feedback. Y
 This is where you can take the answers to these questions and run with them. Hopefully, you receive positive, helpful feedback. Build on it and make yourself an even stronger candidate. If the feedback wasn't helpful or you get shrugged off, however, it might be time to look deeper into the situation. In this case, find an outside perspective to talk to about it. They may see something you don't.
 
 Regardless, keep in mind that you are not alone in being rejected. It happens to everyone, every day. Don't be afraid to put yourself out there. You might come across the opportunity of a lifetime.
-
----
-
-_[Image](https://unsplash.com/photos/1k3vsv7iIIc) by [Kai Pilger](https://unsplash.com/@kaip) on [Unsplash](https://unsplash.com)._

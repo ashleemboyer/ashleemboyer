@@ -1,7 +1,7 @@
 ---
 title: Udemy Needs to Review Courses and Vet Instructors
 date: 2019-09-16
-description: "Udemy needs to do better to ensure the safety of the public."
+description: 'Udemy needs to do better to ensure the safety of the public.'
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fudemy%2Fudemy.png?alt=media&token=fe3eb82c-57b6-490a-9ea5-723133bba439
 alt: "Header reading the this blog post's title. The background is a large lecture hall with light brown, wooden chairs and white walls."
 ---
@@ -150,7 +150,3 @@ Just go read the descriptions. Have a bucket nearby you can vomit into.
 I want you to flood their mentions.
 
 Pressure them into making change. Report awful courses. It's 2019, we have lots of people wanting to write software to filter this kind of crap, and there's no excuse for exposing paying customers to danger. Notice how Udemy never made a public tweet about this? They want to keep it quiet. Don't let them.
-
----
-
-_[Image](https://unsplash.com/photos/ewGMqs2tmJI) by [Nathan Dumlao](https://unsplash.com/@nate_dumlao) on [Unsplash](https://unsplash.com)_

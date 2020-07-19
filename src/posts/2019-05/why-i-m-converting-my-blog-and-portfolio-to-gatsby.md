@@ -1,9 +1,9 @@
 ---
 title: Why I'm Converting my Blog and Portfolio to Gatsby
-date: "2019-05-03"
+date: '2019-05-03'
 description: "I just published my new sites less than 2 weeks ago. Yeah, we devs and designers tend to redo our sites a lot, but isn't this a bit excessive?"
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Froads.jpg?alt=media&token=4750e655-f53f-4a1c-8462-5988d542108e
-alt: "Looking at the horizon of a brown and green landscape from the center of a newly paved road under an overcast sky."
+alt: 'Looking at the horizon of a brown and green landscape from the center of a newly paved road under an overcast sky.'
 tags: [gatsby, blogging, portfolios, redesign]
 ---
 
@@ -22,7 +22,3 @@ In all seriousness, I hadn't tried Gatsby out before publishing the current Angu
 And let's be honest, I just want to play around with Gatsby some more. You see a ton of people who use it for their blog sites, so I want to take that information and use it to challenge myself to make something that'll really stand out. 💪🏻
 
 So, what about you? Do you use Gatsby for your sites, or do you plan to? I'd love to hear about your projects in the comments or [on Twitter](https://twitter.com/ashleemboyer).
-
----
-
-_[Image](https://unsplash.com/photos/dpzp54GkIGI) by [Arnaud STECKLE](https://unsplash.com/@wdtrends) on [Unsplash](unsplash.com)._

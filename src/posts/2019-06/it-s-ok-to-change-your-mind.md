@@ -1,6 +1,6 @@
 ---
 title: It's OK to Change Your Mind
-date: "2019-06-11"
+date: '2019-06-11'
 description: I change my mind so often. Maybe it's a curse, but it's usually a sign of something bigger.
 image: https://thepracticaldev.s3.amazonaws.com/i/eeen3nsks27i0k9gkz5c.jpg
 ---
@@ -29,7 +29,3 @@ Here's the moral of the story: you can change your mind whenever you want to. I 
 But then I remembered: I _started_ blogging for _me_. People finding value in what I write is an added benefit! Of course, I still want people to enjoy reading what I write, but I also need to enjoy what I'm writing or I'll burn right out.
 
 You are your primary stakeholder. Keep doing the things you enjoy, and if you're not enjoying what you're doing, give it your very best shot to turn that around.
-
----
-
-[Image](https://unsplash.com/photos/ixZqFkb-iPY) by [Beth Ireland](https://unsplash.com/@bethirelandphotography) on [Unsplash](https://unsplash.com)

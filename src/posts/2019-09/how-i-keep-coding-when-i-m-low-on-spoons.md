@@ -63,7 +63,3 @@ Once you're home, use your remedies! I have 3 or 4 things I try before declaring
 ### Moral of the story
 
 [Just take a break](https://ashleemboyer.com/don-t-forget-to-take-breaks). You are one person and can only do so much. Don't overextend yourself. You and your work will suffer.
-
----
-
-_[Image](https://unsplash.com/photos/yPHqPB9xa5g) by [Emma Frances Logan](https://unsplash.com/@emmafranceslogan) on [Unsplash](https://unsplash.com)._

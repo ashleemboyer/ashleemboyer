@@ -1,6 +1,6 @@
 ---
 title: My Journey Into Software Engineering
-date: "2019-07-02"
+date: '2019-07-02'
 description: A lot of people have been telling their stories. Here's mine.
 image: https://thepracticaldev.s3.amazonaws.com/i/rsjm8jhn1y549mdm85ya.jpg
 ---
@@ -24,7 +24,3 @@ The journey from then until I got out of college felt like actual hell, but it w
 When I look back, I wish I had known about all of my options and not felt so pressured to hurry up and graduate college. I'm not sure I'd recommend the college route to everyone. Especially in the last several months, I don't see why someone who's self-taught can't be as successful as someone with a heckin' expensive piece of paper. It's all about hard work, which you can't see at surface level. The same thing is true about GPA, something that might as well have not existed for me.
 
 Hearing everyone's stories over the past few days has really opened my eyes. There's a ton of talent in this industry coming from all backgrounds. Let's continue to build an inclusive culture in tech! So much possibility awaits.
-
----
-
-_[Image](https://unsplash.com/photos/VLWy8LIdzsQ) by [Rob Potvin](https://unsplash.com/@robpotvin) on [Unsplash](https://unsplash.com)._

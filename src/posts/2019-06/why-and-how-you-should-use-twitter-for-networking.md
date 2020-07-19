@@ -1,6 +1,6 @@
 ---
 title: Why and How You Should Use Twitter for Networking
-date: "2019-06-07"
+date: '2019-06-07'
 description: I used to think all of Twitter was a dumpster fire. Then I started completely over and it changed my whole life.
 tags: [networking, socialmedia, twitter]
 image: https://thepracticaldev.s3.amazonaws.com/i/46b1tue67sb7hynqha8j.jpg
@@ -37,7 +37,3 @@ My biggest is advice is this: just put yourself out there. Be unapologetically a
 My second piece of advice: go out of your comfort zone. Interact with "famous" people. Ask questions. Answer questions! We're all learning here. If people make you feel bad about yourself because you're new to the field or trying something new, that's not on you. There are plenty of supportive folx who will have your back and don't mind _whatsoever_ where you're at in your career or skillset.
 
 My final piece of advice: learn out loud. It may seem like no one is listening at first, but that's what handy hashtags are for! People _do_ follow those. If you created a static site with Gatsby, @ them. They'll probably retweet it! This is just one good way to get some exposure and even feedback on what you're working on.
-
----
-
-_[Image](https://unsplash.com/photos/cJDwJ4X2IrQ) by [Sara Kurfeß](https://unsplash.com/@stereophototyp) on [Unsplash](https://unsplash.com)_

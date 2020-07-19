@@ -1,9 +1,9 @@
 ---
 title: The Top Five Books on my TBR
-date: "2019-05-08"
+date: '2019-05-08'
 description: Let's be honest, my TBR is endless. While they do switch around periodically, I do have a few top books that I plan to read first.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fbooks.jpg?alt=media&token=4cc336ef-033d-4fe7-83f0-5231ac2bfb37
-alt: "Looking upwards into a tall silo of books stacked like bricks."
+alt: 'Looking upwards into a tall silo of books stacked like bricks.'
 ---
 
 I hate reading more than one book at a time, but here I am, reading three. I think? I can't even be sure. This is why I should practice self-control and only do one at a time.
@@ -42,7 +42,3 @@ No prior experience in UX or design is necessary to get started. If you’re an 
 # 5. Jeremy Baines's & Clive Howard's [_UX Lifecycle_](https://www.amazon.com/UX-Lifecycle-business-implementing-experiences/dp/1522768300)
 
 This book is for organisations starting their UX journey. It will help to address the basics such as defining what UX is; the importance of research; how UX is a process and not a job title; and where business value comes from improving efficiency, effectiveness, and satisfaction. There is practical guidance for building a business case and identifying the key investments required in people and process that will bring about the change needed to deliver success. Implementing UX is brought to life through the UX Lifecycle, a methodology framework that was born out of real life successes. At the heart of the UX process is the most important stakeholder - the user! Clive and Jeremy have helped businesses from start-ups to enterprises derive value from UX. While running their own UX consultancy they created and applied the UX Lifecycle. Since then they have both continued to grow their knowledge through implementing UX solutions and learning from others. This book will answer the questions that they have been asked time and again by businesses seeking to embrace and leverage UX.
-
----
-
-_[Image](https://unsplash.com/photos/wk833OrQLJE) by [Lysander Yuen](https://unsplash.com/@lysanderyuen) on [Unsplash](https://unsplash.com)_

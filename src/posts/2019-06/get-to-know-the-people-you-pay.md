@@ -1,6 +1,6 @@
 ---
 title: Get to Know the People You Pay
-date: "2019-06-06"
+date: '2019-06-06'
 description: Know who you're sending your money to, especially when you send them a lot.
 image: https://thepracticaldev.s3.amazonaws.com/i/xit8xs31acb6cccklfcu.jpg
 ---
@@ -32,7 +32,3 @@ Going back to my above-mentioned situation specifically, it's hard to describe h
 I keep trying to write the next sentence and they keep coming out wrong. It's a really strange feeling to know I was sitting for months on end putting in so much effort, and the simplest effort wasn't being put back into me. It feels lonely and isolating.
 
 Bottom line, just do the right thing. Don't let your employees feel like that. All it takes is a few conversations and a little bit of effort towards remembering facts about people. Make the people you pay feel important.
-
----
-
-_[Image](https://unsplash.com/photos/dZxQn4VEv2M) by [Shridhar Gupta](https://unsplash.com/@shridhar) on [Unsplash](https://unsplash.com)._
