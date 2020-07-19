@@ -1,5 +1,5 @@
 ---
-title: 'Build an Accessible Breadcrumb Component: Part 1 Part 1 in the Accessible React Component Series'
+title: 'Build an Accessible Breadcrumb Component: Part 1 in the Accessible React Component Series'
 date: '2020-04-25'
 description: 'The first accessible React component in the live series is a breadcrumb.'
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FBuild%20an%20Accessible%20Breadcrumb%20Component.png?alt=media&token=fa786a6e-c227-4458-92df-13129ce4ce86
