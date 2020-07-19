@@ -3,6 +3,7 @@ title: Yes, You Should Have Hobbies Outside of Code
 date: '2019-05-25'
 description: Hobbies give us a break from the real world. Take all you can get.
 image: https://thepracticaldev.s3.amazonaws.com/i/8tg3fiv9qyhdbj5lzyoe.jpg
+tags: [hobbies, habits, self care]
 ---
 
 I came across an excellent tweet last night by Twitter user [Amycruz](https://twitter.com/AmarachiAmaechi):

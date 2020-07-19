@@ -3,6 +3,7 @@ title: Just Make That App
 date: '2019-05-27'
 description: Like questions, there are no dumb ideas. Every single idea you have leads to a learning experience.
 image: https://thepracticaldev.s3.amazonaws.com/i/2tlg9fup9m4gzcnqyybg.jpg
+tags: [web development]
 ---
 
 As someone who's new to the web dev game, I find it hard to accept all my ideas as good ones. Yes, you read that right, _all_ ideas are good ideas. Ideas are similar to questions, it's all about the timing. Every single idea you have leads to a learning experience.

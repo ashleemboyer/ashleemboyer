@@ -3,6 +3,7 @@ title: I Know You're Tired
 date: '2019-05-30'
 description: Life is really hard sometimes. We're all going through something. You're not alone.
 image: https://thepracticaldev.s3.amazonaws.com/i/pna3agup405nb4roi5ve.jpg
+tags: [self care, mental health]
 ---
 
 _Life is really hard sometimes. We're all going through something. You're not alone._

@@ -3,6 +3,7 @@ title: Why isn't our world more accessible?
 date: '2019-06-25'
 description: Slow down, look around.
 image: https://thepracticaldev.s3.amazonaws.com/i/sbqg8qdag2tae28cwllg.jpg
+tags: [a11y]
 ---
 
 Next time you walk around some city streets, take a look around.

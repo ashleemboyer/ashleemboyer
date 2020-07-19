@@ -3,6 +3,7 @@ title: "Introducing textua11y: A Color Contrast Tool"
 date: "2019-05-28"
 description: Looking for a quick way to test foreground and background colors in text-heavy areas of your web application?
 image: https://thepracticaldev.s3.amazonaws.com/i/ujvl87jd49qvfbsmcudz.png
+tags: [textua11y]
 ---
 
 Yesterday, I made a post about ideas and going after them. Every idea is a learning experience. There are no dumb ideas.

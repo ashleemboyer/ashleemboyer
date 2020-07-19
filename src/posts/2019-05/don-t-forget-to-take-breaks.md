@@ -3,7 +3,7 @@ title: Don't Forget to Take Breaks
 date: '2019-05-04'
 description: "You and your health are important. If you want to do your job effectively, make sure you're taking breaks."
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fbreaks.jpg?alt=media&token=c7014483-5733-4088-9d89-dc07733f3e59
-alt: 'A smiling orange and white cat sleeping beneath a soft-looking, white comforter.'
+tags: [self care, mental health]
 ---
 
 Do you want to know what I most often forget to do when I'm working really hard? _I forget to eat._ That's a funny thought at first. Like, how do you forget something so vital to your existence? (I have zero ideas, so please tell me if you know the answer. My stomach will appreciate it.)

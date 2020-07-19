@@ -3,7 +3,7 @@ title: Aim to Never Stop Learning
 date: '2019-05-18'
 description: It's OK to not know everything. It's OK to be wrong.
 image: https://thepracticaldev.s3.amazonaws.com/i/7l8063akyshvmi2y8nou.jpg
-alt: 'A blue set of double doors on a large wall of aged books.'
+tags: [learning]
 ---
 
 You will never know everything. There's too much information out there and not enough time to learn it all. What this means is, sometimes we're wrong because we just don't know all of the answers. And that's fine&mdash;it's 100% OK to be wrong!

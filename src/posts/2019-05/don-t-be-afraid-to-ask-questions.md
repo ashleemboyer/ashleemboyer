@@ -3,7 +3,7 @@ title: Don't be Afraid to Ask Questions
 date: '2019-05-17'
 description: I'm an engineer and a natural-born master of asking questions. I used to be afraid of it, but there's really no reason to be.
 image: https://thepracticaldev.s3.amazonaws.com/i/om47qocu0lb2cgzd7u0g.jpg
-alt: 'Graffiti on a concrete wall that reads "Question every thing/body/day".'
+tags: [learning, questions]
 ---
 
 There's no such thing as a stupid question. There may be stupid timing for it, such as a student asking when an exam is 5 minutes after the teacher already announced that information. But that was still a good question, they just asked it at a horrible time.

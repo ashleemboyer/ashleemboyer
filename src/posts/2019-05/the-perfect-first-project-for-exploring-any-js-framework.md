@@ -3,7 +3,7 @@ title: The Perfect First Project for Exploring Any JS Framework
 date: '2019-05-07'
 description: Do you ever feel stumped on what project to create in a new framework after you finish your first tutorial? This one is simple and also a productive use of your time.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fyouvegotthis.jpg?alt=media&token=1261fcc4-889a-45c3-a7f3-30e7771a44b8
-alt: 'A laptop, mug of pencils, headphones, and a sign with the words "You''ve got this" sitting on a fluffy pink rug.'
+tags: [web development, javascript]
 ---
 
 The worst part of finishing a tutorial is not knowing what to do next. You _could_ go look up some app ideas online, but aren't you tired of making to-do lists and calculators you probably won't use? It probably feels like there's nothing left to make.

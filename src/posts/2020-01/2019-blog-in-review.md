@@ -3,7 +3,7 @@ title: 2019 Blog in Review
 date: "2020-01-01"
 description: I blogged regularly for the first time in 2019. How'd it go?
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2020%2F01%2F2019-review.png?alt=media&token=1125950d-2ca8-4427-b8dc-382683c3f749
-alt: "Header reading this blog post's title."
+tags: [blogging, writing]
 ---
 
 ## Table of Contents

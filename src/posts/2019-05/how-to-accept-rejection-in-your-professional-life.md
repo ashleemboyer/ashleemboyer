@@ -3,7 +3,7 @@ title: How to Accept Rejection in Your Professional Life
 date: '2019-05-11'
 description: Rejection can be really painful, but there are a few things you can try to move forward in a healthy and positive direction.
 image: https://thepracticaldev.s3.amazonaws.com/i/v8vyphl2fei9auffc0cu.jpg
-alt: 'Close-up of a cross-walk sign with the orange "Do not walk" hand displayed.'
+tags: [job search]
 ---
 
 Rejection sucks, and for some reason, rejection from acquaintances and strangers _especially_ sucks. Maybe you submitted a proposal to give a talk at an event and weren't selected for it. Maybe you applied for a job and they didn't give you an interview. Maybe you asked for a promotion or salary raise and couldn't get what you needed. How do we move on from rejection like this?

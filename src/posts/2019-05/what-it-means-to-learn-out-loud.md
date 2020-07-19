@@ -3,8 +3,7 @@ title: What it Means to Learn Out Loud
 date: '2019-05-09'
 description: You don't have to know all of the answers right now.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Floud.jpg?alt=media&token=f2357842-5db0-444d-9991-82a46115b752
-alt: 'A black and white image of a young boy, eyes closed, singingly loudly into a microphone.'
-tags: [learning, interviews]
+tags: [learning, job search]
 ---
 
 I first heard the phrase "learn out loud" from the [Office Hours podcast](https://discoverpraxis.com/office-hours/). In [this article](https://discoverpraxis.com/3-reasons-learn-loud/), podcast co-host T.K. Coleman gives us three reasons to do so. I'd like to focus on the first reason he gives and show you how to apply it to the job search.

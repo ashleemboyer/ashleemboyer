@@ -3,8 +3,7 @@ title: Why I'm Converting my Blog and Portfolio to Gatsby
 date: '2019-05-03'
 description: "I just published my new sites less than 2 weeks ago. Yeah, we devs and designers tend to redo our sites a lot, but isn't this a bit excessive?"
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Froads.jpg?alt=media&token=4750e655-f53f-4a1c-8462-5988d542108e
-alt: 'Looking at the horizon of a brown and green landscape from the center of a newly paved road under an overcast sky.'
-tags: [gatsby, blogging, portfolios, redesign]
+tags: [gatsby, blogging, portfolios]
 ---
 
 Why, yes, I would love to be done with the set up of my sites so I could focus more on the side projects I want to post on my portfolio.

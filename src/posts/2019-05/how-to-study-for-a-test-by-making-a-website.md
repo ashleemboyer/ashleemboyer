@@ -3,7 +3,7 @@ title: How to Study for a Test by Making a Website
 date: '2019-05-19'
 description: I have a final a in a few days, but have also been itching to write code outside of work. So, I'm making a site to study for my final!
 image: https://thepracticaldev.s3.amazonaws.com/i/710igobqin8ewfu26hm8.jpg
-alt: 'A pair of glasses on top of a laptop, next to a mouse on a wooden table.'
+tags: [learning]
 ---
 
 With my crazy schedule of driving 1.5 hours one-way for a class four days a week, I haven't had as much time to write code outside of work. I also see tons of people on Twitter talking about React or Gatbsy, which makes me want to dig into them even more.

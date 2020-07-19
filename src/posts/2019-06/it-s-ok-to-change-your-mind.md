@@ -3,11 +3,10 @@ title: It's OK to Change Your Mind
 date: '2019-06-11'
 description: I change my mind so often. Maybe it's a curse, but it's usually a sign of something bigger.
 image: https://thepracticaldev.s3.amazonaws.com/i/eeen3nsks27i0k9gkz5c.jpg
+tags: [blogging]
 ---
 
 Last week, I was feeling [fired up and ready to go](https://youtu.be/5AhRqg0ADbk). I wrote a whole post about some exciting things and plans.
-
-{% link ashleemboyer/good-news-textua11y-updates-and-my-plan-for-future-writings-4g6e %}
 
 But here's the thing: I've thought some more about my plans for writing, and I'm changing my mind. Let me get into the "why". The plans I made were way too strict for me. This is probably because of the spontaneous nature of [my recent 30-day blogging challenge](https://dev.to/ashleemboyer/after-30-days-of-writing-on-dev-to-a08), but I think it also has to do with deadlines.
 

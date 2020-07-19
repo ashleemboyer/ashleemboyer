@@ -3,7 +3,7 @@ title: Udemy Needs to Review Courses and Vet Instructors
 date: 2019-09-16
 description: 'Udemy needs to do better to ensure the safety of the public.'
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fudemy%2Fudemy.png?alt=media&token=fe3eb82c-57b6-490a-9ea5-723133bba439
-alt: "Header reading the this blog post's title. The background is a large lecture hall with light brown, wooden chairs and white walls."
+tags: [women in tech]
 ---
 
 > _Trigger Warning: violence against women_

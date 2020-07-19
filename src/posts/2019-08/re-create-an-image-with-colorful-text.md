@@ -3,6 +3,7 @@ title: Re-Create an Image with Colorful Text
 date: "2019-08-11"
 description: Try some art with your code.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2FtrooperText.png?alt=media&token=ec6a85f8-12e9-4c5d-b7c0-2ef89c770bc4
+tags: [art]
 ---
 
 Hey, friends! It's been a while, but I'm back with something fun. Yesterday, I tweeted out about an image I analyzed and then re-created with my name. It's garnered quite a bit of attention so I figured I'd tell everyone how I did it! It involves the HTML `canvas` element and a little bit of looping over data from that to get information about the colors within the image. Let's get started!

@@ -3,6 +3,7 @@ title: "Working in Circle City, Day 1: Many Firsts"
 date: "2019-06-17"
 description: This place is so exciting. This series is all about my new adventure.
 image: https://thepracticaldev.s3.amazonaws.com/i/2uuoe4i7ahw0tsfmnvd1.jpeg
+tags: [circle city]
 ---
 
 My new job is downtown Indianapolis. Today was my first day for a whole list of things!

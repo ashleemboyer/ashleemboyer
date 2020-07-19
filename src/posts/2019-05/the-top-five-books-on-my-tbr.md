@@ -3,7 +3,7 @@ title: The Top Five Books on my TBR
 date: '2019-05-08'
 description: Let's be honest, my TBR is endless. While they do switch around periodically, I do have a few top books that I plan to read first.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fbooks.jpg?alt=media&token=4cc336ef-033d-4fe7-83f0-5231ac2bfb37
-alt: 'Looking upwards into a tall silo of books stacked like bricks.'
+tags: [reading, books]
 ---
 
 I hate reading more than one book at a time, but here I am, reading three. I think? I can't even be sure. This is why I should practice self-control and only do one at a time.

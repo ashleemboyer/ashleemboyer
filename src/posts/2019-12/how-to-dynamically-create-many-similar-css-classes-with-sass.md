@@ -3,7 +3,7 @@ title: How to Dynamically Create Many Similar CSS Classes with Sass
 date: 2019-12-19
 description: Repeated code takes up a lot of space. Sass can help you reduce repetitive and similar CSS code.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fsass.png?alt=media&token=4035f9c6-3055-4d51-a608-1eb229dfeb05
-alt: "Header reading the this blog post's title." 
+tags: [css, scss]
 ---
 
 Let's say you allow 5 sizes of icons in your web application and they're in 6-pixel increments: 12, 18, 24, 30, and 36. Your Sass file might have something like the following to handle this:

@@ -3,7 +3,7 @@ title: My Favorite Resource for Making Accessible Custom Components
 date: '2020-02-07'
 description: Want to make your components accessible but not sure about the technical feasibility or how to get started? Take a look at the WAI-ARIA Authoring Practices by W3C!
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FMy%20Favorite%20Resource%20for%20Making%20Accessible%20Custom%20Components.png?alt=media&token=fa982680-b3b2-4a27-a1b3-63c23db8da4e
-alt: "Header reading this blog post's title."
+tags: [a11y]
 ---
 
 I'll admit: making web apps accessible can be challenging, especially when you're new to it. It requires thinking from the perspective of disabled users and having some knowledge about the assistive tools they use, such as screen readers. You may also feel overwhelmed when you start reading documentation. There is a ton of information out there! So I'm going to share with you my favorite resource that I use when making accessible custom components and I'll also tell you about how I like to use it.

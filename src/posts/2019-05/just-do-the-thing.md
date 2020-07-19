@@ -3,7 +3,7 @@ title: Just do The Thing
 date: '2019-05-14'
 description: We all procrastinate from time to time at varying degrees. Sometimes you just have to go do whatever it is that you're avoiding.
 image: https://thepracticaldev.s3.amazonaws.com/i/m1j1j0d4hsnoein4r9ab.jpg
-alt: 'An empty wooden desk and chair on a dark background.'
+tags: [writing, blogging]
 ---
 
 I don't know where [Joshua Fields Millburn](https://twitter.com/JFM) was inspired by his advice, but [Steven Pressfield](https://twitter.com/SPressfield), Nike, and he all have roughly the same thing to say: "Just do it."

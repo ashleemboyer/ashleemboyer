@@ -3,7 +3,7 @@ title: Throw All of your Email Subscriptions in the Garbage
 date: '2019-05-16'
 description: Who cares about inbox zero? Just get rid of all the crap you don't even read.
 image: https://thepracticaldev.s3.amazonaws.com/i/392zldjmmhtrdqx650ts.jpg
-alt: 'Several white, yellow, and off-white envelopes and tags laid flat.'
+tags: [organization]
 ---
 
 I do. not. care. about inbox zero. :) Too often, it becomes less about efficiently managing your inbox and more about rushing to have no emails for any reason. I prefer to make sure I'm adequately handling messages instead of emptying my box. But still, my number one tip for a clean inbox?

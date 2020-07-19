@@ -2,6 +2,7 @@
 title: After 30 Days of Writing on DEV.to
 date: "2019-05-29"
 description: This is my 30th post on the DEV Community site. Here's a summary of my experience.
+tags: [blogging]
 ---
 
 This past month of publishing one post per day far exceeded my expectations. I was inspired to do this challenge by the co-hosts of the [Office Hours Podcast](https://discoverpraxis.com/office-hours/), [T.K. Coleman](https://twitter.com/TK_Coleman) and [Isaac Morehouse](https://twitter.com/isaacmorehouse). They talk about the challenge a lot, so I decided to just dive in. Here are my results.

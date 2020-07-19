@@ -3,6 +3,7 @@ title: Minimalism and Habits
 date: '2019-05-26'
 description: Good habits not only keep us on track, but they save us time and energy.
 image: https://thepracticaldev.s3.amazonaws.com/i/hovctbcvi5xfu1hw4cjj.jpg
+tags: [minimalism, habits]
 ---
 
 [Charles Duhigg](https://twitter.com/cduhigg)'s [_The Power of Habit_](https://www.amazon.com/Power-Habit-What-Life-Business/dp/B007EJSMC8/ref=tmm_aud_swatch_0?_encoding=UTF8&qid=&sr=) is an awesome book that gets into the science of decision-making and forming habits. My favorite takeaway from the book is that habits are things we end up doing automatically, meaning we don't even have to use as much energy to think about doing them.

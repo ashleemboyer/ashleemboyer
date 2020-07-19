@@ -3,6 +3,7 @@ title: How I Get Things Done When I'm Feeling Overwhelmed
 date: '2019-06-12'
 description: I freeze up when overwhelmed by too many things to do. Here's how I start to work through the paralyzation.
 image: https://thepracticaldev.s3.amazonaws.com/i/41q88phf6p2ncsqzt3lv.jpg
+tags: [self care, mental health]
 ---
 
 [Fiona Thomas](https://twitter.com/fionalikes), author of [_Depression in a Digital Age_](https://www.amazon.com/Depression-Digital-Age-Highs-Perfectionism/dp/1912478501), has a free ebook called [_How to Get Stuff Done with Depression_](https://fionalikestoblog.com/2017/09/19/getstuffdone/?fbclid=IwAR3l2_kzCXyUB6SbGbPU9f6p8ga4HOfkB9-ad4eyb0MfgiIAqo3mUhs54jA). In it, I found advice that helped me in my worst times. A little over a year ago, I was still on campus at Rose and was so depressed and anxious I could hardly function. It's an evil cycle: I felt bad about being unable to be a good student, employee at my part-time job, dog mom to the lovely Trooper, or partner to Zach; then I felt worse because I couldn't perform pretty simple tasks around our place such as loading the dishwasher.

@@ -3,6 +3,7 @@ title: Get Started with HTML Video Captions
 date: "2019-06-14"
 description: Adding captions to an HTML video isn't hard at all. You can get a mini project together in just a few minutes.
 image: https://thepracticaldev.s3.amazonaws.com/i/0c29s1oopy8xoutfow4b.gif
+tags: [a11y, captions]
 ---
 
 Did you know you can add captions to `<video>` elements with a little HTML and a VTT file? I didn't know until today! It's really easy to do (so long as you format your VTT file correctly... shout out to [Conlin Durbin](https://twitter.com/CallMeWuz) for helping me find that error 😄). At a minimum, you need 3 files:

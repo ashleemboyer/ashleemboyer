@@ -3,8 +3,7 @@ title: Build a Multi-Page Gatsby Site from JSON
 date: "2019-05-12"
 description: Looking for the next thing to try after generating your site with markdown? Try it out with a static JSON file.
 image: https://thepracticaldev.s3.amazonaws.com/i/8xlndw3gzhgl9l5v562r.png
-alt: 'White text, on a purple background, to the right of the GatsbyJS logo, that reads "Build a Multi-Page Gatsby Site from JSON".'
-tags: [gatsby, json, beginner, tutorial]
+tags: [gatsby, web development]
 ---
 
 I decided to take this approach when I made [https://blackbirthdays.com](https://blackbirthdays.com). Originally, for the month of February, it showed a different person each day for their birthday. So, since there was very static data for the site, I decided to just feed the information into it with a JSON file. I wanted to practice something with Gatsby, so I got to practice [programmatically creating pages from data](https://www.gatsbyjs.org/tutorial/part-seven/) and [using GraphQL for getting data](https://www.gatsbyjs.org/tutorial/part-four/).

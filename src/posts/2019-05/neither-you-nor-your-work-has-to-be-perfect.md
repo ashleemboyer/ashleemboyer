@@ -3,8 +3,7 @@ title: Neither You nor Your Work Has to be Perfect
 date: '2019-05-02'
 description: "We all feel pressure to make things perfect, but don't let it crush you. There are alternatives we can work with."
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fperfect.jpg?alt=media&token=af9863be-79b8-4b20-b02e-4272da8b7612
-alt: 'Image taken looking upwards from the bottom of two reflective and symmetrical buildings.'
-tags: [learning, experience, perfection, expectations]
+tags: [learning, perfectionism, self care, mental health]
 ---
 
 Let's face it: nothing you make will ever be absolutely perfect. Some people may not like the final product. Maybe you could remove a paragraph or two from your blog post or reword a few sentences. Your code could probably be refactored in a few different places. That drawing might look cleaner if you erase a couple of smudges.
