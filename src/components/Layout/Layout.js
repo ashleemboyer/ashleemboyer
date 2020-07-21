@@ -56,7 +56,10 @@ export default ({ children, title, description, image, url }) => {
         ></script>
       </Helmet>
       <header>
-        <img src="/me.jpg" />
+        <img
+          src="/me.jpg"
+          alt="Ashlee standing in front of a brick wall looking up to her left and smiling. Her right hand is held up near her right shoulder with the palm facing upwards."
+        />
         <div>
           <Link to={`/`}>
             <h2>{data.site.siteMetadata.title}</h2>
