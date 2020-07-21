@@ -113,7 +113,10 @@ export default ({ data, pageContext }) => {
 
 export const query = graphql`
   query($tag: String) {
-    allMarkdownRemark(filter: { frontmatter: { tags: { in: [$tag] } } }, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { tags: { in: [$tag] } } },
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       totalCount
       edges {
         node {
@@ -123,7 +126,6 @@ export const query = graphql`
             date(formatString: "MMMM DD, YYYY")
             description
             image
-            alt
             tags
           }
           fields {
