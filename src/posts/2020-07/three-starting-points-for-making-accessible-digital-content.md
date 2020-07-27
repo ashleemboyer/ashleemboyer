@@ -1,8 +1,8 @@
 ---
-title: Three Things to Get You Started with Making Accessible Digital Content
+title: Three Starting Points for Making Accessible Digital Content
 date: 2020-07-26
-description: Leave this post with straightforward action items for making accessible digital content.
-image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F07%2F26-three-thigns%2FThree%20Things%20to%20Get%20You%20Started%20with%20Making%20Accessible%20Digital%20Content.png?alt=media&token=72ac6bce-b81e-417e-a3eb-35b13255d99a
+description: You'll leave this post with straightforward action items for making your digital content more accessible.
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F07%2F26-three-starting-points-for-making-accessible-digital-content%2FThree%20Starting%20Points%20for%20Making%20Accessible%20Digital%20Content.png?alt=media&token=23b327f1-631c-48d4-aeeb-819feda92808
 tags: [a11y, web development, blogging]
 ---
 
