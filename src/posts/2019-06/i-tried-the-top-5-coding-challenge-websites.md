@@ -5,9 +5,7 @@ description: I asked for coding challenge suggestions and briefly tested a few o
 tags: [code games]
 ---
 
-Thank you to everyone who replied to the following tweet! It's an excellent list of sites people like to use.
-
-{% twitter 1133927062039867392 %}
+Thank you to everyone who replied to [my tweet about coding challenges](https://twitter.com/ashleemboyer/status/1133927062039867392)! It's an excellent list of sites people like to use.
 
 I did a quick look over all of these sites and am providing my immediate impressions from them. It's very possible they might be missing something. :) If a correction needs to be made, or if there's another really awesome thing about any of these sites that I missed, just drop a comment and I can update this post.
 

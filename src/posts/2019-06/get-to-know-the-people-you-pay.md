@@ -6,9 +6,7 @@ image: https://thepracticaldev.s3.amazonaws.com/i/xit8xs31acb6cccklfcu.jpg
 tags: [about me, disability]
 ---
 
-I made some shouty tweets on Sunday. Here's the first one, and the one I want to focus on for this conversation.
-
-{% twitter 1135403356506198017 %}
+I made some shouty tweets on Sunday. [Here's the first one](https://twitter.com/ashleemboyer/status/1135403356506198017), and the one I want to focus on for this conversation.
 
 You can go read the other tweets and think whatever you want about them as a whole, but I'm here to elaborate a bit on what I was (and still am) feeling.
 
