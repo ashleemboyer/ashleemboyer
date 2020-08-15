@@ -1,6 +1,4 @@
-import fs from 'fs';
-import path from 'path';
-import marked from 'marked';
+import { getAllPosts } from '../lib/api';
 import Link from 'next/link';
 
 import { Layout } from '../components';
@@ -26,7 +24,10 @@ const HomePage = ({ posts }) => {
       </p>
       {posts.map((post, index) => (
         <div key={post.fileName}>
-          <h2 style={{ marginBottom: 12 }}>{post.meta.title}</h2>
+          <h2
+            style={{ marginBottom: 12 }}
+            dangerouslySetInnerHTML={{ __html: post.meta.title }}
+          ></h2>
           <p
             style={{ marginBottom: 12 }}
             dangerouslySetInnerHTML={{ __html: post.meta.excerpt }}
@@ -42,63 +43,7 @@ const HomePage = ({ posts }) => {
 };
 
 export async function getStaticProps() {
-  let posts = [];
-
-  const postsDirectory = path.join(process.cwd(), 'posts');
-  const yearDirectoryNames = fs.readdirSync(postsDirectory);
-
-  yearDirectoryNames.forEach((yearDirectoryName) => {
-    const yearDirectory = path.join(postsDirectory, yearDirectoryName);
-    const monthDirectoryNames = fs.readdirSync(yearDirectory);
-
-    monthDirectoryNames.forEach((monthDirectoryName) => {
-      const monthDirectory = path.join(yearDirectory, monthDirectoryName);
-      const fileNames = fs.readdirSync(monthDirectory);
-
-      fileNames.forEach((fileName) => {
-        const filePath = path.join(monthDirectory, fileName);
-        const fileContents = fs.readFileSync(filePath, 'utf8');
-
-        const contentsPieces = fileContents.split('---\n');
-        const frontmatter = contentsPieces[1];
-        const body = contentsPieces[2];
-
-        let meta = {};
-        frontmatter.split('\n').forEach((attribute) => {
-          const [key, value] = attribute.split(': ');
-          if (key) {
-            meta[key] = value;
-          }
-        });
-
-        const getExcerpt = (text) => {
-          let result = '';
-          let resultLength = 0;
-
-          text.split(' ').forEach((piece) => {
-            if (resultLength > 200) {
-              return result;
-            }
-
-            result = `${result} ${piece}`;
-            resultLength += piece.length;
-          });
-
-          return result.trim();
-        };
-
-        const parsed = marked(body);
-        const withoutTags = parsed.replace(/<[^>]*>/g, '');
-        meta.excerpt = `${getExcerpt(withoutTags)} ...`;
-
-        posts.push({
-          meta,
-          content: parsed,
-          fileName: fileName.substring(0, fileName.length - 3),
-        });
-      });
-    });
-  });
+  let posts = getAllPosts();
 
   posts = posts.sort((a, b) => {
     if (a.meta.date < b.meta.date) {
