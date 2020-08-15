@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const HeadWrapper = ({ title, description, image, url }) => (
+const HeadWrapper = ({ title, description, image, slug }) => (
   <Head>
     <title>{title}</title>
 
@@ -21,10 +21,10 @@ const HeadWrapper = ({ title, description, image, url }) => (
     {image && <meta property="og:image" content={image} />}
     {image && <meta name="twitter:image" content={image} />}
 
-    {url && (
-      <meta property="og:url" content={`https://ashleemboyer.com/${url}`} />
+    {slug && (
+      <meta property="og:url" content={`https://ashleemboyer.com/${slug}`} />
     )}
-    {url && <link rel="canonical" href={`https://ashleemboyer.com/${url}`} />}
+    {slug && <link rel="canonical" href={`https://ashleemboyer.com/${slug}`} />}
   </Head>
 );
 
