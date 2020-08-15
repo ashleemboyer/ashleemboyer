@@ -14,3 +14,13 @@ hr {
   border-bottom: 1px solid #bdbdbd;
   margin: 32px 0;
 }
+
+ol,
+ul {
+  margin-left: 1.45rem;
+
+  li {
+    padding-left: 0;
+    margin-bottom: calc(0.725rem);
+  }
+}
