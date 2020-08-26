@@ -5,7 +5,7 @@ import styles from '../stylesheets/Pages.module.scss';
 
 const PostPage = ({ post }) => {
   const {
-    meta: { title, description, image, date, timeToRead, tags },
+    meta: { title, description, image, formattedDate, timeToRead, tags },
     content,
     fileName,
   } = post;
@@ -20,7 +20,7 @@ const PostPage = ({ post }) => {
       <div className={styles.PostPage}>
         <h1>{title}</h1>
         <p>
-          {date} &mdash; {timeToRead}
+          {formattedDate} &mdash; {timeToRead}
         </p>
         <div>
           {tags.map((tag) => (
