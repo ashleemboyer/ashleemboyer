@@ -1,0 +1,16 @@
+.Button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #c2185b;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  &:disabled {
+    visibility: hidden;
+  }
+}
