@@ -67,9 +67,9 @@ export default ({ children, title, description, image, url }) => {
           <p>
             You can find me talking about issues surrounding Disability,
             Accessibililty, & Mental Health on{' '}
-            <a href="https://twitter.com/ashleemboyer">Twitter</a>, or you can
+            <a href="https://twitter.com/ashleemboyer" target="_blank" rel="noreferrer">Twitter</a>, or you can
             find me regularly live-knitting or live-coding on{' '}
-            <a href="https://twitch.tv/ashleemboyer">Twitch</a>.
+            <a href="https://twitch.tv/ashleemboyer" target="_blank" rel="noreferrer">Twitch</a>. You can also <a href="https://forms.gle/Q79Dr7bkFnYV3y759" target="_blank" rel="noreferrer">contact me</a> if you're in need of a freelance web developer.
           </p>
         </div>
       </header>
