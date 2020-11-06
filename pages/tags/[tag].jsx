@@ -12,7 +12,17 @@ const TagPage = ({ tag, posts }) => (
 );
 
 export async function getStaticProps({ params }) {
-  return { props: { tag: params.tag, posts: getPostsByTag(params.tag) } };
+  let posts = getPostsByTag(params.tag);
+
+  posts = posts.sort((a, b) => {
+    if (a.meta.date < b.meta.date) {
+      return 1;
+    }
+
+    return -1;
+  });
+
+  return { props: { tag: params.tag, posts } };
 }
 
 export async function getStaticPaths() {
