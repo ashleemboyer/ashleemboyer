@@ -1,22 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import qs from 'querystring';
-
+import React from 'react';
+import { useRouter } from 'next/router';
+import { confirm } from '../lib/confirm';
 import { Layout } from '../components';
-
-const confirmSubscriber = async (email) => {
-  return await fetch('/.netlify/functions/confirm', {
-    method: 'PUT',
-    body: JSON.stringify({
-      email,
-    }),
-  })
-    .then((response) => response.json())
-    .then((data) => data);
-};
-
-const Loading = () => {
-  return <h1>Loading...</h1>;
-};
 
 const Message = ({ message }) => {
   return (
@@ -45,50 +30,45 @@ const Error = ({ message }) => {
   );
 };
 
-const Confirm = ({ location }) => {
-  const [loading, setLoading] = useState(true);
-  const [message, setMessage] = useState(true);
-  const [showError, setShowError] = useState(false);
-
-  useEffect(() => {
-    const params = qs.parse(location.search.substring(1));
-    const email = params.email;
-    if (!email) {
-      window.location = '/404';
-    }
-
-    confirmSubscriber(email)
-      .then((data) => {
-        setLoading(false);
-        setMessage(data.message);
-
-        if (!data.success) {
-          setShowError(true);
-        }
-      })
-      .catch((err) => {
-        setLoading(false);
-        setMessage(`There was an error in the request: ${err}.`);
-        setShowError(true);
-        console.error(err);
-      });
-  }, [location]);
+const Confirm = (props) => {
+  const router = useRouter();
+  if (!props.message && typeof window == 'object') {
+    router.replace('/404');
+  }
 
   const getPageContents = () => {
-    if (loading) {
-      return <Loading />;
-    } else if (showError) {
-      return <Error message={message} />;
-    } else if (message) {
-      return <Message message={message} />;
+    if (props.error) {
+      return <Error message={props.message} />;
+    } else if (props.message) {
+      return <Message message={props.message} />;
     }
   };
 
   return (
-    <Layout>
+    <Layout title="Confirm Subscription">
       <div>{getPageContents()}</div>
     </Layout>
   );
 };
+
+export async function getServerSideProps({ query }) {
+  if (!query.email) {
+    return { props: {} };
+  }
+
+  const result = await confirm(query.email)
+    .then((data) => ({
+      message: data.message,
+      error: !data.success,
+    }))
+    .catch((err) => ({
+      message: `There was an error in the request: ${err}.`,
+      error: true,
+    }));
+
+  return {
+    props: { message: result.message || '', error: result.error || false },
+  };
+}
 
 export default Confirm;

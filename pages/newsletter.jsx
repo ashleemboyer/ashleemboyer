@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+import { subscribe } from '../lib/subscribe';
 import { Form, Layout } from '../components';
-
-const Loading = () => {
-  return <h1>Loading...</h1>;
-};
 
 const Message = ({ message }) => {
   return (
@@ -32,63 +30,52 @@ const Error = ({ message }) => {
   );
 };
 
-const Newsletter = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(false);
-  const [showError, setShowError] = useState(false);
+const Newsletter = (props) => {
+  const router = useRouter();
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
 
   const submitForm = async () => {
-    setLoading(true);
+    if (!name) {
+      alert('Please enter a name in the form.');
+      return;
+    }
 
-    await fetch('/.netlify/functions/subscribe', {
-      method: 'POST',
-      body: JSON.stringify({
-        name,
-        email,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setLoading(false);
-        setMessage(data.message);
+    if (!email) {
+      alert('Please enter an email in the form.');
+      return;
+    }
 
-        if (!data.success) {
-          setShowError(true);
-        }
-      })
-      .catch((err) => {
-        setLoading(false);
-        setMessage(`There was an error in the request: ${err}.`);
-        setShowError(true);
-        console.error(err);
-      });
+    router.push({
+      pathname: '/newsletter',
+      query: {
+        name: encodeURIComponent(name),
+        email: encodeURIComponent(email),
+      },
+    });
   };
 
   const getPageContents = () => {
-    if (loading) {
-      return <Loading />;
-    } else if (showError) {
-      return <Error message={message} />;
-    } else if (message) {
-      return <Message message={message} />;
+    if (props.error) {
+      return <Error message={props.message} />;
+    } else if (props.message) {
+      return <Message message={props.message} />;
     } else {
       return (
         <>
-          <h1 css>
+          <h1>
             Did you know I have a newsletter?{' '}
             <span role="img" aria-label="Open mailbox with raised flag emoji.">
               📬
             </span>
           </h1>
-          <p css={{ marginBottom: 32, lineHeight: '1.8rem' }}>
+          <p style={{ marginBottom: 32, lineHeight: '1.8rem' }}>
             If you want to get notified when I publish new blog posts or make
             major project announcements, this is the right place! All I need is
             your name and email address.
           </p>
           <Form>
-            <h2 css={{ marginBottom: 32, fontSize: '1.8rem' }}>
+            <h2 style={{ marginBottom: 32, fontSize: '1.8rem' }}>
               Sign up here{' '}
               <span
                 role="img"
@@ -128,7 +115,27 @@ const Newsletter = () => {
     }
   };
 
-  return <Layout>{getPageContents()}</Layout>;
+  return <Layout title="Newsletter">{getPageContents()}</Layout>;
 };
+
+export async function getServerSideProps({ query }) {
+  if (!query.name && !query.email) {
+    return { props: {} };
+  }
+
+  const result = await subscribe(query.name, query.email)
+    .then((data) => ({
+      message: data.message,
+      error: !data.success,
+    }))
+    .catch((err) => ({
+      message: `There was an error in the request: ${err}.`,
+      error: true,
+    }));
+
+  return {
+    props: { message: result.message || '', error: result.error || false },
+  };
+}
 
 export default Newsletter;
