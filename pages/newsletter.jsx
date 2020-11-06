@@ -118,7 +118,8 @@ const Newsletter = (props) => {
   return <Layout title="Newsletter">{getPageContents()}</Layout>;
 };
 
-export async function getServerSideProps({ query }) {
+Newsletter.getInitialProps = async ({ query }) => {
+  console.log('hello', query);
   if (!query.name && !query.email) {
     return { props: {} };
   }
@@ -133,9 +134,12 @@ export async function getServerSideProps({ query }) {
       error: true,
     }));
 
+  console.log(result);
+
   return {
-    props: { message: result.message || '', error: result.error || false },
+    message: result.message || '',
+    error: result.error || false,
   };
-}
+};
 
 export default Newsletter;
