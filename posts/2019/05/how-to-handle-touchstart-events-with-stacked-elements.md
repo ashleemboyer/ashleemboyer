@@ -2,7 +2,7 @@
 title: How to Handle touchstart Events with Stacked Elements
 date: 2019-05-31
 description: The touchstart event in mobile web apps is a little different than the click event. Here's how I solved an issue I've run into frequently.
-tags: [web development, mobile]
+tags: [web-development, mobile]
 ---
 
 I came across some issues on touch screens where I have a navigation menu expanded and the common "shadow" showing on the non-menu portion of the screen. When I tried tapping on the "shadow" to close the menu, way too many things were happening! Here's a quick illustration of what sort of screen I'm talking about:

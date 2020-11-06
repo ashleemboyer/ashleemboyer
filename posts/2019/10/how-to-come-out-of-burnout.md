@@ -3,7 +3,7 @@ title: How to Come out of Burnout
 date: 2019-10-27
 description: Burnout is difficult and everyone experiences it differently.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Ffire.jpg?alt=media&token=cb445b64-1e62-46af-9177-4db390031128
-tags: [burnout, self care, mental health, hobbies]
+tags: [burnout, self-care, mental-health, hobbies]
 ---
 
 To be completely honest: I have no idea what the answer is here. I don't think there's just one correct answer. Burnout is so unique to every individual, which become more obvious to me after I asked my followers about how they cope with feeling uninspired:

@@ -2,7 +2,7 @@
 title: I Tried the Top 5 Coding Challenge Websites
 date: 2019-06-05
 description: I asked for coding challenge suggestions and briefly tested a few of them out. Here are my results.
-tags: [code games]
+tags: [code-games]
 ---
 
 Thank you to everyone who replied to [my tweet about coding challenges](https://twitter.com/ashleemboyer/status/1133927062039867392)! It's an excellent list of sites people like to use.

@@ -3,7 +3,7 @@ title: Let People Have Emotions
 date: 2019-05-10
 description: I think it's time to stop making people hide in bathrooms in fear of looking unstable for healthy and normal behaviors.
 image: https://thepracticaldev.s3.amazonaws.com/i/benyqxlu508z9rv7np79.jpg
-tags: [self care, mental health]
+tags: [self-care, mental-health]
 ---
 
 Work (hopefully) doesn't consume our entire lives. Every single one of us comes from a different background and we're also all in very different stages. Despite this obvious fact, there's still a ridiculous stigma against people expressing emotions at work. We aren't robots, so what's the deal?

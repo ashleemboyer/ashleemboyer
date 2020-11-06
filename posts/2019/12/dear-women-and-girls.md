@@ -3,7 +3,7 @@ title: Dear Women & Girls
 date: 2019-12-04
 description: You are smart and deserving.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fdearwomenandgirls.png?alt=media&token=5ae75ee7-bdca-4f00-aae0-8bffcde759c6
-tags: [women in tech]
+tags: [women-in-tech]
 ---
 
 Dear Women & Girls,

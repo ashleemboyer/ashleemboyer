@@ -3,7 +3,7 @@ title: My Journey Into Software Engineering
 date: 2019-07-02
 description: A lot of people have been telling their stories. Here's mine.
 image: https://thepracticaldev.s3.amazonaws.com/i/rsjm8jhn1y549mdm85ya.jpg
-tags: [about me]
+tags: [about-me]
 ---
 
 I started college in the fall of 2013 as a Chemical Engineering major at a small private engineering school in Indiana. That first quarter ended very poorly for me and had me questioning whether or not I could make it at the school. From what I could see, everyone else was so smart and doing so well! (In reality, I think a ton of us were struggling silently and alone.)

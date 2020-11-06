@@ -3,7 +3,7 @@ title: It's OK to Be Scared
 date: 2019-05-01
 description: The unknown is absolutely terrifying, probably because we can't control what we don't know. But that's OK.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2FItsOKToBeScared.png?alt=media&token=586a9f2b-f91e-4291-91d0-5a81454e7b73
-tags: [self care, mental health]
+tags: [self-care, mental-health]
 ---
 
 _Originally written in late February 2019_

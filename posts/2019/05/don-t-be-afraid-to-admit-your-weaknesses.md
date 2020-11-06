@@ -3,7 +3,7 @@ title: Don't be Afraid to Admit Your Weaknesses
 date: 2019-05-15
 description: Listing out your flaws can feel awkward and uncomfortable, but guess what? We all have them, so let's bond with that discussion.
 image: https://thepracticaldev.s3.amazonaws.com/i/844vqwg32l16d5i5p5o7.jpg
-tags: [vulnerability, self care]
+tags: [vulnerability, self-care]
 ---
 
 Do you know what it means when you can admit your weaknesses? It means you've probably recognized the following:

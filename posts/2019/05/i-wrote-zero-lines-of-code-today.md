@@ -3,7 +3,7 @@ title: I Wrote Zero Lines of Code Today
 date: 2019-05-05
 description: There are a ton of projects on my to-do list, but it's just been one of those days.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Frelax.jpg?alt=media&token=5398e4d9-c096-42c3-8166-5eb1e65d188b
-tags: [self care, mental health]
+tags: [sel-care, mental-health]
 ---
 
 Sometimes, you need a day. When you have a job in tech, the amount of available knowledge to us can both incredible and staggering. We fear to look unintelligent to our peers and colleagues, so feel obligated to learn everything we can. The desire to learn is not the issue here, though. What's important to remember, is that it's impossible to learn _everything_.

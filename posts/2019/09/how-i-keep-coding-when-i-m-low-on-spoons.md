@@ -3,7 +3,7 @@ title: How I Keep Coding When I'm Low on Spoons
 date: 2019-09-03
 description: It's hard to code when you deal with chronic illnesses or disabilities. Here's what I try to do when those things start to get in the way.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fspoons.png?alt=media&token=fd4b5de5-4b0e-4594-9d0d-6f7271a84b3d
-tags: [self care, mental health, chronic illness, disability, about me]
+tags: [self-care, mental-health, chronic-illness, disability, about-me]
 ---
 
 A few days ago, I came across a tweet thread by my e-friend, [@TheCodePixi](https://twitter.com/TheCodePixi). She's working on making [#SpooniesWhoCode](https://twitter.com/hashtag/SpooniesWhoCode) a thing, so make sure you join in if you're a spoonie who codes!

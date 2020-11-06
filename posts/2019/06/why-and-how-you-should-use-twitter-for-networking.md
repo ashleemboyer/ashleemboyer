@@ -3,7 +3,7 @@ title: Why and How You Should Use Twitter for Networking
 date: 2019-06-07
 description: I used to think all of Twitter was a dumpster fire. Then I started completely over and it changed my whole life.
 image: https://thepracticaldev.s3.amazonaws.com/i/46b1tue67sb7hynqha8j.jpg
-tags: [twitter, social media, networking]
+tags: [twitter, social-media, networking]
 ---
 
 _Disclaimer: This post isn't for bragging. I've had people ask me whether or not Twitter is worth it._

@@ -3,7 +3,7 @@ title: Things You Shouldn't Say to a Disabled Person About Why Your App Isn't Ac
 date: 2019-05-06
 description: I'm a disabled woman and have a few thoughts about how able-bodied people speak to people like me about accessibility.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Fno.jpg?alt=media&token=11530a14-26de-46b4-b290-1ecaf939e4ff
-tags: [a11y, about me, disability]
+tags: [a11y, about-me, disability]
 ---
 
 Not that I feel the need to explain myself, but I want to share that I'm hard-of-hearing. It's genetic and just about everyone on my family's maternal side suffers significant hearing loss. I've had hearing aids since I was 10 years old, and as I've grown up, it becomes more and more clear to me how little people understand about the importance of accessibility.

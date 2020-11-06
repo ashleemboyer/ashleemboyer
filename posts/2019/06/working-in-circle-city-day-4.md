@@ -3,7 +3,7 @@ title: Working in Circle City, Day 4: Community
 date: 2019-06-20
 description: This place is so exciting. This series is all about my new adventure.
 image: https://thepracticaldev.s3.amazonaws.com/i/2uuoe4i7ahw0tsfmnvd1.jpeg
-tags: [circle city]
+tags: [circle-city]
 ---
 
 # The AM

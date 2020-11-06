@@ -3,7 +3,7 @@ title: Get to Know the People You Pay
 date: 2019-06-06
 description: Know who you're sending your money to, especially when you send them a lot.
 image: https://thepracticaldev.s3.amazonaws.com/i/xit8xs31acb6cccklfcu.jpg
-tags: [about me, disability]
+tags: [about-me, disability]
 ---
 
 I made some shouty tweets on Sunday. [Here's the first one](https://twitter.com/ashleemboyer/status/1135403356506198017), and the one I want to focus on for this conversation.

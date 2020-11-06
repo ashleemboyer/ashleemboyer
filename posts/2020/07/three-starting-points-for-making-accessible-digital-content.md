@@ -3,7 +3,7 @@ title: Three Starting Points for Making Accessible Digital Content
 date: 2020-07-26
 description: You'll leave this post with straightforward action items for making your digital content more accessible.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F07%2F26-three-starting-points-for-making-accessible-digital-content%2FThree%20Starting%20Points%20for%20Making%20Accessible%20Digital%20Content.png?alt=media&token=23b327f1-631c-48d4-aeeb-819feda92808
-tags: [a11y, web development, blogging]
+tags: [a11y, web-development, blogging]
 ---
 
 Accessibility can be pretty overwhelming at first. There are a lot of things to consider and it's really hard to figure out what you don't know when you're just starting out. I hope you find this short list useful to help your first dive into making accessible digital content. My focus is usually on websites, but a lot of this is good for things like mobile apps, ebooks, and slideshows, too!

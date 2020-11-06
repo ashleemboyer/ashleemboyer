@@ -3,7 +3,7 @@ title: GPA Isn't Everything
 date: 2019-05-13
 description: Employers put far too much weight on GPA as an indicator of work ethic, intelligence, and capability when really, it has almost nothing to do with it.
 image: https://thepracticaldev.s3.amazonaws.com/i/5ftagp29fvcgxphvjhh4.jpg
-tags: [job search]
+tags: [job-search]
 ---
 
 I'm finishing up my degree at one of the top undergraduate engineering schools in the country. Applicants are typically at the very top of their high school class and have great SAT and ACT scores. I did pretty well during the last few years of high school and worked extremely hard to get into the school.

@@ -3,7 +3,7 @@ title: What You Can Learn from Your Dog about Mindfulness
 date: 2019-05-20
 description: My dog has nothing to worry about, but it's not like he could do it if that wasn't true.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Ftrooper.png?alt=media&token=5ff038c1-e5c6-4c35-8d92-d6a8f17f74ab
-tags: [self care, mental health]
+tags: [self-care, mental-health]
 ---
 
 Since I've lived in apartments for the entire 3 years I've had my dog, Trooper, Zach and I have always had to walk him with a leash. Our current apartment has a nice bark park, which helps him get some energy out, but for the most part, he's on a leash.

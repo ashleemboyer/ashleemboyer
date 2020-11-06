@@ -1,7 +1,7 @@
 ---
 title: A Haiku About Pausing
 date: 2019-05-23
-tags: [self care]
+tags: [self-care]
 ---
 
 Still feeling under the weather, but I mustered up the brain energy to write this little haiku:
