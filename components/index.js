@@ -1,4 +1,7 @@
 export { Button } from './Button';
-export { Layout } from './Layout';
+
 export { Form } from './Form';
-export { PostListPagination } from './PostListPagination';
+
+export { Layout } from './Layout';
+
+export { PostList } from './PostList';

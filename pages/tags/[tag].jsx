@@ -1,13 +1,15 @@
 import { getAllTagNames, getPostsByTag } from '../../lib/api';
-import { Layout } from '../../components';
+import { Layout, PostList } from '../../components';
 
-const TagPage = ({ tag, posts }) => {
-  return (
-    <Layout title={`Posts under #${tag}`}>
-      <h1>Hello!</h1>
-    </Layout>
-  );
-};
+const TagPage = ({ tag, posts }) => (
+  <Layout title={`Posts under #${tag}`}>
+    <PostList
+      title={`Posts with the "${tag}" tag`}
+      subtitle={`She's written ${posts.length} posts`}
+      posts={posts}
+    />
+  </Layout>
+);
 
 export async function getStaticProps({ params }) {
   return { props: { tag: params.tag, posts: getPostsByTag(params.tag) } };
