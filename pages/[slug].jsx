@@ -32,7 +32,7 @@ const PostPage = ({ post }) => {
       slug={fileName}
     >
       <div className={styles.PostPage}>
-        <h1>{title}</h1>
+        <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
         <p>
           {formattedDate} &mdash; {timeToRead}
         </p>

@@ -4,6 +4,8 @@ date: 2020-04-25
 description: The first accessible React component in the live series is a breadcrumb.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FBuild%20an%20Accessible%20Breadcrumb%20Component.png?alt=media&token=fa786a6e-c227-4458-92df-13129ce4ce86
 tags: [a11y, react, barc]
+series_title: Build an Accessible React Component
+series_slug: build-an-accessible-react-component
 ---
 
 During the first stream in the accessible React component live coding series, we spun the wheel and it chose the breadcrumb component for us! While the component was extremely straightforward, I think it was a great one to kick off the series. Let's dive right in, shall we?
@@ -245,7 +247,7 @@ Now we need to update the component to accept and use a prop called `links`.
 const Breadcrumb = ({ links }) => (
   <nav className={styles.BreadcrumbContainer}>
     <ol>
-      {links.map(link => (
+      {links.map((link) => (
         <li>
           <a href={link.href}>{link.label}</a>
         </li>

@@ -4,6 +4,8 @@ date: 2019-09-02
 description: Learn how to build a blog site with React and Firebase.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Freact-firebase-blog%2Fpart-03%2Fheader.png?alt=media&token=f3be5439-bc89-41b0-bf69-79f96cf879ec
 tags: [react, firebase, web-development]
+series_title: Build a React & Firebase Blog Site
+series_slug: react-firebase-blog
 ---
 
 We've reached the third part of our React & Firebase series. In [part one](https://ashleemboyer.com/react-firebase-blog-01), we learned how to set everything up. [Last time](https://ashleemboyer.com/react-firebase-blog-02), we made a page for creating new blog posts. Today, we're going to read single posts from our Firebase Realtime Database and show them in our app.
