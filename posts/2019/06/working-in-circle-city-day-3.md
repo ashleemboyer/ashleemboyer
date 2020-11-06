@@ -4,6 +4,8 @@ date: 2019-06-19
 description: This place is so exciting. This series is all about my new adventure.
 image: https://thepracticaldev.s3.amazonaws.com/i/2uuoe4i7ahw0tsfmnvd1.jpeg
 tags: [circle-city]
+series_title: Working in Circle City
+series_slug: working-in-circle-city
 ---
 
 # The morning

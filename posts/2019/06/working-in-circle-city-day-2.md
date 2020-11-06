@@ -4,6 +4,8 @@ date: 2019-06-18
 description: This place is so exciting. This series is all about my new adventure.
 image: https://thepracticaldev.s3.amazonaws.com/i/2uuoe4i7ahw0tsfmnvd1.jpeg
 tags: [circle-city]
+series_title: Working in Circle City
+series_slug: working-in-circle-city
 ---
 
 Day 2 was pretty quiet and smooth, but still exciting. I had two on-boarding meetings and will have one or two per day through next week. These are chances to learn more about the start of the company, how things work, and the company's values. It's also a great chance to meet people from different teams, which is pretty cool! Everyone is incredibly friendly.

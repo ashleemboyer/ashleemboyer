@@ -4,6 +4,8 @@ date: 2020-04-19
 description: This is where you can find all the details for my accessible React component live coding series.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F02%2FBuild%20an%20Accessible%20React%20Component%20The%20Live%20Series.png?alt=media&token=6b90bff4-abbd-4c40-98a2-2222ae2a3b21
 tags: [a11y, react, barc]
+series_title: Build an Accessible React Component
+series_slug: build-an-accessible-react-component
 ---
 
 ## First of all, Thank you so much! 🎉
