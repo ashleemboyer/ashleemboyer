@@ -10,11 +10,11 @@ const PostListPagination = ({
 }) => (
   <div className={styles.PostListPagination}>
     <Button disabled={!hasPrevious} onClick={onPrevious}>
-      Show Older Posts
+      Show Newer Posts
     </Button>
     <p>{label}</p>
     <Button disabled={!hasNext} onClick={onNext}>
-      Show Newer Posts
+      Show Older Posts
     </Button>
   </div>
 );
