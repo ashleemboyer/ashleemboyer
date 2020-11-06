@@ -17,15 +17,25 @@ const SeriesIndex = ({ series }) => (
     </p>
     {series.map(({ slug, title }) => (
       <Link href={`/series/${slug}`}>
-        <h2
+        <a
           style={{
-            textDecoration: 'underline',
+            display: 'block',
             marginBottom: 16,
-            cursor: 'pointer',
+            color: 'black',
+          }}
+          onClick={() => {
+            if (typeof ga !== 'undefined') {
+              ga('send', {
+                hitType: 'event',
+                eventCategory: 'Series',
+                eventAction: 'Series Click',
+                eventLabel: slug,
+              });
+            }
           }}
         >
-          {title}
-        </h2>
+          <h2>{title}</h2>
+        </a>
       </Link>
     ))}
   </Layout>
