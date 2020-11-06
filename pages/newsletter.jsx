@@ -134,8 +134,7 @@ export async function getServerSideProps({ query }) {
     }));
 
   return {
-    message: result.message || '',
-    error: result.error || false,
+    props: { message: result.message || '', error: result.error || false },
   };
 }
 
