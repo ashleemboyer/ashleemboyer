@@ -3,6 +3,21 @@ import Head from 'next/head';
 const HeadWrapper = ({ title, description, image, slug }) => (
   <Head>
     <title>{title}</title>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-129788768-1"
+    ></script>
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-129788768-1');
+              `,
+      }}
+    ></script>
 
     <meta charSet="utf-8" />
     <meta name="twitter:site" content="@ashleemboyer" />
