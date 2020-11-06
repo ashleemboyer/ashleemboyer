@@ -51,7 +51,7 @@ const Confirm = (props) => {
   );
 };
 
-Confirm.getInitialProps = async ({ query }) => {
+export async function getServerSideProps({ query }) {
   if (!query.email) {
     return { props: {} };
   }
@@ -69,6 +69,6 @@ Confirm.getInitialProps = async ({ query }) => {
   return {
     props: { message: result.message || '', error: result.error || false },
   };
-};
+}
 
 export default Confirm;
