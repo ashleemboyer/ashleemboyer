@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { getPostBySlug, getAllPostNames } from '../lib/api';
 import { Layout } from '../components';
 import styles from '../stylesheets/Pages.module.scss';
+import { useLayoutEffect } from 'react';
 
 const PostPage = ({ post }) => {
   const {
@@ -9,6 +10,19 @@ const PostPage = ({ post }) => {
     content,
     fileName,
   } = post;
+
+  useLayoutEffect(() => {
+    if (typeof ga !== 'undefined') {
+      tags.forEach((tag) => {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Tags',
+          eventAction: 'Post Landing',
+          eventLabel: tag,
+        });
+      });
+    }
+  }, []);
 
   return (
     <Layout
@@ -25,7 +39,20 @@ const PostPage = ({ post }) => {
         <div>
           {tags.map((tag) => (
             <Link href={`/tags/${tag}`} key={tag}>
-              <a>#{tag}</a>
+              <a
+                onClick={() => {
+                  if (typeof ga !== 'undefined') {
+                    ga('send', {
+                      hitType: 'event',
+                      eventCategory: 'Tags',
+                      eventAction: 'Tag Click',
+                      eventLabel: tag,
+                    });
+                  }
+                }}
+              >
+                #{tag}
+              </a>
             </Link>
           ))}
         </div>
