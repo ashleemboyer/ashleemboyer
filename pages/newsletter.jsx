@@ -119,7 +119,6 @@ const Newsletter = (props) => {
 };
 
 Newsletter.getInitialProps = async ({ query }) => {
-  console.log('hello', query);
   if (!query.name && !query.email) {
     return { props: {} };
   }
@@ -133,8 +132,6 @@ Newsletter.getInitialProps = async ({ query }) => {
       message: `There was an error in the request: ${err}.`,
       error: true,
     }));
-
-  console.log(result);
 
   return {
     message: result.message || '',
