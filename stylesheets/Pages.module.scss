@@ -1,0 +1,64 @@
+.HomePage {
+}
+
+.PostPage {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  & > p {
+    font-style: italic;
+    color: #505050;
+    margin-bottom: 8px;
+  }
+
+  & > div:first-of-type {
+    margin-bottom: 24px;
+
+    a {
+      margin-right: 6px;
+      background-color: #c2185b;
+      color: white;
+      font-size: 0.8rem;
+      padding: 2px 8px;
+      border-radius: 1.75rem;
+    }
+  }
+
+  & > div:last-of-type {
+    & > * {
+      margin-bottom: 1.45rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    code {
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: rgba(#c2185b, 0.13);
+      color: #c2185b;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background-color: rgba(#c2185b, 0.13);
+      padding: 12px;
+      white-space: pre-wrap;
+      font-size: 0.85rem;
+      line-height: 1.45rem;
+
+      code {
+        background-color: transparent;
+        font-weight: normal;
+      }
+    }
+  }
+}

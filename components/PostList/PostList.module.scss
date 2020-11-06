@@ -1,0 +1,24 @@
+.PostList {
+  & > h1 {
+    margin-bottom: 20px;
+  }
+
+  & > p {
+    margin-bottom: 48px;
+    font-size: 1.4rem;
+    font-family: 'Lora';
+    color: #505050;
+  }
+
+  [role='feed'] {
+    [role='article'] {
+      h2 {
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

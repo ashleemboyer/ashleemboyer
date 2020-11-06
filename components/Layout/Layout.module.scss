@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.Layout {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 24px;
+  padding-bottom: 64px;
+
+  header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+
+    img {
+      border-radius: 50%;
+      border: 2px solid black;
+      box-shadow: -2px 2px 6px 2px #00000044;
+      margin: 0;
+      margin-right: 20px;
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: 8px;
+      display: inline-block;
+      font-style: normal;
+      font-size: 1.5rem;
+      color: #212121;
+
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  main {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 550px) {
+    header {
+      flex-wrap: wrap;
+      text-align: center;
+
+      img {
+        margin: 0 auto;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
