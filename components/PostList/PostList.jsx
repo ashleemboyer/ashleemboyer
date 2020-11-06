@@ -83,7 +83,7 @@ const PostList = ({ title, subtitle, posts }) => {
             <Link href={`/${post.fileName}`}>
               <a>Keep Reading</a>
             </Link>
-            {index !== postsCount - 1 && <hr />}
+            <hr />
           </div>
         ))}
       </div>
