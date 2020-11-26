@@ -41,7 +41,11 @@ const PostPage = ({ post }) => {
       slug={fileName}
     >
       <div className={styles.PostPage}>
-        <h1 dangerouslySetInnerHTML={{ __html: title }}></h1>
+        <h1
+          id="post-title"
+          tabIndex="-1"
+          dangerouslySetInnerHTML={{ __html: title }}
+        ></h1>
         <p>
           <span>
             {formattedDate} &mdash; {timeToRead}
@@ -91,6 +95,16 @@ const PostPage = ({ post }) => {
         </div>
         <div dangerouslySetInnerHTML={{ __html: content }}></div>
       </div>
+      <button
+        className={styles.ScrollButton}
+        onClick={() => {
+          window.scrollTo(0, 0);
+          const title = document.getElementById('post-title');
+          title.focus();
+        }}
+      >
+        Scroll to top
+      </button>
     </Layout>
   );
 };
