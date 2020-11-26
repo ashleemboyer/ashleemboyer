@@ -1,7 +1,7 @@
 ---
 title: Accessible, Smooth Scroll-to-top Buttons with Little Code
 date: 2020-11-26
-description: Adding a scroll to top button with smooth scrolling is as easy as adding 5 lines of code.
+description: Adding a scroll to top button with smooth scrolling is as easy as adding a few lines of code.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2020%2F11%2F26%2FAccessible%2C%20Smooth%20Scroll-to-top%20Buttons%20with%20Little%20Code.png?alt=media&token=1e6ab036-9197-414d-b765-311416189b51
 tags: [a11y, css, web-development]
 ---
