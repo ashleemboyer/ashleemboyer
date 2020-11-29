@@ -21,7 +21,7 @@ const Layout = ({ title, description, image, slug, children }) => (
         </Link>
         <p>
           You can find me talking about issues surrounding Disability,
-          Accessibililty, & Mental Health on{' '}
+          Accessibility, & Mental Health on{' '}
           <a href="https://twitter.com/ashleemboyer">Twitter</a>, or you can
           find me regularly live-knitting or live-coding on{' '}
           <a href="https://twitch.tv/ashleemboyer">Twitch</a>.
