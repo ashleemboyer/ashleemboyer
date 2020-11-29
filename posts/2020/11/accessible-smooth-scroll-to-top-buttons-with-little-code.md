@@ -14,7 +14,7 @@ Making a scroll-to-top button and making it scroll smoothly is probably a lot ea
 
 ## The SCSS Code
 
-First, let's make sure this scroll will happen smoothly. To do so, set `scroll-behavior` to `smoothly` in a global stylesheet under the `html` element. The media query I've added is for accessibility. Animations can be distracting or for some users, like myself, have vestibular disorders where animations can cause harmful physical effects. These effects can include dizziness, nausea, and headaches or migraines.
+First, let's make sure this scroll will happen smoothly. To do so, set `scroll-behavior` to `smooth` in a global stylesheet under the `html` element. The media query I've added is for accessibility. Animations can be distracting or for some users, like myself, have vestibular disorders where animations can cause harmful physical effects. These effects can include dizziness, nausea, and headaches or migraines.
 
 We can prevent this harm to these users who have set up their device to reduce motion by using the `prefers-reduced-motion` CSS media query. Inside of it, we set the `scroll-behavior` to `auto`, which is the default. If you'd like to read more about this technique, it's thoroughly covered in [WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/css/C39).
 
