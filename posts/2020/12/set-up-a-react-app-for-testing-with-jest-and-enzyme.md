@@ -8,6 +8,10 @@ tags: [javascript, testing, web-development]
 
 It's been awhile since I've set up a React app for testing with Jest and Enzyme. Since I had to look up more than one of these steps to remind myself how to accomplish this, I decided to write a super quick guide in case it helps anyone else.
 
+## Dec. 8th Correction
+
+Enzyme is not yet compatible with React 17. You should make sure the highest version of React you are using is `16.14.0` if you want to use Enzyme with your tests. [This PR](https://github.com/enzymejs/enzyme/pull/2430) will add an adapter for React 17. *Please do not ask them when it will be done, it will be done when they get it done!*
+
 ## Step 1: Create the app with `create-react-app`
 
 This requires having `npx` installed. You can read about it [here](https://www.npmjs.com/package/npx).
