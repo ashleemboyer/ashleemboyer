@@ -18,8 +18,6 @@ If you haven't read the first two posts, I have some starter code you can use in
 2. Inspect the `Post` Component
 3. Connect the `Post` Component to Firebase
 
----
-
 ## 1. Clone the (Part 3) Starter Code [Optional]
 
 Skip this step if you've successfully completed Part 2. Otherwise, you can clone the code by running the following command in the terminal:
@@ -133,7 +131,5 @@ I also added a `12px` margin to the top of `<p>` elements in `src/index.js`.
 Now, when you click a "Continue reading..." link or manually navigate to one of your posts, you should see something like this:
 
 ![Screenshot of a single blog post's page.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2Freact-firebase-blog%2Fpart-03%2Fpost.png?alt=media&token=4a9abd6a-9549-467f-a473-ff86ae47357a)
-
----
 
 Please [send me an email](mailto:hello@ashleemboyer.com) or [a Twitter DM](https://twitter.com/ashleemboyer) if you have any questions or concerns. I love hearing from you! 😊
