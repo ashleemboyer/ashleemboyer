@@ -24,8 +24,6 @@ Ready to get started? :)
 6. Read from the Database
 7. Wrapping Up
 
----
-
 ## 1. Sign up for Firebase
 
 This one is easy! Head over to [Firebase's website](https://firebase.google.com/) and click the "Get started" button. The page looks like this:
