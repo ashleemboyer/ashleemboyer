@@ -23,8 +23,6 @@ A fair warning: since this post is building off of Part 1, it assumes you have r
 3. Make Inputs for Describing Posts
 4. Write a Create Function
 
----
-
 ## 1. Clone the (Part 2) Starter Code [Optional]
 
 Skip this step if you've successfully completed Part 1. Otherwise, you can start clone the code by running the following command in a terminal:
