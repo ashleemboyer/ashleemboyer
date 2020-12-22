@@ -2,7 +2,7 @@
 title: Build a Blog Site with Next.js and Firebase Part 2 - Creating New Posts
 date: 2021-01-11
 description: Learn how to build a blog site with Next.js and Firebase.
-image:
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2021%2F01%2FNextFirebasePart2.png?alt=media&token=e8ddd3ae-2eb6-4ef1-bab2-5f082c61bed4
 tags: [react, nextjs, firebase, web-development]
 series_title: Build a Blog Site with Next.js and Firebase
 series_slug: nextjs-firebase-blog
