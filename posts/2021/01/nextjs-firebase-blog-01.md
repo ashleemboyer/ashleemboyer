@@ -29,9 +29,36 @@ series_slug: nextjs-firebase-blog
 
 ## Add some test data
 
-- click the "+" just to the right of `null`
-- give a "name" and a "value" like "test" and "123"
-- click "add"
+- create a file in the root directory called data.json
+- paste this:
+
+```
+{
+  "posts": {
+    "my-first-blog-post": {
+      "content": "Cupcake ipsum dolor sit amet carrot cake. Sweet tootsie roll marzipan jelly-o cake cotton candy pie. Jelly-o powder tootsie roll. Toffee gummi bears muffin powder caramels dragée soufflé. Halvah gummies gingerbread jelly jujubes. Sweet toffee lollipop chocolate cake.",
+      "coverImage": "http://placekitten.com/g/700/400",
+      "coverImageAlt": "A random kitten from PlaceKitten.com",
+      "dateCreated": 1609718400000,
+      "slug": "my-first-blog-post",
+      "title": "My First Blog Post"
+    },
+    "my-second-blog-post": {
+      "content": "Cupcake ipsum dolor sit amet carrot cake. Sweet tootsie roll marzipan jelly-o cake cotton candy pie. Jelly-o powder tootsie roll. Toffee gummi bears muffin powder caramels dragée soufflé. Halvah gummies gingerbread jelly jujubes. Sweet toffee lollipop chocolate cake.",
+      "coverImage": "http://placekitten.com/g/700/500",
+      "coverImageAlt": "A random kitten from PlaceKitten.com",
+      "dateCreated": 1609459200000,
+      "slug": "my-second-blog-post",
+      "title": "My Second Blog Post"
+    }
+  }
+}
+```
+
+- click the vertical ellipsis menu
+- select "Import JSON"
+- browse for your data.json file
+- click "Import"
 
 # Next.js Setup
 
@@ -59,6 +86,19 @@ import "../stylesheets/global.scss";
 const App = ({ Component, pageProps }) => <Component {...pageProps} />;
 
 export default App;
+```
+
+- add `jsconfig.json` for absolute imports:
+
+```
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@lib/*": ["lib/*"]
+    }
+  }
+}
 ```
 
 - add `styles` directory
@@ -150,7 +190,6 @@ const initFirebase = async () => {
 - add `getTestData`:
 
 ```
-
 export const getTestData = async () => {
   initFirebase();
 
