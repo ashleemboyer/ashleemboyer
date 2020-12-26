@@ -111,10 +111,58 @@ body {
 }
 ```
 
-- add `index.js` to pages:
+- add `index.module.scss` to `pages` directory:
 
 ```
-const HomePage = () => <h1>Hello from HomePage!</h1>;
+.HomePage {
+  padding: 24px;
+
+  h1,
+  article {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-bottom: 32px;
+  }
+
+  article {
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    div {
+      padding: 16px;
+
+      h2 {
+        margin-top: 0;
+        margin-bottom: 4px;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+```
+
+- add `index.js` to `pages`:
+
+```
+import styles from './index.module.scss';
+
+const HomePage = () => <h1 className={styles.HomePage}>Hello from HomePage!</h1>;
 
 export default HomePage;
 ```
