@@ -287,32 +287,24 @@ const getFormattedDate = (milliseconds) => {
 };
 ```
 
-- add a loading state
-- add a state for data
-- add a `useEffect` for calling `getPosts`
+- add `getServerSideProps` for fetching the posts:
 
 ```
-useEffect(() => {
-  setIsLoading(true);
-  getPosts().then((res) => {
-    setPosts(res);
-    setIsLoading(false);
-  });
-}, []);
-```
+export async function getServerSideProps() {
+  const posts = await getPosts();
 
-- show loading text if loading:
-
-```
-if (isLoading) {
-  return <h1>Loading...</h1>;
+  return {
+    props: {
+      posts,
+    },
+  };
 }
 ```
 
-- otherwise, map over the posts and render them:
+- accepts a `posts` prop to `HomePage` and map over them to render
 
 ```
-return (
+const HomePage = ({ posts }) => (
   <div className={styles.HomePage}>
     <h1>Blog Posts</h1>
     {posts.map((post) => (
