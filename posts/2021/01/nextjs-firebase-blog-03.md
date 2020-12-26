@@ -12,6 +12,10 @@ series_slug: nextjs-firebase-blog
 
 - create post page
 
+# Previously
+
+...
+
 # Create the page
 
 - Add `post` directory to `pages`
@@ -276,3 +280,66 @@ Let's remove these three styles from the other SCSS files and also use our Layou
 - import the `Layout` component in each page
 - wrap the rendered content with the opening and closing `Layout` tags
 - and delete the `max-width`, `margin`, and `padding` from the `.HomePage`, `.CreatePage`, and `.PostPage` classes
+
+# One last thing
+
+What if someone tries to go to a post that doesn't exist? Let's try it. Go to `https://localhost:3000/post/abcdefg`. You should see this error:
+
+```
+Server Error
+TypeError: Cannot read property 'coverImage' of null
+```
+
+This is because the `PostPage` component is expecting `post` to be defined. Since the post isn't found in your database, our `getPostBySlug` is returning `null`. So, the `post` object passed to `PostPage` is null and doesn't have anything to access off of it.
+
+- Add the router back to the component and check to see if `post` is defined:
+
+```
+const PostPage = ({ post }) => {
+  const router = useRouter();
+
+  if (!post) {
+    router.push('/404');
+    return;
+  }
+
+  ...
+};
+```
+
+- Uh oh! There's another error:
+
+```
+Server Error
+Error: No router instance found. you should only use "next/router" inside the client side of your app.
+```
+
+This is happening because this code is running on the server side of our app and the router.push method is not supported there. You can read more about it at the link mentioned in the error.
+
+- To fix it, let's add an additional check to our if statement:
+
+```
+if (!post && typeof window !== 'undefined') {
+  router.push('/404');
+  return;
+}
+```
+
+If we run this, we still get an error:
+
+```
+Server Error
+TypeError: Cannot read property 'coverImage' of null
+```
+
+The if-statement we just added is mainly for the client-side and doesn't tell the server-side what to do if the `post` object is undefined. Let's add another if-statement below the first one that just returns `null` if `post` isn't defined.
+
+```
+if (!post) {
+  return null;
+}
+```
+
+# Next time
+
+...
