@@ -187,21 +187,30 @@ const initFirebase = async () => {
 
 ## Create a function for reading data
 
-- add `getTestData`:
+- add `getPosts`:
 
 ```
-export const getTestData = async () => {
+export const getPosts = async () => {
   initFirebase();
 
-  const testData = await firebase
+  const posts = await firebase
     .database()
-    .ref("/test")
-    .once("value")
+    .ref('/posts')
+    .orderByChild('dateCreated')
+    .once('value')
     .then((snapshot) => {
-      return snapshot.val();
+      const snapshotVal = snapshot.val();
+
+      const result = [];
+      for (var slug in snapshotVal) {
+        const post = snapshotVal[slug];
+        result.push(post);
+      }
+
+      return result;
     });
 
-  return testData;
+  return posts;
 };
 ```
 
@@ -209,11 +218,68 @@ export const getTestData = async () => {
 
 ## Use the function in HomePage
 
-- import `getTestData` in `index.js`
+- import `getPosts` in `index.js`
+- add a function for formatting the date:
+
+```
+const getFormattedDate = (milliseconds) => {
+  const formatOptions = {
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  };
+  const date = new Date(milliseconds);
+  return date.toLocaleDateString(undefined, formatOptions);
+};
+```
+
 - add a loading state
 - add a state for data
-- show loading text if loading
-- show data if not loading
-- show an idk otherwise
+- add a `useEffect` for calling `getPosts`
+
+```
+useEffect(() => {
+  setIsLoading(true);
+  getPosts().then((res) => {
+    setPosts(res);
+    setIsLoading(false);
+  });
+}, []);
+```
+
+- show loading text if loading:
+
+```
+if (isLoading) {
+  return <h1>Loading...</h1>;
+}
+```
+
+- otherwise, map over the posts and render them:
+
+```
+return (
+  <div className={styles.HomePage}>
+    <h1>Blog Posts</h1>
+    {posts.map((post) => (
+      <article key={post.slug}>
+        <img src={post.coverImage} alt={post.coverImageAlt} />
+        <div>
+          <h2>{post.title}</h2>
+          <span>{getFormattedDate(post.dateCreated)}</span>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: `${post.content.substring(0, 200)}...`,
+            }}
+          ></p>
+        </div>
+      </article>
+    ))}
+  </div>
+);
+```
+
 - restart dev server (show browser)
 - `git commit -m "Showing test data in HomePage"`
