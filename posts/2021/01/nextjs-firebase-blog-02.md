@@ -15,17 +15,52 @@ series_slug: nextjs-firebase-blog
 3. Make Inputs for Describing Posts
 4. Write a Create Function
 
-# Clone the starter code
-
-- git clone <repo>
-- change firebase config vars (make this .env actually)
-
 # Add a Page for Creating Posts
 
-- add create.js in /pages:
+- add `create.module.scss` in `pages`:
 
 ```
-const CreatePage = () => <h1>Hello, from CreatePage!</h1>;
+.CreatePage {
+  padding: 24px;
+
+  form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 16px;
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+
+    input {
+      margin-bottom: 16px;
+    }
+
+    textarea {
+      height: 300px;
+    }
+
+    button {
+      display: block;
+      margin-right: 0;
+      margin-left: auto;
+      margin-top: 24px;
+    }
+  }
+}
+```
+
+- add `create.js` in `pages`:
+
+```
+import styles from './create.module.scss';
+
+const CreatePage = () => (
+  <div styles={className.CreatePage}>
+    <h1>Hello, from CreatePage!</h1>
+  </div>
+);
 
 export default CreatePage;
 ```
