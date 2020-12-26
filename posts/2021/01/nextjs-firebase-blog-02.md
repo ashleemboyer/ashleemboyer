@@ -69,7 +69,7 @@ export default CreatePage;
 
 # Make inputs for describing posts
 
-The post object (date will be auto-generated):
+The post object (`dateCreated` will be auto-generated):
 
 ```
 title
