@@ -162,7 +162,11 @@ body {
 ```
 import styles from './index.module.scss';
 
-const HomePage = () => <h1 className={styles.HomePage}>Hello from HomePage!</h1>;
+const HomePage = () => (
+  <div className={styles.HomePage}>
+    <h1>Hello from HomePage!</h1>
+  </div>
+);
 
 export default HomePage;
 ```
