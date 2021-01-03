@@ -259,7 +259,7 @@ export const getPosts = async () => {
         result.push(post);
       }
 
-      return result;
+      return result.reverse();
     });
 
   return posts;
