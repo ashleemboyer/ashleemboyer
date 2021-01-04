@@ -48,9 +48,9 @@
     pre {
       background-color: rgba(#c2185b, 0.13);
       padding: 12px;
-      white-space: pre-wrap;
       font-size: 0.85rem;
       line-height: 1.45rem;
+      overflow-y: scroll;
 
       code {
         background-color: transparent;
