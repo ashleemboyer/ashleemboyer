@@ -1,17 +1,17 @@
 .PostPage {
   h1 {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   & > p {
     font-style: italic;
     color: #505050;
-    margin-bottom: 8px;
   }
 
   & > div:first-of-type {
-    margin-bottom: 24px;
+    margin-top: 12px;
+    margin-bottom: 32px;
 
     a {
       margin-right: 6px;
