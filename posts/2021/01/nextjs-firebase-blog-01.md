@@ -411,11 +411,12 @@ const HomePage = ({ posts }) => (
 
 [![The blog site showing a "Blog Posts" heading and a list of two posts showing the test data.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-01%2FCleanShot%202021-01-04%20at%2000.43.45.png?alt=media&token=5574ca53-9e33-49e2-aab0-9b8a8b23f150)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-01%2FCleanShot%202021-01-04%20at%2000.43.45.png?alt=media&token=5574ca53-9e33-49e2-aab0-9b8a8b23f150)
 
-19. You've done quite a bit of work now, so make sure you commit it in your terminal:
+19. You've done quite a bit of work now, so make sure you commit and push it in your terminal:
 
 ```
 git add .
 git commit -m "Showing test data on HomePage"
+git push
 ```
 
 ## Deploy to Vercel
