@@ -22,18 +22,18 @@ Welcome to the first post in my new "Build a Blog Site with Next.js and Firebase
 
 ## Firebase Setup
 
-First, let's create a new project in Firebase. _There's a video after these steps that visually walk though how to do this._
+First, let's create a new project in Firebase. _There's a video after these steps that visually walks though how to do this._
 
 1. Go to [console.firebase.google.com](https://console.firebase.google.com) and make sure you're logged in with the Google account you want to use.
 2. Click the card that says "Add project". It should be the first one listed.
 3. Enter a project name. I'm going to use `nextjs-firebase-blog` for the entire series.
 4. Toggle "Enable Google Analytics for this project" to off.
 5. Click "Create project".
-6. Click "continue" when your new project is ready.
+6. Click "Continue" when your new project is ready.
 
 <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/2w5BV9ft82g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Now that we have a project, we can setup the database and add some test data to it. _There's a video after these steps that visually walk though how to do this._
+Now that we have a project, we can set up the database and add some test data to it. _There's a video after these steps that visually walks though how to do this._
 
 1. Click "Realtime Database" in the left-hand sidebar.
 2. Click the "Create Database" button.
@@ -43,7 +43,7 @@ Now that we have a project, we can setup the database and add some test data to 
 
 <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/DQU0rcHce1c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Since we won't have an interface for creating new posts until after Part 2 of this series, we need to add some test data to our database. Firebase makes it easy to import data from a JSON file. That's how we're going to add our test data. _There's a video after these steps that visually walk though how to do this._
+Since we won't have an interface for creating new posts until after Part 2 of this series, we need to add some test data to our database. Firebase makes it easy to import data from a JSON file. That's how we're going to add our test data. _There's a video after these steps that visually walks though how to do this._
 
 1. Wherever you store code on your machine, create a new folder for this project. I'm calling mine `nextjs-firebase-blog`.
 2. Add a file to it called `data.json`.
@@ -421,7 +421,7 @@ git push
 
 ## Deploy to Vercel
 
-Woot! We're at the last step! We've got a basic little blog site that lists posts from a Firebase Realtime Database. You should be so proud of yourself. Let's get this deployed to Vercel so you can show it off! _There's a video after these steps that visually walk though how to do this._
+Woot! We're at the last step! We've got a basic little blog site that lists posts from a Firebase Realtime Database. You should be so proud of yourself. Let's get this deployed to Vercel so you can show it off! _There's a video after these steps that visually walks though how to do this._
 
 1. Go to [vercel.com/new](https://vercel.com/new). You may have to create an account.
 2. Find your `nextjs-firebase-blog` repository and click the "Import" button next to it.
@@ -440,7 +440,7 @@ Woot! We're at the last step! We've got a basic little blog site that lists post
 12. Click the "Save" button.
 13. Repeat steps 9-12 for the other two variables in your `.env` file: `NEXT_PUBLIC_FIREBASE_DATABASE_URL` and `NEXT_PUBLIC_FIREBASE_PROJECT_ID`.
 
-You should now have 3 environment variables that match the ones in your `.env` file. A deployment is required for these changes to take effect, so let's finish up with that last task. _There's a video after these steps that visually walk though how to do this._
+You should now have 3 environment variables that match the ones in your `.env` file. A deployment is required for these changes to take effect, so let's finish up with that last task. _There's a video after these steps that visually walks though how to do this._
 
 1. Go to your project overview.
 2. Scroll to the Production Deployment section.
