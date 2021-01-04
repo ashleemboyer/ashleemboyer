@@ -24,17 +24,17 @@
 .PostPage {
   h1 {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   & > p {
     font-style: italic;
     color: #505050;
-    margin-bottom: 8px;
   }
 
   & > div:first-of-type {
-    margin-bottom: 24px;
+    margin-top: 12px;
+    margin-bottom: 32px;
 
     a {
       margin-right: 6px;
@@ -71,9 +71,9 @@
     pre {
       background-color: rgba(#c2185b, 0.13);
       padding: 12px;
-      white-space: pre-wrap;
       font-size: 0.85rem;
       line-height: 1.45rem;
+      overflow-y: scroll;
 
       code {
         background-color: transparent;
