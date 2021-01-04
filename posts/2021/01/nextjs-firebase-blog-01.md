@@ -365,6 +365,11 @@ const getFormattedDate = (milliseconds) => {
 14. After the `HomePage` component initialization and before `export default HomePage`, add `getServerSideProps` for fetching posts from the database:
 
 ```
+// This is for fetching data every time the page is visited. We do this
+// so that we don't have to redploy the site every time we add a blog post.
+// You can read more about this in the Next.js docs at:
+// https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
+
 export async function getServerSideProps() {
   const posts = await getPosts();
 
