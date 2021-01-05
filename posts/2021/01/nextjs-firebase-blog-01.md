@@ -8,7 +8,9 @@ series_title: Build a Blog Site with Next.js and Firebase
 series_slug: nextjs-firebase-blog
 ---
 
-Welcome to the first post in my new "Build a Blog Site with Next.js and Firebase" series! The next post will be published one week from today, Monday, January 11th, 2021. If you'd like to get an email notification when that happens, consider subscribing to my newsletter at [ashleemboyer.com/newsletter](https://ashleemboyer.com/newsletter)! As always, you can contact me through [Twitter](https://twitter.com/ashleemboyer) or [email](mailto:hello@ashleemboyer.com) if you run into any issues.
+Welcome to the first post in my new "Build a Blog Site with Next.js and Firebase" series! This series is pretty similar to a series I wrote in 2019: ["Build a React & Firebase Blog Site"](https://ashleemboyer.com/series/react-firebase-blog). Because it's been well over a year since I published that series, I decided to create a new series and use the Next.js React framework this time. It's a fun framework to use, and I know so many people that are curious about it. I hope you enjoy the series!
+
+Part 2 of this series will be published one week from today, Monday, January 11th, 2021. If you'd like to get an email notification when that happens, consider subscribing to my newsletter at [ashleemboyer.com/newsletter](https://ashleemboyer.com/newsletter)! As always, you can contact me through [Twitter](https://twitter.com/ashleemboyer) or [email](mailto:hello@ashleemboyer.com) if you run into any issues.
 
 ## Table of Contents
 
@@ -224,7 +226,7 @@ This is a great place to stop and commit because you have a working version of y
 
 - A clear commit history is an efficient way to remind yourself what you did.
 - You can access the code from multiple machines.
-- Other people will be able to see what you've created. ([Learning out loud](https://ashleemboyer.com/what-it-means-to-learn-out-loud.md) is definitely a good thing!)
+- Other people will be able to see what you've created. ([Learning out loud](https://ashleemboyer.com/what-it-means-to-learn-out-loud) is definitely a good thing!)
 - Vercel makes it easy to deploy from GitHub repositories.
 
 1. Go to [https://github.com/new](https://github.com/new)
