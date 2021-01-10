@@ -46,32 +46,31 @@ const PostPage = ({ post }) => {
           tabIndex="-1"
           dangerouslySetInnerHTML={{ __html: title }}
         ></h1>
+        {series_title && (
+          <p>
+            Part of the{' '}
+            <Link href={`/series/${series_slug}`}>
+              <a
+                onClick={() => {
+                  if (typeof ga !== 'undefined') {
+                    ga('send', {
+                      hitType: 'event',
+                      eventCategory: 'Series',
+                      eventAction: 'Series Click',
+                      eventLabel: series_slug,
+                    });
+                  }
+                }}
+              >
+                {series_title} Series
+              </a>
+            </Link>
+          </p>
+        )}
         <p>
           <span>
             {formattedDate} &mdash; {timeToRead}
           </span>
-          {series_title && (
-            <span>
-              {' '}
-              &mdash; Part of the{' '}
-              <Link href={`/series/${series_slug}`}>
-                <a
-                  onClick={() => {
-                    if (typeof ga !== 'undefined') {
-                      ga('send', {
-                        hitType: 'event',
-                        eventCategory: 'Series',
-                        eventAction: 'Series Click',
-                        eventLabel: series_slug,
-                      });
-                    }
-                  }}
-                >
-                  {series_title} Series
-                </a>
-              </Link>
-            </span>
-          )}
         </p>
         <div>
           {tags.map((tag) => (
