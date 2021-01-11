@@ -78,7 +78,7 @@ export default CreatePage;
 
 [![A white webpage that reads "Hello from CreatePage!" in black text.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-02%2FCleanShot%202021-01-10%20at%2014.13.47.png?alt=media&token=fb6d2174-34f6-4cc6-bf74-f23bbac592f9)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-02%2FCleanShot%202021-01-10%20at%2014.13.47.png?alt=media&token=fb6d2174-34f6-4cc6-bf74-f23bbac592f9)
 
-4. Commit and push your work to the repository:
+4. Commit and push your work to your repository:
 
 ```
 git add .
@@ -246,7 +246,7 @@ export default CreatePage;
 
 [![Window showing the create page and inputs on the left and the dev tools console on the right. The console shows an expanded JSON object with the form values correctly stored.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-02%2FCleanShot%202021-01-10%20at%2014.52.21.png?alt=media&token=55cb793a-714e-4664-b67e-c2d8ddd3495a)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-02%2FCleanShot%202021-01-10%20at%2014.52.21.png?alt=media&token=55cb793a-714e-4664-b67e-c2d8ddd3495a)
 
-7. Commit and push your work to the repository:
+7. Commit and push your work to your repository:
 
 ```
 git add .
@@ -428,7 +428,7 @@ export default CreatePage;
 
 [![Window showing the home page and list of blog posts.](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-02%2FCleanShot%202021-01-10%20at%2015.22.04.png?alt=media&token=b2c47ab7-43e9-42bd-9454-ed33f8a8d4e2)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-02%2FCleanShot%202021-01-10%20at%2015.22.04.png?alt=media&token=b2c47ab7-43e9-42bd-9454-ed33f8a8d4e2)
 
-6. Commit and push your work to the repository:
+6. Commit and push your work to your repository:
 
 ```
 git add .
