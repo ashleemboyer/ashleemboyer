@@ -143,6 +143,10 @@ export default App;
 ```scss
 // This is where global site styles go.
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
