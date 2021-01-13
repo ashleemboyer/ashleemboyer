@@ -51,7 +51,7 @@ Since we won't have an interface for creating new posts until after Part 2 of th
 2. Add a file to it called `data.json`.
 3. Paste this block of code in the JSON file:
 
-```
+```json
 {
   "posts": {
     "my-first-blog-post": {
@@ -93,7 +93,7 @@ _Make sure you run the commands in steps 1 and 2 in your `nextjs-firebase-blog` 
 3. Open `package.json` in your code editor.
 4. Update the `"scripts"` property to have `dev`, `build`, and `start` properties like this:
 
-```
+```json
 {
   "scripts": {
     "dev": "next dev",
@@ -106,13 +106,13 @@ _Make sure you run the commands in steps 1 and 2 in your `nextjs-firebase-blog` 
 5. Add a `pages` directory.
 6. Add `_app.js` to the `pages` directory and write this code in it:
 
-```
+```jsx
 // This is called a "Custom `App` in Next.js.
 // We use it for global styles and will later use it for loading an
 // icon library. You can read more about this in the Next.js docs at:
 // https://nextjs.org/docs/advanced-features/custom-app
 
-import "@styles/global.scss";
+import '@styles/global.scss';
 
 const App = ({ Component, pageProps }) => <Component {...pageProps} />;
 
@@ -121,7 +121,7 @@ export default App;
 
 7. Add a `jsconfig.json` file in the root of the project:
 
-```
+```json
 // This file is for absolute imports and module path aliases.
 // It'll help us keep our import statements nice and clean!
 // You can read more about this in the Next.js docs at:
@@ -140,7 +140,7 @@ export default App;
 8. Add a `styles` directory in the root of the project.
 9. Add `global.scss` to the `styles` directory:
 
-```
+```scss
 // This is where global site styles go.
 
 body {
@@ -151,7 +151,7 @@ body {
 
 10. Add `index.module.scss` to the `styles` directory:
 
-```
+```scss
 // These styles go with the index page.
 
 .HomePage {
@@ -199,7 +199,7 @@ body {
 
 11. Add `index.js` to the `pages` directory:
 
-```
+```jsx
 // This component represents the index page for the site. You
 // can read more about Pages in the Next.js docs at:
 // https://nextjs.org/docs/basic-features/pages
@@ -239,7 +239,7 @@ _The next few steps will be run in your terminal._
 5. `git init` to initialize a Git repository in your project directory.
 6. Add a `.gitignore` file so we can avoid adding unnecessary files to the repository:
 
-```
+```gitignore
 .next
 node_modules
 ```
@@ -259,7 +259,7 @@ In order to read data from our Firebase Realtime Database, we need to initialize
 
 1. Update your `.gitignore` to include `.env`:
 
-```
+```gitignore
 .next
 node_modules
 .env
@@ -272,7 +272,7 @@ node_modules
 6. Click the "Register app" button and keep this page open.
 7. Add a `.env` file in the root of the project and paste your `apiKey`, `databaseURL`, and `projectId` in the correct places:
 
-```
+```env
 NEXT_PUBLIC_FIREBASE_API_KEY=<your api key>
 NEXT_PUBLIC_FIREBASE_DATABASE_URL=<your database url>
 NEXT_PUBLIC_FIREBASE_PROJECT_ID=<your project id>
@@ -282,12 +282,12 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=<your project id>
 9. Add a `lib` directory in the root of the project.
 10. Add a `firebase.js` file:
 
-```
+```js
 // This is where we'll add all of the functions for interacting with
 // Firebase services in our app.
 
-import firebase from "firebase/app";
-import "firebase/database";
+import firebase from 'firebase/app';
+import 'firebase/database';
 
 const initFirebase = async () => {
   // This check prevents us from initializing more than one app.
@@ -330,7 +330,7 @@ export const getPosts = async () => {
 
 11. Update `jsconfig.json` for the new `lib` directory:
 
-```
+```json
 {
   "compilerOptions": {
     "baseUrl": "./",
@@ -344,13 +344,13 @@ export const getPosts = async () => {
 
 12. Import the `getPosts` in `pages/index.js` as the first import:
 
-```
+```jsx
 import { getPosts } from '@lib/firebase';
 ```
 
 13. Below the imports, add a helper function for formatting the date of a post:
 
-```
+```js
 const getFormattedDate = (milliseconds) => {
   const formatOptions = {
     weekday: 'long',
@@ -366,7 +366,7 @@ const getFormattedDate = (milliseconds) => {
 
 14. After the `HomePage` component initialization and before `export default HomePage`, add `getServerSideProps` for fetching posts from the database:
 
-```
+```js
 // This is for fetching data every time the page is visited. We do this
 // so that we don't have to redploy the site every time we add a blog post.
 // You can read more about this in the Next.js docs at:
@@ -385,7 +385,7 @@ export async function getServerSideProps() {
 
 15. Update the `HomePage` component to accept a `posts` prop and to render the given `posts`:
 
-```
+```jsx
 const HomePage = ({ posts }) => (
   <div className={styles.HomePage}>
     <h1>Blog Posts</h1>
@@ -415,7 +415,7 @@ const HomePage = ({ posts }) => (
 
 19. You've done quite a bit of work now, so make sure you commit and push it in your terminal:
 
-```
+```bash
 git add .
 git commit -m "Showing test data on HomePage"
 git push
