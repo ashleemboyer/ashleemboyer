@@ -1,40 +1,68 @@
 .CodeBlock {
-  display: flex;
-  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
 
-  button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-  }
-
-  & > div {
-    min-width: 2.6rem;
-    color: white;
+  &-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
     background-color: #560027;
-    padding: 2px 8px;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    color: white;
+
+    span:first-child {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
-  pre {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    font-family: 'Courier New', Courier, monospace;
+  &-content {
+    display: flex;
     background-color: rgba(#c2185b, 0.13);
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding-left: 12px;
+    padding: 8px;
 
-    & > div {
-      display: flex;
-      align-items: center;
+    &-lineNumbers {
+      min-width: 1.6rem;
+      color: #560027;
+      text-align: right;
 
-      * {
-        font-size: 1.1rem !important;
-        font-weight: normal;
-        line-height: 1.4rem;
-        font-family: 'Courier New', Courier, monospace;
+      & > div {
+        font-size: 1rem !important;
+        font-weight: 500;
+        line-height: 1.5rem;
+        font-family: 'Source Code Pro', monospace;
+      }
+    }
+
+    pre {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      margin-left: 20px;
+
+      & > div {
+        display: flex;
+        align-items: center;
+
+        * {
+          color: #560027;
+          font-size: 1rem !important;
+          font-weight: 500;
+          line-height: 1.5rem;
+          font-family: 'Source Code Pro', monospace;
+        }
       }
     }
   }
