@@ -165,14 +165,14 @@ null false
 
 The first shows the initial values of `user` and `userLoading` when we invoke `useAuth`. The second shows those values after the `callback` we pass into `onAuthStateChanged` has been invoked and `setUser` has been called. The third shows after `setUserLoading` has been called in the same `callback`. This is why we call `setUser` before `setUserLoading`, so we can ensure that everything is truly loaded before changing that state.
 
-4. Redirect to 404 if no user and return null if user is loading, before the `handleChange` and `handleSubmit` functions are defined. Prevents us from unecessarily defining the functions if we're not going to use them.
+4. Redirect to 404 if no user and return null if user is loading, before the `handleChange` and `handleSubmit` functions are defined. This placement prevents us from unecessarily defining those two functions if we're not going to use them.
 
 ```jsx
 if (userLoading) {
   return null;
 }
 
-if (!user) {
+if (!user && typeof window !== 'undefined') {
   router.push('/404');
   return null;
 }
