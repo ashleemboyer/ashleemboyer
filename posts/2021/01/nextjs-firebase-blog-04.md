@@ -8,25 +8,59 @@ series_title: Build a Blog Site with Next.js and Firebase
 series_slug: nextjs-firebase-blog
 ---
 
-# TOC
+Welcome to the fourth post in my new "Build a Blog Site with Next.js and Firebase" series! This series is pretty similar to a series I wrote in 2019: ["Build a React & Firebase Blog Site"](/series/react-firebase-blog). Because it's been well over a year since I published that series, I decided to create a new series and use the Next.js React framework this time. It's a fun framework to use, and I know so many people that are curious about it. I hope you enjoy the series!
 
-TODO
+<a href="/nextjs-firebase-blog-03" style="width:fit-content;margin:40px auto;display:block;text-align:center;background-color:#c2185b;color:white;padding:8px 20px;border-radius:50vw;text-decoration:none;">Read Part 3 of the "Build a Blog Site with Next.js and Firebase" series</a>
 
-# Previously
+Part 5 of this series will be published one week from today, Monday, February 1st, 2021. If you'd like to get an email notification when that happens, consider subscribing to my newsletter at [ashleemboyer.com/newsletter](/newsletter). As always, you can contact me through [Twitter](https://twitter.com/ashleemboyer) or [email](mailto:hello@ashleemboyer.com) if you run into any issues.
 
-TODO
+## TOC
 
-# Add a Context for managing current user
+- [Set up Authentication in the Firebase Console](#set-up-authentication-in-the-firebase-console)
+- [Manage Authentication with React Context](#manage-authentication-with-react-context)
+- [Check for an Authenticated User in CreatePage](#check-for-an-authenticated-user-in-createpage)
+- [Add a Page for Signing In](#add-a-page-for-signing-in)
+- [Add a Sign Out Button to Layout](#add-a-sign-out-button-to-layout)
+- [Update the CreatePage Redirect](#update-the-create-page-redirect)
 
-- Import `firebase/auth` into `lib/firebase.js`:
+<hr />
 
-```
+The importance of authentication in this app is making it so only _you_ can create, edit, and delete posts. It is _your_ blog after all. We'll use Firebase Authentication to manage a user account and we'll track the authentication state using React Context. Then we can hide certain parts of the app from people who aren't logged in.
+
+## Set up Authentication in the Firebase Console
+
+Firebase makes it easy for us to set up email/password authentication in our app. It's also easy to add a user for ourselves right from the console. Make sure you use a real email address and a secure password for your user. This is how you're protecting your blog! _There's a video after these steps that visually walks though how to do this._
+
+1. Go to [the Firebase console](console.firebase.google.com) for your project.
+2. Go to the "Authentication" page under "Build".
+3. Click "Get Started".
+4. You should be on the "Sign-in method" tab.
+5. Click "Email/Password".
+6. Enable the first toggle.
+7. Click "Save".
+8. Switch to the "Users" tab.
+9. Click "Add user".
+10. Enter a secure email and password.
+11. Click "Add user".
+
+<iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/WTnIU0ZtCoo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Manage Authentication State with React Context
+
+1. Import `firebase/auth` into `lib/firebase.js` after the other Firebase imports:
+
+```js
 import 'firebase/auth';
 ```
 
-- Add an `onAuthStateChanged` function to `lib/firebase.js`:
+2. Add an `onAuthStateChanged` function to `lib/firebase.js`:
 
-```
+```js
+/*
+Observes changes in authentication. Receives a callback function that is invoked
+when auth state changes. See the Firebase Reference Docs for all of the details:
+https://firebase.google.com/docs/reference/js/firebase.auth.Auth#onauthstatechanged
+*/
 export const onAuthStateChanged = async (callback) => {
   initFirebase();
 
@@ -34,10 +68,26 @@ export const onAuthStateChanged = async (callback) => {
 };
 ```
 
-- Add a `contexts` directory
-- Add a `auth.js` file:
+3. Add a `contexts` directory at the root of the project.
+4. Update `jsconfig.json` for the new `contexts` directory:
 
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components": ["components"],
+      "@contexts/*": ["contexts/*"],
+      "@lib/*": ["lib/*"],
+      "@styles/*": ["styles/*"]
+    }
+  }
+}
 ```
+
+5. Add an `auth.js` file:
+
+```js
 import { createContext, useState, useEffect, useContext } from 'react';
 import { onAuthStateChanged } from '@lib/firebase';
 
@@ -64,26 +114,11 @@ export const AuthProvider = ({ children }) => {
 export const useAuth = () => useContext(AuthContext);
 ```
 
-- Add `@contexts` to `jsconfig.json` paths:
+6. Update `pages/_app.js` to use `AuthProvider`:
 
-```
-{
-  "compilerOptions": {
-    "baseUrl": "./",
-    "paths": {
-      "@components": ["components"],
-      "@contexts/*": ["contexts/*"],
-      "@lib/*": ["lib/*"]
-    }
-  }
-}
-```
-
-- Update `pages/_app.js` to use `AuthProvider`:
-
-```
+```js
 import { AuthProvider } from '@contexts/auth';
-import '../styles/global.scss';
+import '@styles/global.scss';
 
 const App = ({ Component, pageProps }) => (
   <AuthProvider>
@@ -94,61 +129,73 @@ const App = ({ Component, pageProps }) => (
 export default App;
 ```
 
-# Check for a user in CreatePage
-
-- Import `useAuth`:
+7. Restart your development server if it's running.
+8. Make sure your home page loads without error.
+9. Commit and push your work to your repository:
 
 ```
+git add .
+git commit -m "Adding AuthContext"
+git push
+```
+
+## Check for an Authenticated User in CreatePage
+
+1. Import `useAuth`:
+
+```jsx
 import { useAuth } from '@contexts/auth';
 ```
 
-- Invoke it and log the results
+2. Invoke it and log the results
 
-```
+```jsx
 const [user, userLoading] = useAuth();
 console.log(user, userLoading);
 ```
 
-You should see three logs in the console:
+3. Visit `http://localhost:3000/create` in your browser.
+4. You should see three logs in the console:
 
-1. undefined true
-2. null true
-3. null false
+```
+undefined true
+null true
+null false
+```
 
 The first shows the initial values of `user` and `userLoading` when we invoke `useAuth`. The second shows those values after the `callback` we pass into `onAuthStateChanged` has been invoked and `setUser` has been called. The third shows after `setUserLoading` has been called in the same `callback`. This is why we call `setUser` before `setUserLoading`, so we can ensure that everything is truly loaded before changing that state.
 
-- Redirect to 404 if no user and return null if user is loading, before the `handleChange` and `handleSubmit` functions are defined. Prevents us from unecessarily defining the functions if we're not going to use them.
+4. Redirect to 404 if no user and return null if user is loading, before the `handleChange` and `handleSubmit` functions are defined. Prevents us from unecessarily defining the functions if we're not going to use them.
 
-```
-if (!user && !userLoading) {
-  router.push('/404');
-  return;
+```jsx
+if (userLoading) {
+  return null;
 }
 
-if (userLoading) {
+if (!user) {
+  router.push('/404');
   return null;
 }
 ```
 
-# Set up Auth in the Firebase Console
-
-- Go to [the console](console.firebase.google.com)
-- Go to the "Authentication" page under "Build"
-- Click "Get Started"
-- You should be on the "Sign-in method" tab
-- Click "Email/Password"
-- Enable the first toggle
-- Click "Save"
-- Switch to the "Users" tab
-- Click "Add user"
-- Enter a secure email and password (this is how you're protecting your blog!)
-- Click "Add user"
-
-# Add Firebase function for signing in
-
-- Add `signIn` to `lib/firebase.js`:
+5. Visit `http://localhost:3000/create` in your browser.
+6. You should be redirected to the 404 page.
+7. Commit and push your work to your repository:
 
 ```
+git add .
+git commit -m "Requiring Authentication in CreatePage"
+git push
+```
+
+## Add a Page for Signing In
+
+1. Add a new `signIn` function to `lib/firebase.js`:
+
+```js
+/*
+Attempts to authenticate a user with a given email and password.
+*/
 export const signIn = async (email, password) => {
   initFirebase();
 
@@ -156,11 +203,9 @@ export const signIn = async (email, password) => {
 };
 ```
 
-# Add a login page
+2. Add `styles/signin.module.scss`:
 
-- Add `pages/signin.module.scss`:
-
-```
+```scss
 .SignIn {
   max-width: 500px;
   margin: 32px auto;
@@ -191,14 +236,14 @@ export const signIn = async (email, password) => {
 }
 ```
 
-- Add `pages/signin.js`:
+3. Add `pages/signin.js`:
 
-```
+```jsx
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { signIn } from '@lib/firebase';
 import { useAuth } from '@contexts/auth';
-import styles from './signin.module.scss';
+import styles from '@styles/signin.module.scss';
 
 const SignInPage = () => {
   const router = useRouter();
@@ -268,14 +313,26 @@ const SignInPage = () => {
 export default SignInPage;
 ```
 
-- try logging in
-- you should be sent to the home page
-
-## Add sign out button to Layout
-
-- write a `signOut` function:
+4. Go to `http://localhost:3000/signin` in your browser.
+5. Try logging in with the user credentials you created at the beginning of this post.
+6. If successful, you should be sent to the home page.
+7. Go to `http://localhost:3000/create` in your browser. You should not be redirected to the 404 page.
+8. Commit and push your work to your repository:
 
 ```
+git add .
+git commit -m "Adding SignInPage"
+git push
+```
+
+## Add a Sign Out Button to Layout
+
+1. Add a new `signOut` function to `lib/firebase.js`:
+
+```js
+/*
+Signs out the authenticated user.
+*/
 export const signOut = async () => {
   initFirebase();
 
@@ -283,44 +340,89 @@ export const signOut = async () => {
 };
 ```
 
-- import `signOut` in `Layout`:
+2. Update the `Layout` component to check for a user and render a Sign Out button if there is one.
 
-```
+```jsx
 import { signOut } from '@lib/firebase';
-```
-
-- import `useAuth`
-
-```
 import { useAuth } from '@contexts/auth';
+import styles from './Layout.module.scss';
+
+const Layout = ({ children }) => {
+  const [user] = useAuth();
+
+  return (
+    <div className={styles.Layout}>
+      <nav>
+        <span>
+          <a href="/">My Next.js Blog</a>
+        </span>
+        {user && (
+          <span>
+            <button onClick={() => signOut()}>Sign Out</button>
+          </span>
+        )}
+      </nav>
+      <main>{children}</main>
+    </div>
+  );
+};
+
+export default Layout;
 ```
 
-- invoke `useAuth` to check for a `user`:
+3. Update the `Layout` styles so the `<nav>` element uses Flexbox and the new button stands out from the blue bar.
+
+```scss
+.Layout {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    ...
+
+    span {
+      ...
+
+      button {
+        color: #1a73e8;
+        background-color: white;
+      }
+    }
+  }
+
+  ...
+}
+```
+
+4. Go to `http://localhost:3000/` in your browser.
+5. In the blue bar at the top, you should see a white button with blue text that reads "Sign Out" like this:
+
+[![](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-04%2FCleanShot%202021-01-17%20at%2018.36.51.png?alt=media&token=9d34e42d-945c-4ad2-bc3a-9161cc34bc9b)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-04%2FCleanShot%202021-01-17%20at%2018.36.51.png?alt=media&token=9d34e42d-945c-4ad2-bc3a-9161cc34bc9b)
+
+6. Click the Sign Out button and check that you can no longer access the create page at `http://localhost:3000/create`.
+7. Commit and push your work to your repository:
 
 ```
-const [user] = useAuth();
+git add .
+git commit -m "Adding Sign Out button to Layout"
+git push
 ```
 
-- render a second `<span>` in `<nav>` with the sign out button if there's a `user`:
+## Update the CreatePage Redirect
+
+1. In the `CreatePage` component, update `router.push('/404')` to `router.push('/signin')`.
+2. Click the "Sign Out" button if you're signed in.
+3. Try to access `http://localhost:3000/create` in your browser.
+4. You should be sent to the sign in page.
+5. Sign in with your credentials.
+6. Try to access `http://localhost:3000/create` again.
+7. You should be able to create posts.
+8. Commit and push your work to your repository:
 
 ```
-{user && (
-  <span>
-    <button onClick={() => signOut()}>Sign Out</button>
-  </span>
-)}
+git add .
+git commit -m "Redirecting to signin in CreatePage"
+git push
 ```
 
-# Require sign in for the CreatePage component
-
-- update `router.push('/404')` to `router.push('/signin')`
-- click "sign out" if you're signed in
-- try to go to /create
-- you should be sent to the login page
-- sign in
-- try to go to /create
-- you should be able to create posts
-
-# Next Time
-
-edit and delete posts
+9. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
