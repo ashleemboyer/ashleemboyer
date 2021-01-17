@@ -12,7 +12,7 @@ Welcome to the second post in my new "Build a Blog Site with Next.js and Firebas
 
 <a href="/nextjs-firebase-blog-01" style="width:fit-content;margin:40px auto;display:block;text-align:center;background-color:#c2185b;color:white;padding:8px 20px;border-radius:50vw;text-decoration:none;">Read Part 1 of the "Build a Blog Site with Next.js and Firebase" series</a>
 
-Part 3 of this series will be published one week from today, Monday, January 18th, 2021. If you'd like to get an email notification when that happens, consider subscribing to my newsletter at [ashleemboyer.com/newsletter](/newsletter). As always, you can contact me through [Twitter](https://twitter.com/ashleemboyer) or [email](mailto:hello@ashleemboyer.com) if you run into any issues.
+Part 3 of this series will be published about one week from today, Tuesday, January 19th, 2021. If you'd like to get an email notification when that happens, consider subscribing to my newsletter at [ashleemboyer.com/newsletter](/newsletter). As always, you can contact me through [Twitter](https://twitter.com/ashleemboyer) or [email](mailto:hello@ashleemboyer.com) if you run into any issues.
 
 ## Table of Contents
 
@@ -30,11 +30,11 @@ First, let's add styles and a minimal component for our new `CreatePage` compone
 
 ```scss
 .CreatePage {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 24px;
 
   form {
-    max-width: 700px;
-    margin: 0 auto;
     padding: 16px;
 
     h1 {
@@ -436,6 +436,6 @@ git commit -m "Adding createPost function and using it in CreatePage"
 git push
 ```
 
-6. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
+7. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
 
 Don't forget that [last time](/nextjs-firebase-blog-01), we [deployed our site to Vercel](/nextjs-firebase-blog-01#deploy-to-vercel). With every `git push` we've done, Vercel has re-built your site for you! It's already updated and you can share your progress with everyone you know. :)

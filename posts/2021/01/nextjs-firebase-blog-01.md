@@ -159,13 +159,9 @@ body {
 // These styles go with the index page.
 
 .HomePage {
+  max-width: 700px;
+  margin: 0 auto;
   padding: 24px;
-
-  h1,
-  article {
-    max-width: 700px;
-    margin: 0 auto;
-  }
 
   h1 {
     margin-bottom: 32px;
