@@ -1,0 +1,64 @@
+.CodeBlock {
+  border-radius: 8px;
+  overflow: hidden;
+
+  &-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #560027;
+    color: white;
+
+    span:first-child {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-decoration: underline;
+    }
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    background-color: rgba(#c2185b, 0.13);
+
+    &-lineNumbers {
+      min-width: 48px;
+      text-align: right;
+      border-right: 1px solid #560027;
+      padding-right: 12px;
+    }
+
+    pre {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      padding-left: 20px;
+    }
+
+    &-lineNumbers,
+    pre {
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      & > span {
+        display: block;
+        color: #560027;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5rem;
+        font-family: 'Source Code Pro', monospace;
+      }
+    }
+  }
+}
