@@ -1,17 +1,40 @@
+.LinksPage {
+  p {
+    margin-bottom: 48px;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    background-color: #c2185b;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 4px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .PostPage {
   h1 {
     font-size: 2rem;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   & > p {
     font-style: italic;
     color: #505050;
-    margin-bottom: 8px;
   }
 
   & > div:first-of-type {
-    margin-bottom: 24px;
+    margin-top: 12px;
+    margin-bottom: 32px;
 
     a {
       margin-right: 6px;
@@ -34,28 +57,6 @@
 
     img {
       width: 100%;
-    }
-
-    code {
-      font-size: 1rem;
-      font-weight: bold;
-      background-color: rgba(#c2185b, 0.13);
-      color: #c2185b;
-      padding: 2px 4px;
-      border-radius: 4px;
-    }
-
-    pre {
-      background-color: rgba(#c2185b, 0.13);
-      padding: 12px;
-      white-space: pre-wrap;
-      font-size: 0.85rem;
-      line-height: 1.45rem;
-
-      code {
-        background-color: transparent;
-        font-weight: normal;
-      }
     }
   }
 }

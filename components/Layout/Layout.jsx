@@ -12,7 +12,7 @@ const Layout = ({ title, description, image, slug, children }) => (
     />
     <header>
       <img
-        src="/me.jpg"
+        src="/me.png"
         alt="Ashlee standing in front of a brick wall looking up to her left and smiling. Her right hand is held up near her right shoulder with the palm facing upwards."
       />
       <div>
