@@ -242,7 +242,7 @@ Neat! This is also what I mean by incremental changes to code. Take it step by s
 import { getFirebase } from "../firebase";
 ```
 
-Now, add the `generateDate()` function and update the `createPost` function:
+Now, add the `generateDate()` function, update the `createPost` function, and destructure the `history` prop from the `Create` component params:
 
 ```
 const generateDate = () => {
@@ -287,6 +287,12 @@ const createPost = () => {
     .set(newPost)
     .then(() => history.push(`/`));
 };
+```
+
+```
+const Create = ({ history }) => {
+  ...
+}
 ```
 
 Fill in your inputs like we did a few minutes ago, click "Create post", and you should be brought to the home page with your new post at the very top!
