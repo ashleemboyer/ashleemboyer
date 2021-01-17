@@ -29,9 +29,9 @@ const renderContent = (content) => {
     if (line.startsWith('<pre')) {
       const codeLines = line.split('||');
       const language = getLanguage(codeLines[0]);
-      const clipboardContent = [];
-      const things = [];
 
+      const clipboardContent = [];
+      const lines = [];
       codeLines.forEach((codeLine) => {
         if (codeLine.startsWith('<span class="line-of-code">')) {
           const innerStuff = codeLine.substring(
@@ -39,16 +39,14 @@ const renderContent = (content) => {
             codeLine.length - '</span>'.length,
           );
           clipboardContent.push(innerStuff);
-          things.push(
-            <span className="line-of-code">{innerStuff || ' '}</span>,
-          );
+          lines.push(<span className="line-of-code">{innerStuff || ' '}</span>);
         }
       });
 
       return (
         <CodeBlock
           language={language}
-          lines={things.slice(0, things.length - 1)}
+          lines={lines.slice(0, lines.length - 1)}
           clipboardContent={clipboardContent}
         />
       );
