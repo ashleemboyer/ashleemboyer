@@ -29,14 +29,10 @@ const CodeBlock = ({ language, lines, clipboardContent }) => {
       <div className={styles['CodeBlock-content']}>
         <div className={styles['CodeBlock-content-lineNumbers']}>
           {lines.map((_, index) => (
-            <div>{index + 1}</div>
+            <span>{index + 1}</span>
           ))}
         </div>
-        <pre>
-          {lines.map((line) => (
-            <div>{line}</div>
-          ))}
-        </pre>
+        <pre>{lines.map((line) => line)}</pre>
       </div>
     </div>
   );

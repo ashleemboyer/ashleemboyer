@@ -32,37 +32,32 @@
   &-content {
     display: flex;
     background-color: rgba(#c2185b, 0.13);
-    padding: 8px;
 
     &-lineNumbers {
-      min-width: 1.6rem;
-      color: #560027;
+      min-width: 48px;
       text-align: right;
-
-      & > div {
-        font-size: 1rem !important;
-        font-weight: 500;
-        line-height: 1.5rem;
-        font-family: 'Source Code Pro', monospace;
-      }
+      border-right: 1px solid #560027;
+      padding-right: 12px;
     }
 
     pre {
       overflow-y: hidden;
       overflow-x: scroll;
-      margin-left: 20px;
+      padding-left: 20px;
+    }
 
-      & > div {
-        display: flex;
-        align-items: center;
+    &-lineNumbers,
+    pre {
+      padding-top: 8px;
+      padding-bottom: 8px;
 
-        * {
-          color: #560027;
-          font-size: 1rem !important;
-          font-weight: 500;
-          line-height: 1.5rem;
-          font-family: 'Source Code Pro', monospace;
-        }
+      & > span {
+        display: block;
+        color: #560027;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5rem;
+        font-family: 'Source Code Pro', monospace;
       }
     }
   }
