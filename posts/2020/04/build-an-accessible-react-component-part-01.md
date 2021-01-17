@@ -382,7 +382,9 @@ Then, we have our main [`describe`](https://jestjs.io/docs/en/api#describename-f
 
 3. Next, we want to make sure the correct number of anchor elements are being rendered based on the input given to the component through the `links` prop. Similar to the previous step, we `find` all the `<a>` elements and then expect that there are as many found as we have in our `testLinks` array.
 
-4. Now we can look at the first link rendered to make sure it has both a `label` and `href` being rendered correctly. We get the first anchor element using the handy [`first`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/first.html) method. Then we expect it's [`text`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/text.html) to match the first test link's `label`. Finally, we check the `props` on the element and make sure `href` is set to the test link's `href`. _Note: we only need to perform these expects on the first element because if the first element is rendered correctly, then all the others are too._
+4. Now we can look at the first link rendered to make sure it has both a `label` and `href` being rendered correctly. We get the first anchor element using the handy [`first`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/first.html) method. Then we expect it's [`text`](https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/text.html) to match the first test link's `label`. Finally, we check the `props` on the element and make sure `href` is set to the test link's `href`.
+
+Note: we only need to perform these expects on the first element because if the first element is rendered correctly, then all the others are too.
 
 5. Last but not least, we need to make sure the last anchor element has the `aria-current` attribute set to `"page"`. And you guessed it! Enzyme also has a [`last`]() method to go with `first`. Similar to how we checked the `aria-label` prop in 2, we expect it to have the string value of `"page"`.
 
