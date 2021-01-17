@@ -14,14 +14,14 @@ Welcome to the fourth post in my new "Build a Blog Site with Next.js and Firebas
 
 Part 5 of this series will be published one week from today, Monday, February 1st, 2021. If you'd like to get an email notification when that happens, consider subscribing to my newsletter at [ashleemboyer.com/newsletter](/newsletter). As always, you can contact me through [Twitter](https://twitter.com/ashleemboyer) or [email](mailto:hello@ashleemboyer.com) if you run into any issues.
 
-## TOC
+## Table of Contents
 
 - [Set up Authentication in the Firebase Console](#set-up-authentication-in-the-firebase-console)
-- [Manage Authentication with React Context](#manage-authentication-with-react-context)
+- [Manage Authentication State with React Context](#manage-authentication-state-with-react-context)
 - [Check for an Authenticated User in CreatePage](#check-for-an-authenticated-user-in-createpage)
 - [Add a Page for Signing In](#add-a-page-for-signing-in)
 - [Add a Sign Out Button to Layout](#add-a-sign-out-button-to-layout)
-- [Update the CreatePage Redirect](#update-the-create-page-redirect)
+- [Update the CreatePage Redirect](#update-the-createpage-redirect)
 
 <hr />
 
