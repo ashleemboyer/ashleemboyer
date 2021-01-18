@@ -33,54 +33,27 @@ We don't currently have a way for people to read posts individually. We have the
 
 ```scss
 .PostPage {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 24px;
-
   img {
     max-width: 100%;
     border-radius: 12px;
     border: 1px solid black;
   }
 
-  & > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+  h1 {
+    margin-top: 0;
     margin-bottom: 8px;
-
-    h1 {
-      margin: 0;
-    }
-
-    span {
-      display: flex;
-      margin: 0;
-
-      a {
-        display: block;
-        padding: 8px;
-        color: black;
-      }
-
-      button {
-        background: transparent;
-        box-shadow: none;
-        border: none;
-        color: black;
-      }
-    }
   }
 
-  span {
-    margin-bottom: 16px;
+  a {
+    display: block;
+    padding: 8px;
+    color: black;
   }
 }
 ```
 
-- Add a `post` directory to `pages`
-- Add `[slug].js` under the `post` directory:
+2. Add a `post` directory to `pages`
+3. Add `[slug].js` under the `post` directory:
 
 ```jsx
 import { useRouter } from 'next/router';
@@ -100,12 +73,12 @@ const PostPage = () => {
 export default PostPage;
 ```
 
-2. Go to `https://localhost:3000/post/my-first-blog-post` in your browser
-3. The page should look something like this:
+4. Go to `https://localhost:3000/post/my-first-blog-post` in your browser
+5. The page should look something like this:
 
 [![White webpage with black text that reads "Hello, from post: my-first-blog-post!".](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-03%2FCleanShot%202021-01-17%20at%2013.46.33.png?alt=media&token=5fe24bde-e502-4fe8-af7c-8675261f2729)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-03%2FCleanShot%202021-01-17%20at%2013.46.33.png?alt=media&token=5fe24bde-e502-4fe8-af7c-8675261f2729)
 
-4. Commit and push your work to your repository:
+6. Commit and push your work to your repository:
 
 ```
 git add .
