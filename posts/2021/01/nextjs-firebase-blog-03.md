@@ -40,7 +40,7 @@ We don't currently have a way for people to read posts individually. We have the
   }
 
   h1 {
-    margin-top: 0;
+    margin-top: 20px;
     margin-bottom: 8px;
   }
 
@@ -336,9 +336,9 @@ git push
 
 ## Consolidate Page Styles
 
-Take a look styles in `index.module.scss`, `create.module.scss`, and `post.module.scss`. You should notice that all three of them have the same `max-width`, `margin`, and `padding` CSS properties and the same values for each. This is one benefit of having a `Layout` component. It helps you consolidate your styles and avoid repetition. It also allows you to make styling changes accross all of your pages at once. For example, if you wanted to make the main content of your site narrower, you could update `max-width` in this one place to do so.
+Take a look styles in `index.module.scss`, `create.module.scss`, and `post.module.scss`. You should notice that all three of them have the same `max-width`, `margin`, and `padding` CSS properties set and the same values for each. This will be one benefit of having a `Layout` component: It helps you consolidate your styles and avoid repetition.
 
-Let's remove these three properties from `index.module.scss`, `create.module.scss`, and `post.module.scss` and use the new `Layout` component on these pages.
+It also allows you to make styling changes accross all of your pages at once. For example, if you wanted to make the main content of your site narrower, you could update `max-width` in this one place to do so. Let's remove these three properties from `index.module.scss`, `create.module.scss`, and `post.module.scss` and use the new `Layout` component on these pages.
 
 1. Import `Layout` in `pages/index.js` and `pages/create.js`:
 
