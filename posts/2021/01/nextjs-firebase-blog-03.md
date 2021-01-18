@@ -27,7 +27,7 @@ Part 4 of this series will be published almost one week from today, Monday, Janu
 
 ## Create a Page Component for Each Post
 
-We don't currently have a way for people to read posts individually. We have the home page, which lists all blog posts, and we have a page for creating new posts. The good news is that we can handle rendering individual posts on their own pages pretty easily with [Next.js Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes). We just need to make sure we name the file correctly. Let's create a page component that renders the `slug` from the URL.
+In the site we've been building together, there currently isn't a way for people to read posts individually. We have the home page, which lists all blog posts, and we have a page for creating new posts. The good news is that we can handle rendering individual posts on their own pages pretty easily with [Next.js Dynamic Routes](https://nextjs.org/docs/routing/dynamic-routes). We just need to make sure we name the file correctly. Let's create a page component that just displays the `slug` from the URL as a test.
 
 1. Add `post.module.scss` under the `styles` directory:
 
