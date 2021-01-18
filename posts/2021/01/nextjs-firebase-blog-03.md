@@ -88,9 +88,9 @@ git push
 
 ## Link to Each Post on the Home Page
 
-Now that we have a the pages dynamically generating, we can link to them on the home page.
+Now that we have the pages for each post dynamically generating, we can link to them on the home page.
 
-1. In `pages/index.js`, add this `<a>` element below the `<p>` where you set `dangerouslySetHTML` with the post content:
+1. In `pages/index.js`, add this `<a>` element below the `<p>` where you set `dangerouslySetInnerHTML` with the post content:
 
 ```jsx
 <a href={`/post/${post.slug}`}>Continue Reading</a>
