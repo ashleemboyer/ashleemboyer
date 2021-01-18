@@ -112,9 +112,9 @@ git push
 
 ## Load and Render Posts by Slug
 
-Our `PostPage` component doesn't do much yet, so let's take care of that now. We'll need to add a function for getting a post's details from Firebase and then update the `PostPage` component to render those details nicely.
+Our `PostPage` component doesn't do much yet, so let's take care of that now. We'll need to add a function for getting a post's details from our Firebase Realtime Database and then update the `PostPage` component to render those details nicely.
 
-1. A a `getPostBySlug` function to `lib/firebase.js` for getting the post from our Firebase Realtime Database:
+1. Add a new `getPostBySlug` function to `lib/firebase.js` for getting the post from our Firebase Realtime Database:
 
 ```js
 /*
