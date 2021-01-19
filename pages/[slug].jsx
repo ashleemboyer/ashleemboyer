@@ -76,6 +76,16 @@ const renderContent = (content) => {
       return <h2 id={id} dangerouslySetInnerHTML={{ __html: h2Content }}></h2>;
     }
 
+    if (line.startsWith('<h3')) {
+      const indexOfContent = line.indexOf('>');
+      const h3Content = line.substring(
+        indexOfContent + '>'.length,
+        line.length - '</h3>'.length,
+      );
+
+      return <h3 dangerouslySetInnerHTML={{ __html: h3Content }}></h3>;
+    }
+
     if (line.startsWith('<ol') || line.startsWith('<ul')) {
       currentListItems = [];
 
