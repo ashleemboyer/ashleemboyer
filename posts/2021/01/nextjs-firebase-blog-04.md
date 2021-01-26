@@ -85,7 +85,7 @@ export const onAuthStateChanged = async (callback) => {
 }
 ```
 
-5. Add an `auth.js` file:
+5. Add an `auth.js` file to `contexts`:
 
 ```js
 import { createContext, useState, useEffect, useContext } from 'react';
@@ -141,13 +141,13 @@ git push
 
 ## Check for an Authenticated User in CreatePage
 
-1. Import `useAuth`:
+1. Import `useAuth` in `pages/create.js`:
 
 ```jsx
 import { useAuth } from '@contexts/auth';
 ```
 
-2. Invoke it and log the results
+2. Invoke it in the component after the `isLoading` variable and log the results.
 
 ```jsx
 const [user, userLoading] = useAuth();
@@ -408,21 +408,4 @@ git commit -m "Adding Sign Out button to Layout"
 git push
 ```
 
-## Update the CreatePage Redirect
-
-1. In the `CreatePage` component, update `router.push('/404')` to `router.push('/signin')`.
-2. Click the "Sign Out" button if you're signed in.
-3. Try to access `http://localhost:3000/create` in your browser.
-4. You should be sent to the sign in page.
-5. Sign in with your credentials.
-6. Try to access `http://localhost:3000/create` again.
-7. You should be able to create posts.
-8. Commit and push your work to your repository:
-
-```
-git add .
-git commit -m "Redirecting to signin in CreatePage"
-git push
-```
-
-9. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
+8. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
