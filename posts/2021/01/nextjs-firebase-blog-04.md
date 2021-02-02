@@ -1,6 +1,6 @@
 ---
 title: Build a Blog Site with Next.js and Firebase Part 4 - Adding Authentication
-date: 2021-01-18
+date: 2021-01-26
 description: Learn how to build a blog site with Next.js and Firebase.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2021%2F01%2FNextFirebasePart4.png?alt=media&token=af237a61-17a7-44f1-bd71-da0038767921
 tags: [react, nextjs, firebase, web-development]
