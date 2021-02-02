@@ -223,6 +223,8 @@ git push
 
 ## Add an Icon component
 
+We're going to make a wrapper component for the `FontAwesomeIcon` to make it easy to render an icon at different sizes and so we don't have to remember the import path for the `FontAwesomeIcon` component. The `classnames` package is great conditionally applying classes based on boolean props passed to a component. You can read more about the package [here](https://github.com/JedWatson/classnames#readme).
+
 1. Install the `classnames` package:
 
 ```
@@ -263,16 +265,14 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './Icon.module.scss';
 
-const Icon = ({ name, small, large, spin }) => {
+const Icon = ({ name, small, large }) => {
   let cx = classNames.bind(styles);
   let className = cx('Icon', {
-    'Icon--small': !!small,
-    'Icon--large': !!large,
+    'Icon--small': small,
+    'Icon--large': large,
   });
 
-  return (
-    <FontAwesomeIcon className={className} icon={name || 'smile'} spin={spin} />
-  );
+  return <FontAwesomeIcon className={className} icon={name} />;
 };
 
 export default Icon;
@@ -294,7 +294,7 @@ git push
 
 ## Add a Link for EditPage
 
-1. Import the new `Icon` component in `PostPage`:
+1. Import the new `Icon` component in `PostPage` (that's `pages/post/[slug.js]`):
 
 ```jsx
 import { Icon, Layout } from '@components';
@@ -363,10 +363,10 @@ export const deletePost = async (slug) => {
 2. Import the `deletePost` function in `PostPage`:
 
 ```jsx
-import { deletePost } from '@lib/firebase';
+import { deletePost, getPostBySlug } from '@lib/firebase';
 ```
 
-3. At the same level as the edit link we just added in the previous section, add a `<button>` and wrap both elements in a `span`:
+3. At the same level as the edit link we just added in the previous section, add a `<button>` and wrap both elements in a `div`:
 
 ```jsx
 <span>
@@ -390,14 +390,35 @@ import { deletePost } from '@lib/firebase';
 </span>
 ```
 
-4. Create a new post for testing the delete functionality.
-5. Go to the post's page and you should see a trashcan icon to the right of the pencil icon like this:
+4. Replace the `a` styles you added to `styles/post.module.scss` with these:
+
+```scss
+& > div {
+  display: flex;
+  margin: 0;
+
+  a {
+    padding: 8px;
+    color: black;
+  }
+
+  button {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    color: black;
+  }
+}
+```
+
+5. Create a new post for testing the delete functionality.
+6. Go to the post's page and you should see a trashcan icon to the right of the pencil icon like this:
 
 [![](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F02%2Fnextjs-firebase-blog-05%2FCleanShot%202021-01-17%20at%2019.54.16.png?alt=media&token=5371736e-21fe-41b4-b3a0-ed9b5ad6cde0)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F02%2Fnextjs-firebase-blog-05%2FCleanShot%202021-01-17%20at%2019.54.16.png?alt=media&token=5371736e-21fe-41b4-b3a0-ed9b5ad6cde0)
 
-6. Click the trashcan icon and you should see an alert that says "Are you sure you want to delete this post?"
-7. Click OK and you should be taken back to the home page. That post will no longer be listed and it should also be gone from the database.
-8. Commit and push your work to your repository:
+7. Click the trashcan icon and you should see an alert that says "Are you sure you want to delete this post?"
+8. Click OK and you should be taken back to the home page. That post will no longer be listed and it should also be gone from the database.
+9. Commit and push your work to your repository:
 
 ```
 git add .
@@ -405,4 +426,4 @@ git commit -m "Adding delete button"
 git push
 ```
 
-9. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
+0. Celebrate!!! You did it!!! <span role="img" aria-label="party popper emoji">🎉</span>
