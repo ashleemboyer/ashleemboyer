@@ -1,6 +1,6 @@
 ---
 title: Build a Blog Site with Next.js and Firebase Part 5 - Editing & Deleting Posts
-date: 2021-02-01
+date: 2021-02-02
 description: Learn how to build a blog site with Next.js and Firebase.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2021%2F02%2FNextFirebasePart5.png?alt=media&token=d0644d55-81ba-454b-adf1-81edfc912f66
 tags: [react, nextjs, firebase, web-development]
