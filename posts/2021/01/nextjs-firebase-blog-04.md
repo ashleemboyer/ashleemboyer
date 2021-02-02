@@ -45,6 +45,21 @@ Firebase makes it easy for us to set up email/password authentication in our app
 
 <iframe width="100%" height="350" src="https://www.youtube-nocookie.com/embed/WTnIU0ZtCoo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+12. Go to your Realtime Database.
+13. Click the "Rules" tab.
+14. Update the rules to allow all reads but only authenticated writes:
+
+```json
+{
+  "rules": {
+    ".read": true,
+    ".write": "auth != null"
+  }
+}
+```
+
+15. Click the "Publish" button.
+
 ## Manage Authentication State with React Context
 
 1. Import `firebase/auth` into `lib/firebase.js` after the other Firebase imports:
