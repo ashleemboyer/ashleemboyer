@@ -12,7 +12,7 @@ When I first started seriously writing in early 2019, it was because I committed
 
 What I discovered is that publishing a post a day wasn't sustainable for me. I think it takes a special kind of person and a special kind of content to publish daily and I applaud anyone who does that. I personally can't keep up with a schedule like that because I have chronic issues that make my spoon levels unpredictable. As I write this, I'm pretty low on spoons but I've been looking forward to this post for several weeks, so that's what's motivating me. :)
 
-Not only was I looking for a schedule so that I can get back to writing at a regular cadence, but I'm also launching a support site soon where folks can do monthly subscriptions to support my work and also get some fun benefits in return. One of the membership tiers includes 2-week early access to blog posts I write for my website. That means I need to have posts scheduled ahead of time.
+Not only was I looking for a schedule so that I can get back to writing at a regular cadence, but I'm also launching a support site soon where folks can do monthly subscriptions to support my work and get some fun benefits in return. One of the membership tiers includes 2-week early access to blog posts I write for my website. That means I need to have posts written and scheduled ahead of time.
 
 ## How I Came up with a New Process
 
@@ -43,7 +43,7 @@ I keep track of all of my writing ideas, plans, and newsletter dates with a "Wri
 - **Ready & Scheduled:** This column holds cards for newsletters that have been scheduled for delivery and posts that have PRs that just need me to press "Merge".
 - **Live:** Things in this column have been sent or published. The whole world can see them.
 
-The columns are laid out so that a task moves through each step from right to left. And as I mentioned in the last section, I'm a very visual person. I use my one free power-up for the Calendar that lets me view all of my tasks by week or month. I use these views to ensure that I've spaced out my topics appropriately and so I can group ideas if I feel like writing a series about a broader topic.
+The columns are laid out so that a task moves through each step from left to right. And as I mentioned in the last section, I'm a very visual person. I use my one free power-up for the Calendar that lets me view all of my tasks by week or month. I use these views to ensure that I've spaced out my topics appropriately and so I can group ideas if I feel like writing a series about a broader topic.
 
 [![Trello board showing 5 columns: To Do, Outlining, Writing, Ready & Scheduled, and Live. The background of the board is a desk in a dark room with a computer screen that reads "Do what is great."](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F02%2Fmy-writing-and-planning-process%2FCleanShot%202021-02-08%20at%2022.23.46.png?alt=media&token=73366deb-df54-475c-b391-3f0bb59e4e2b)](https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F02%2Fmy-writing-and-planning-process%2FCleanShot%202021-02-08%20at%2022.23.46.png?alt=media&token=73366deb-df54-475c-b391-3f0bb59e4e2b)
 
