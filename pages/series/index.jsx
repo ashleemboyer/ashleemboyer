@@ -44,7 +44,7 @@ const SeriesIndex = ({ series }) => (
 export async function getStaticProps() {
   let series = getAllSeries();
 
-  series = series.sort((a, b) => (a.title < b.title ? -1 : 1));
+  series = series.sort((a, b) => (a.title < b.title ? 1 : -1));
 
   return { props: { series } };
 }
