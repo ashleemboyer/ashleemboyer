@@ -67,55 +67,62 @@ const ResumePage = () => (
         <h1>Ashlee M Boyer</h1>
         <p>Disabled Software Engineer and Web Accessibility Specialist</p>
         <p>ashleemboyer.dev@gmail.com</p>
-        <p className={styles.box}>
+        <p className={styles.pinkBox}>
           My primary focus as a front-end web developer is to make the internet
           a valuable experience for everyone. Accessibility isn't just something
           to consider—it's absolutely necessary.
         </p>
       </div>
-      <section>
-        <h2>Education</h2>
-        <p>
-          BS in Software Engineering, Rose-Hulman Institute of Technology (Terre
-          Haute, IN)
-        </p>
-      </section>
-      <section>
-        <h2>Speaking Experience</h2>
-        <ul>
-          {speakingExperiences.map((experience) => (
-            <li>{experience}</li>
-          ))}
-        </ul>
-      </section>
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>
-            Comfortable with or without frameworks: Bulk of experience is
-            building with React and testing with Jest and Enzyme
-          </li>
-          <li>
-            Specializes in building accessible components and user experiences
-            using WAI-ARIA and WCAG specifications for reference
-          </li>
-          <li>
-            Approaches debugging with excitement and views fixing bugs as an
-            opportunity for learning and overall product improvement
-          </li>
-        </ul>
-      </section>
-      <section>
+      <div className={styles.split}>
+        <div>
+          <section className={styles.purpleBox}>
+            <h2>Education</h2>
+            <p>
+              BS in Software Engineering, Rose-Hulman Institute of Technology
+              (Terre Haute, IN)
+            </p>
+          </section>
+          <section className={styles.purpleBox}>
+            <h2>Skills</h2>
+            <ul>
+              <li>
+                Comfortable with or without frameworks: Bulk of experience is
+                building with React, Redux, and TypeScript and testing with Jest
+                and Enzyme
+              </li>
+              <li>
+                Specializes in building accessible components and user
+                experiences using WAI-ARIA and WCAG specifications for reference
+              </li>
+              <li>
+                Approaches debugging with excitement and views fixing bugs as an
+                opportunity for learning and overall product improvement
+              </li>
+            </ul>
+          </section>
+        </div>
+        <div>
+          <section className={styles.purpleBox}>
+            <h2>Speaking Experience</h2>
+            <ul>
+              {speakingExperiences.map((experience) => (
+                <li>{experience}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
+      <section className={styles.history}>
         <h2>Professional Experience</h2>
         {workExperiences.map(
           ({ company, location, timeframe, title, items }) => (
             <ul>
-              <li className={styles.box}>
+              <li className={styles.pinkBox}>
                 <div className={styles.company}>
                   <h3>{company}</h3>
                   <span>{timeframe}</span>
                 </div>
-                <p className={styles.timeframe}>{location}</p>
+                <p className={styles.location}>{location}</p>
                 <p className={styles.title}>{title}</p>
                 <ul>
                   {items.map((item) => (
