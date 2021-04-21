@@ -109,6 +109,10 @@ $mobileWidth: 820px;
               font-size: 1.2rem;
               font-family: 'Lora';
             }
+
+            @media only screen and (max-width: $mobileWidth) {
+              display: block;
+            }
           }
 
           .location {

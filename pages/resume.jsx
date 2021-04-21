@@ -59,7 +59,7 @@ const workExperiences = [
 const ResumePage = () => (
   <div className={styles.ResumePage}>
     <svg width="100vw" viewBox="0 0 18 10">
-      <polygon fill="#c2185b" points="0,0 0,6 30,0" />
+      <polygon fill="#c2185b" points="0,0 0,5 20,0" />
     </svg>
     <div>
       <div className={styles.Intro}>
