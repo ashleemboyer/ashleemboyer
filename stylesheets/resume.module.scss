@@ -14,7 +14,7 @@ $mobileWidth: 820px;
   }
 
   & > div {
-    padding: 10vw 24px;
+    padding: 8vw 24px;
     position: relative;
     max-width: 900px;
     margin: 0 auto;
@@ -178,6 +178,8 @@ $mobileWidth: 820px;
         width: 100%;
 
         &:last-child {
+          padding-top: 0;
+
           section {
             margin-top: 32px;
           }
