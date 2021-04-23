@@ -26,6 +26,10 @@ $mobileWidth: 820px;
       text-align: center;
       margin-bottom: 64px;
 
+      @media (prefers-reduced-motion) {
+        animation: none;
+      }
+
       img {
         position: relative;
         border-radius: 100%;
