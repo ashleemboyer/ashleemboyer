@@ -22,7 +22,7 @@ $mobileWidth: 820px;
     .Intro {
       position: relative;
       animation-name: fadeInAndUp;
-      animation-duration: 2s;
+      animation-duration: 1.2s;
       text-align: center;
       margin-bottom: 64px;
 
@@ -222,7 +222,7 @@ $mobileWidth: 820px;
 
 @keyframes fadeInAndUp {
   from {
-    padding-top: 100vh;
+    padding-top: 300px;
     opacity: 0;
   }
 
