@@ -1,5 +1,53 @@
 import styles from '../stylesheets/resume.module.scss';
 
+const workExperiences = [
+  {
+    company: 'All Campus',
+    location: 'Chicago, Illinois (remote)',
+    timeframe: 'Nov 2020 - present',
+    title: 'Front-end Web Developer II',
+    items: [
+      'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51MB to 13MB)',
+      'Built multiple React hooks for making API requests and easily tracking their loading states to provide better UI/UX feedback for users',
+      'Migrated several pages using legacy Redux and React class components to function components written in TypeScript and little to no Redux, enabling the use of React hooks and improving overall performance',
+      'Incorporated the use of tools that improve developer experience and the code review process: the Prettier code formatter with CircleCI checks on PRs and the classnames package for conditional styles',
+      'Proposed and created the first integration tests between the frontend and backend repositories to catch breaking changes in PR checks before code is reviewed or merged',
+    ],
+  },
+  {
+    company: 'Iris Works',
+    location: 'Carmel, Indiana',
+    timeframe: 'Dec 2019 - Jul 2020',
+    title: 'Full-stack Web Developer',
+    items: [
+      'Migrated from a legacy Rails application to a modern React and Redux application, making it easier to add new features and develop an attractive UI',
+      'Created and updated several API endpoints to use Fast JSON API and filter, sort, and paginate data',
+      'Onboarded a junior developer with no Rails experience through pair programming and coached them through their first projects',
+      'Led the scoping, estimation, and defintion of work for several epics and small projects',
+    ],
+  },
+  {
+    company: 'Sigstr',
+    location: 'Indianapolis, Indiana',
+    timeframe: 'Jun 2019 — Dec 2019',
+    title: 'Front-end Web Developer',
+    items: [
+      'Built out brand-new React pages and components with accessibility in mind, such as a full-screen modal that allowed users to create email marketing campaigns',
+      'Worked with full-stack and back-end developers to plan how the front-end and back-end would effectively interact',
+    ],
+  },
+  {
+    company: 'ORS, Inc',
+    location: 'Fishers, Indiana',
+    timeframe: 'Jun 2018 — May 2019',
+    title: 'Front-end Web Developer',
+    items: [
+      'Completed several patient and non-patient features in a multi-module Electronic Health Record web application',
+      'Re-created the patient-side company marketing website from scratch using Vanilla JS',
+    ],
+  },
+];
+
 const speakingExperiences = [
   {
     label:
@@ -37,54 +85,6 @@ const speakingExperiences = [
   },
 ];
 
-const workExperiences = [
-  {
-    company: 'All Campus',
-    location: 'Chicago, Illinois (remote)',
-    timeframe: 'Nov 2020 - present',
-    title: 'Front-end Web Developer II',
-    items: [
-      'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51MB to 13MB)',
-      'Built multiple React hooks for making API requests and easily tracking their loading states for better UI/UX feedback',
-      'Migrated several pages using legacy Redux and React class components to function components written in TypeScript and little to no Redux',
-      'Incorporated the use of tools that improve developer experience and the code review process: the Prettier code formatter with CircleCI checks on PRs and the classnames package for conditional styles',
-      'Proposed and created the first integration tests between the frontend and backend repositories',
-    ],
-  },
-  {
-    company: 'Iris Works',
-    location: 'Carmel, Indiana',
-    timeframe: 'Dec 2019 - Jul 2020',
-    title: 'Full-stack Web Developer',
-    items: [
-      'Migrated from a legacy Rails application to a modern React and Redux application',
-      'Created and updated several API endpoints to use Fast JSON API and filter, sort, and paginate data',
-      'Onboarded a junior developer with no Rails experience through pair programming and coached them through their first projects',
-      'Led the scoping, estimation, and defintion of work for several epics and small projects',
-    ],
-  },
-  {
-    company: 'Sigstr',
-    location: 'Indianapolis, Indiana',
-    timeframe: 'Jun 2019 — Dec 2019',
-    title: 'Front-end Web Developer',
-    items: [
-      'Built out brand-new React pages and components with accessibility in mind, such as a full-screen modal that allowed users to create email marketing campaigns',
-      'Worked with full-stack and back-end developers to plan how the front-end and back-end would effectively interact',
-    ],
-  },
-  {
-    company: 'ORS, Inc',
-    location: 'Fishers, Indiana',
-    timeframe: 'Jun 2018 — May 2019',
-    title: 'Front-end Web Developer',
-    items: [
-      'Completed several patient and non-patient features in a multi-module Electronic Health Record web application',
-      'Re-created the patient-side company marketing website from scratch using Vanilla JS',
-    ],
-  },
-];
-
 const ResumePage = () => (
   <div className={styles.ResumePage}>
     <div>
@@ -102,50 +102,31 @@ const ResumePage = () => (
           just something to consider—it's absolutely necessary.
         </p>
       </div>
+      <section className={styles.history}>
+        <h2>Professional Experience</h2>
+        {workExperiences.map(
+          ({ company, location, timeframe, title, items }) => (
+            <ul>
+              <li className={styles.purpleBox}>
+                <div className={styles.company}>
+                  <h3>{company}</h3>
+                  <span>{timeframe}</span>
+                </div>
+                <p className={styles.location}>{location}</p>
+                <p className={styles.title}>{title}</p>
+                <ul>
+                  {items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </li>
+            </ul>
+          ),
+        )}
+      </section>
       <div className={styles.split}>
         <div>
-          <section className={styles.purpleBox}>
-            <h2>Education</h2>
-            <p>
-              BS in Software Engineering, Rose-Hulman Institute of Technology
-              (Terre Haute, IN)
-            </p>
-          </section>
-          <section className={styles.purpleBox}>
-            <h2>Speaking Experience</h2>
-            <ul>
-              {speakingExperiences.map(({ label, link }) => (
-                <li>
-                  {label} [
-                  {
-                    <a href={link} target="_blank">
-                      link
-                    </a>
-                  }
-                  ]
-                </li>
-              ))}
-            </ul>
-          </section>
-          <section className={styles.purpleBox}>
-            <h2>Volunteer Experience</h2>
-            <ul>
-              <li>
-                Co-organizer of{' '}
-                <a href="https://www.meetup.com/React-Indy/" target="_blank">
-                  local React.Indy meetup
-                </a>{' '}
-                (since March 2021)
-              </li>
-              <li>
-                Co-chair and co-founder of Neurodiversity/Disability ERG at
-                current company (since February 2021)
-              </li>
-            </ul>
-          </section>
-        </div>
-        <div>
-          <section className={styles.purpleBox}>
+          <section className={styles.pinkBox}>
             <h2>Skills</h2>
             <ul>
               <li>
@@ -177,29 +158,48 @@ const ResumePage = () => (
             </ul>
           </section>
         </div>
-      </div>
-      <section className={styles.history}>
-        <h2>Professional Experience</h2>
-        {workExperiences.map(
-          ({ company, location, timeframe, title, items }) => (
+        <div>
+          <section className={styles.pinkBox}>
+            <h2>Education</h2>
+            <p>
+              BS in Software Engineering, Rose-Hulman Institute of Technology
+              (Terre Haute, IN)
+            </p>
+          </section>
+          <section className={styles.pinkBox}>
+            <h2>Volunteer Experience</h2>
             <ul>
-              <li className={styles.pinkBox}>
-                <div className={styles.company}>
-                  <h3>{company}</h3>
-                  <span>{timeframe}</span>
-                </div>
-                <p className={styles.location}>{location}</p>
-                <p className={styles.title}>{title}</p>
-                <ul>
-                  {items.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
+              <li>
+                Co-organizer of{' '}
+                <a href="https://www.meetup.com/React-Indy/" target="_blank">
+                  local React.Indy meetup
+                </a>{' '}
+                (since March 2021)
+              </li>
+              <li>
+                Co-chair and co-founder of Neurodiversity/Disability ERG at
+                current company (since February 2021)
               </li>
             </ul>
-          ),
-        )}
-      </section>
+          </section>
+          <section className={styles.pinkBox}>
+            <h2>Speaking Experience</h2>
+            <ul>
+              {speakingExperiences.map(({ label, link }) => (
+                <li>
+                  {label} [
+                  {
+                    <a href={link} target="_blank">
+                      link
+                    </a>
+                  }
+                  ]
+                </li>
+              ))}
+            </ul>
+          </section>
+        </div>
+      </div>
     </div>
   </div>
 );
