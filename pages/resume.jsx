@@ -105,8 +105,8 @@ const ResumePage = () => (
       <section className={styles.history}>
         <h2>Professional Experience</h2>
         {workExperiences.map(
-          ({ company, location, timeframe, title, items }) => (
-            <ul>
+          ({ company, location, timeframe, title, items }, experienceIndex) => (
+            <ul key={`experience-${experienceIndex}`}>
               <li className={styles.purpleBox}>
                 <div className={styles.company}>
                   <h3>{company}</h3>
@@ -115,8 +115,8 @@ const ResumePage = () => (
                 <p className={styles.location}>{location}</p>
                 <p className={styles.title}>{title}</p>
                 <ul>
-                  {items.map((item) => (
-                    <li>{item}</li>
+                  {items.map((item, itemIndex) => (
+                    <li key={`item-${itemIndex}`}>{item}</li>
                   ))}
                 </ul>
               </li>
