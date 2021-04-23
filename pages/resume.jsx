@@ -46,7 +46,8 @@ const workExperiences = [
     items: [
       'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51MB to 13MB)',
       'Built multiple React hooks for making API requests and easily tracking their loading states for better UI/UX feedback',
-      'Incorporated the use of several tools packages that improve developer experience and the code review process',
+      'Migrated several pages using legacy Redux and React class components to function components written in TypeScript and little to no Redux',
+      'Incorporated the use of tools that improve developer experience and the code review process: the Prettier code formatter with CircleCI checks on PRs and the classnames package for conditional styles',
       'Proposed and created the first integration tests between the frontend and backend repositories',
     ],
   },
@@ -56,10 +57,10 @@ const workExperiences = [
     timeframe: 'Dec 2019 - Jul 2020',
     title: 'Full-stack Web Developer',
     items: [
-      'Converted multiple pages from using Rails views to using React components and Redux',
+      'Migrated from a legacy Rails application to a modern React and Redux application',
       'Created and updated several API endpoints to use Fast JSON API and filter, sort, and paginate data',
-      'Paired on a full-stack project with a junior developer for onboarding training',
-      'Divided projects into consumable, estimated tasks with thorough descriptions and acceptance criteria',
+      'Onboarded a junior developer with no Rails experience through pair programming and coached them through their first projects',
+      'Led the scoping, estimation, and defintion of work for several epics and small projects',
     ],
   },
   {
