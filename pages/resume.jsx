@@ -17,9 +17,10 @@ const workExperiences = [
     timeframe: 'Nov 2020 - present',
     title: 'Front-end Web Developer II',
     items: [
-      'Always looking for ways to reduce dependency on Redux by removing it entirely or replacing it with use of the Context API',
       'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51M to 13M)',
-      'Incorporated the use of several tools packages that improve developer experience - Prettier',
+      'Built multiple React hooks for making API requests and easily tracking their loading states for better UI/UX feedback',
+      'Incorporated the use of several tools packages that improve developer experience and the code review process',
+      'Proposed and created the first integration tests between the frontend and backend repositories',
     ],
   },
   {
@@ -58,19 +59,19 @@ const workExperiences = [
 
 const ResumePage = () => (
   <div className={styles.ResumePage}>
-    <svg width="100vw" viewBox="0 0 18 10">
-      <polygon fill="#c2185b" points="0,0 0,5 20,0" />
-    </svg>
     <div>
       <div className={styles.Intro}>
-        <img src="/me.png" />
+        <img
+          src="/me.png"
+          alt="Ashlee smiling at the camera and wearing a burnt-orange shirt with small flower blossoms scattered around. She’s wearing brown glasses and is wearing golden-brown eye shadow and black mascara. Her hair is short and wavy with a blonde streak on her right side. The picture has a warm tint."
+        />
         <h1>Ashlee M Boyer</h1>
         <p>Disabled Software Engineer and Web Accessibility Specialist</p>
         <p>ashleemboyer.dev@gmail.com</p>
         <p className={styles.pinkBox}>
           My primary focus as a front-end web developer is to make the internet
-          a valuable experience for everyone. Accessibility isn't just something
-          to consider—it's absolutely necessary.
+          a valuable and inclusive experience for everyone. Accessibility isn't
+          just something to consider—it's absolutely necessary.
         </p>
       </div>
       <div className={styles.split}>
@@ -82,6 +83,16 @@ const ResumePage = () => (
               (Terre Haute, IN)
             </p>
           </section>
+          <section className={styles.purpleBox}>
+            <h2>Speaking Experience</h2>
+            <ul>
+              {speakingExperiences.map((experience) => (
+                <li>{experience}</li>
+              ))}
+            </ul>
+          </section>
+        </div>
+        <div>
           <section className={styles.purpleBox}>
             <h2>Skills</h2>
             <ul>
@@ -98,16 +109,21 @@ const ResumePage = () => (
                 Approaches debugging with excitement and views fixing bugs as an
                 opportunity for learning and overall product improvement
               </li>
-            </ul>
-          </section>
-        </div>
-        <div>
-          <section className={styles.purpleBox}>
-            <h2>Speaking Experience</h2>
-            <ul>
-              {speakingExperiences.map((experience) => (
-                <li>{experience}</li>
-              ))}
+              <li>
+                Prioritizes the developer experience by writing code, tests,
+                documentation, and pull requests that are easy to read,
+                maintain, and extend
+              </li>
+              <li>
+                Communicates with both technical and non-technical audiences in
+                mind so everyone is on the same page and feels included in
+                conversations
+              </li>
+              <li>
+                Passionate about expanding and maintaining work cultures that
+                prioritize inclusive and accessible policies, psychological
+                safety, and conducive learning through mentorship and coaching
+              </li>
             </ul>
           </section>
         </div>
