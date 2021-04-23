@@ -150,8 +150,7 @@ const ResumePage = () => (
             <ul>
               <li>
                 Comfortable with or without frameworks: Bulk of experience is
-                building with React, Redux, and TypeScript and testing with Jest
-                and Enzyme
+                with React, Redux, TypeScript, Jest, and Enzyme
               </li>
               <li>
                 Specializes in building accessible components and user
@@ -159,7 +158,7 @@ const ResumePage = () => (
               </li>
               <li>
                 Approaches debugging with excitement and views fixing bugs as an
-                opportunity for learning and overall product improvement
+                opportunity for overall product improvement
               </li>
               <li>
                 Prioritizes the developer experience by writing code, tests,
@@ -167,9 +166,8 @@ const ResumePage = () => (
                 maintain, and extend
               </li>
               <li>
-                Communicates with both technical and non-technical audiences in
-                mind so everyone is on the same page and feels included in
-                conversations
+                Communicates with all levels of expertise in mind so everyone is
+                on the same page and feels included in discussions
               </li>
               <li>
                 Passionate about expanding and maintaining work cultures that
