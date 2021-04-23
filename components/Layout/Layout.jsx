@@ -2,7 +2,7 @@ import Link from 'next/link';
 import HeadWrapper from './HeadWrapper';
 import styles from './Layout.module.scss';
 
-const Layout = ({ title, description, image, slug, children }) => (
+const Layout = ({ title, description, image, slug, children, className }) => (
   <div className={styles.Layout}>
     <HeadWrapper
       title={title}
@@ -24,11 +24,12 @@ const Layout = ({ title, description, image, slug, children }) => (
           Accessibility, & Mental Health on{' '}
           <a href="https://twitter.com/ashleemboyer">Twitter</a>, or you can
           find me regularly live-knitting or live-coding on{' '}
-          <a href="https://twitch.tv/ashleemboyer">Twitch</a>.
+          <a href="https://twitch.tv/ashleemboyer">Twitch</a>. I'm @AshleeMBoyer
+          on all the platforms I use.
         </p>
       </div>
     </header>
-    <main>{children}</main>
+    <main className={className}>{children}</main>
   </div>
 );
 
