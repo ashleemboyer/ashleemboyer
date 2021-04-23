@@ -163,6 +163,8 @@ $mobileWidth: 820px;
       }
 
       &:last-child {
+        padding-top: 32px;
+
         section {
           margin: 0;
         }
@@ -210,6 +212,11 @@ $mobileWidth: 820px;
     background-color: rgba(#3949ab, 0.12);
     border: 2px solid #3949ab;
     box-shadow: -4px 4px 0 1px #3949ab;
+
+    a {
+      color: #3949ab;
+      font-weight: bold;
+    }
   }
 }
 

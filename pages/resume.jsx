@@ -1,13 +1,40 @@
 import styles from '../stylesheets/resume.module.scss';
 
 const speakingExperiences = [
-  '"Build an Accessible React Component" live-coding series (since April 2020)',
-  'Accessibility Live Q&A with Kevin Powell (March 2021)',
-  '"Building an Accessible Modal" at React.Indy (October 2020)',
-  '"Disability in UX" Panel for Twitter (July 2020)',
-  '"A Disabled Dev\'s Journey" at The Indianapolis Ruby Brigade (November 2019)',
-  'Diversity & Inclusion Panel at Sigstr on (September 2019)',
-  '"A Disabled Dev\'s Journey" at IndyPy La Femme Pythonista on (September 2019)',
+  {
+    label:
+      '"Build an Accessible React Component" live-coding series (since April 2020)',
+    link:
+      'https://youtube.com/playlist?list=PLOmKTF_wUDoydvtwWrzEw7DZ9VboV51py',
+  },
+  {
+    label: 'Accessibility Live Q&A with Kevin Powell (March 2021)',
+    link: 'https://www.twitch.tv/videos/955311597',
+  },
+  {
+    label: '"Building an Accessible Modal" at React.Indy (October 2020)',
+    link:
+      'https://github.com/ashleemboyer/react-indy-20201028#building-an-accessible-modal--reactindy-on-october-28th-2020',
+  },
+  {
+    label: '"Disability in UX" Panel for Twitter (July 2020)',
+    link: 'https://twitter.com/i/broadcasts/1OwxWLnlrMDKQ',
+  },
+  {
+    label:
+      '"A Disabled Dev\'s Journey" at The Indianapolis Ruby Brigade (November 2019)',
+    link: 'https://www.youtube.com/watch?v=BOAXrY6G7xA',
+  },
+  {
+    label: 'Diversity & Inclusion Panel at Sigstr on (September 2019)',
+    link: 'https://twitter.com/sigstr/status/1171819460841357312',
+  },
+  {
+    label:
+      '"A Disabled Dev\'s Journey" at IndyPy La Femme Pythonista on (September 2019)',
+    link:
+      'https://docs.google.com/presentation/d/1BFY8C3k6Fj70jD4JCMy-XjDRtmDguqQJl7SUR3PXcYg/edit',
+  },
 ];
 
 const workExperiences = [
@@ -17,7 +44,7 @@ const workExperiences = [
     timeframe: 'Nov 2020 - present',
     title: 'Front-end Web Developer II',
     items: [
-      'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51M to 13M)',
+      'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51MB to 13MB)',
       'Built multiple React hooks for making API requests and easily tracking their loading states for better UI/UX feedback',
       'Incorporated the use of several tools packages that improve developer experience and the code review process',
       'Proposed and created the first integration tests between the frontend and backend repositories',
@@ -86,9 +113,33 @@ const ResumePage = () => (
           <section className={styles.purpleBox}>
             <h2>Speaking Experience</h2>
             <ul>
-              {speakingExperiences.map((experience) => (
-                <li>{experience}</li>
+              {speakingExperiences.map(({ label, link }) => (
+                <li>
+                  {label} [
+                  {
+                    <a href={link} target="_blank">
+                      link
+                    </a>
+                  }
+                  ]
+                </li>
               ))}
+            </ul>
+          </section>
+          <section className={styles.purpleBox}>
+            <h2>Volunteer Experience</h2>
+            <ul>
+              <li>
+                Co-organizer of{' '}
+                <a href="https://www.meetup.com/React-Indy/" target="_blank">
+                  local React.Indy meetup
+                </a>{' '}
+                (since March 2021)
+              </li>
+              <li>
+                Co-chair and co-founder of Neurodiversity/Disability ERG at
+                current company (since February 2021)
+              </li>
             </ul>
           </section>
         </div>
