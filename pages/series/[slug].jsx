@@ -30,10 +30,10 @@ export async function getStaticProps({ params }) {
 
   posts = posts.sort((a, b) => {
     if (a.meta.date < b.meta.date) {
-      return 1;
+      return -1;
     }
 
-    return -1;
+    return 1;
   });
 
   return { props: { posts } };
