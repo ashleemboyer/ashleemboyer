@@ -1,105 +1,81 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import { PostListPagination } from '../PostListPagination';
 import styles from './PostList.module.scss';
 
-const PAGE_SIZE = 5;
+const filterBySearchValue = (posts, searchValue) => {
+  const lowercased = searchValue.toLowerCase();
+  if (!lowercased) {
+    return posts;
+  }
 
-const PostList = ({ title, subtitle, posts }) => {
-  const [isFirstLoad, setIsFirstLoad] = useState(true);
-  const [currentPage, setCurrentPage] = useState(0);
-  const postsCount = posts.length;
-  const numPages = Math.ceil(postsCount / PAGE_SIZE) - 1;
-  const paginatedPosts = posts.slice(
-    PAGE_SIZE * currentPage,
-    PAGE_SIZE * currentPage + PAGE_SIZE,
-  );
+  return posts.filter((post) => {
+    const {
+      meta: { tags, title },
+    } = post;
 
-  useLayoutEffect(() => {
-    if (isFirstLoad) {
-      setIsFirstLoad(false);
-      return;
+    const titleMatches = title.toLowerCase().indexOf(lowercased) !== -1;
+    if (titleMatches) {
+      return true;
     }
 
-    document.querySelectorAll('[role="article"]')[0].focus();
-  }, [currentPage]);
+    const tagsMatch = tags.some(
+      (tag) => tag.toLowerCase().indexOf(lowercased) !== -1,
+    );
+    if (tagsMatch) {
+      return true;
+    }
+
+    return false;
+  });
+};
+
+const PostList = ({ title, subtitle, posts }) => {
+  const [searchValue, setSearchValue] = useState('');
+  const filteredPosts = filterBySearchValue(posts, searchValue);
+  const numberOfPosts = filteredPosts.length;
 
   return (
     <div className={styles.PostList}>
       <h1>{title}</h1>
       <p>{subtitle}</p>
-      {posts.map((post) => (
-        <h2>{post.title}</h2>
-      ))}
-      <div role="feed">
-        {paginatedPosts.map((post, index) => (
-          <div
-            key={post.fileName}
-            id={post.fileName}
-            role="article"
-            aria-posinset={index + 1}
-            tabIndex="0"
-            aria-labelledby={`post-heading-${index + 1}`}
-            aria-describedby={`post-description-${index + 1}`}
-            aria-setsize={PAGE_SIZE}
-            onKeyDown={(e) => {
-              let shouldPreventDefault = false;
-              const focusableElements = document.querySelectorAll('a,button');
-
-              if (e.keyCode === 33 && index > 0) {
-                document
-                  .getElementById(paginatedPosts[index - 1].fileName)
-                  .focus();
-                shouldPreventDefault = true;
-              } else if (e.keyCode === 34 && index < PAGE_SIZE) {
-                document
-                  .getElementById(paginatedPosts[index + 1].fileName)
-                  .focus();
-                shouldPreventDefault = true;
-              } else if (e.ctrlKey && e.keyCode === 36) {
-                focusableElements[1].focus();
-                shouldPreventDefault = true;
-              } else if (e.ctrlKey && e.keyCode === 35) {
-                !focusableElements[7].disabled
-                  ? focusableElements[7].focus()
-                  : focusableElements[8].focus();
-                shouldPreventDefault = true;
-              }
-
-              if (shouldPreventDefault) {
-                e.preventDefault();
-                e.stopPropagation();
-              }
-            }}
-          >
-            <h2
-              id={`post-heading-${index + 1}`}
-              dangerouslySetInnerHTML={{ __html: post.meta.title }}
-            ></h2>
-            <p
-              id={`post-description-${index + 1}`}
-              dangerouslySetInnerHTML={{ __html: post.meta.excerpt }}
-            ></p>
-            <Link href={`/${post.fileName}`}>
-              <a>Keep Reading</a>
-            </Link>
-            <hr />
-          </div>
-        ))}
-      </div>
-      <PostListPagination
-        label={`${PAGE_SIZE * currentPage + 1} - ${
-          PAGE_SIZE * currentPage + paginatedPosts.length
-        } of ${postsCount}`}
-        hasPrevious={currentPage > 0}
-        onPrevious={() => {
-          setCurrentPage(currentPage - 1);
-        }}
-        hasNext={currentPage < numPages}
-        onNext={() => {
-          setCurrentPage(currentPage + 1);
-        }}
+      <label htmlFor="post-search">Search by title or tags</label>
+      <input
+        id="post-search"
+        onChange={(e) => setSearchValue(e.target.value)}
+        type="search"
+        value={searchValue}
       />
+      {numberOfPosts > 0 ? (
+        <div role="feed">
+          {filteredPosts.map((post, index) => (
+            <div
+              key={post.fileName}
+              id={post.fileName}
+              role="article"
+              aria-posinset={index + 1}
+              tabIndex="0"
+              aria-labelledby={`post-heading-${index + 1}`}
+              aria-describedby={`post-description-${index + 1}`}
+              aria-setsize={filteredPosts.length}
+            >
+              <h2
+                id={`post-heading-${index + 1}`}
+                dangerouslySetInnerHTML={{ __html: post.meta.title }}
+              />
+              <p
+                id={`post-description-${index + 1}`}
+                dangerouslySetInnerHTML={{ __html: post.meta.excerpt }}
+              />
+              <Link href={`/${post.fileName}`}>
+                <a>Keep Reading</a>
+              </Link>
+              <hr />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Sorry, no posts match that search value!</p>
+      )}
     </div>
   );
 };
