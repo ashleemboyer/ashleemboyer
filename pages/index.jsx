@@ -33,7 +33,7 @@ const generateRSSFeed = (forRSSFeed) => {
     language: 'en',
     updated: date,
     feedLinks: {
-      rss2: `${baseUrl}/feed.xml`,
+      rss2: `${baseUrl}/rss.xml`,
     },
     author,
   });
@@ -64,7 +64,7 @@ const generateRSSFeed = (forRSSFeed) => {
     });
   });
 
-  fs.writeFileSync('./public/rss.xml', feed.rss2());
+  fs.writeFileSync('public/rss.xml', feed.rss2());
 };
 
 export async function getStaticProps() {
