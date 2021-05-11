@@ -16,17 +16,7 @@ const HomePage = ({ posts }) => (
   </Layout>
 );
 
-export async function getStaticProps() {
-  let { forSite, forRSSFeed } = getAllPosts();
-
-  const posts = forSite.sort((a, b) => {
-    if (a.meta.date < b.meta.date) {
-      return 1;
-    }
-
-    return -1;
-  });
-
+const generateRSSFeed = (forRSSFeed) => {
   const baseUrl = 'https://ashleemboyer.com';
   const date = new Date();
   const author = {
@@ -48,6 +38,13 @@ export async function getStaticProps() {
     author,
   });
 
+  forRSSFeed.sort((a, b) => {
+    if (a.meta.date < b.meta.date) {
+      return 1;
+    }
+
+    return -1;
+  });
   forRSSFeed.forEach((post) => {
     const {
       content,
@@ -68,8 +65,22 @@ export async function getStaticProps() {
   });
 
   fs.writeFileSync('./public/rss.xml', feed.rss2());
+};
 
-  return { props: { posts } };
+export async function getStaticProps() {
+  let { forSite, forRSSFeed } = getAllPosts();
+
+  generateRSSFeed(forRSSFeed);
+
+  forSite.sort((a, b) => {
+    if (a.meta.date < b.meta.date) {
+      return 1;
+    }
+
+    return -1;
+  });
+
+  return { props: { posts: forSite } };
 }
 
 export default HomePage;
