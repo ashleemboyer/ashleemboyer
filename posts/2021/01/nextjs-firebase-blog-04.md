@@ -2,7 +2,7 @@
 title: Build a Blog Site with Next.js and Firebase Part 4 - Adding Authentication
 date: 2021-01-26
 description: Learn how to build a blog site with Next.js and Firebase.
-image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2021%2F01%2FNextFirebasePart4.png?alt=media&token=af237a61-17a7-44f1-bd71-da0038767921
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F01%2Fnextjs-firebase-blog-04%2FNextFirebasePart4.png?alt=media&token=ee5e8655-93fd-43be-826c-ccfd56d3efcf
 tags: [react, nextjs, firebase, web-development]
 series_title: Build a Blog Site with Next.js and Firebase
 series_slug: nextjs-firebase-blog
@@ -21,7 +21,6 @@ Part 5 of this series will be published one week from today, Monday, February 1s
 - [Check for an Authenticated User in CreatePage](#check-for-an-authenticated-user-in-createpage)
 - [Add a Page for Signing In](#add-a-page-for-signing-in)
 - [Add a Sign Out Button to Layout](#add-a-sign-out-button-to-layout)
-- [Update the CreatePage Redirect](#update-the-createpage-redirect)
 
 <hr />
 

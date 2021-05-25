@@ -2,7 +2,7 @@
 title: My Writing and Planning Process
 date: 2021-02-15
 description: I leveled up my content process for 2021 with Trello and GitHub Pull Requests.
-image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2F2021%2F02%2FMyWritingAndPlanningProcess.png?alt=media&token=9b30b4aa-9406-4d06-9daf-a5257614b85f
+image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F02%2Fmy-writing-and-planning-process%2FMyWritingAndPlanningProcess.png?alt=media&token=2ec5bdf9-f026-4180-9b86-d9b459c1c8b5
 tags: [writing, planning, organization]
 ---
 
