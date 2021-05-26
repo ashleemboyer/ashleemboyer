@@ -1,5 +1,5 @@
 ---
-title: How I Added an RSS Feed to my Next.js Site
+title: How I Added an RSS Feed to My Next.js Site
 date: 2021-05-27
 description: Learn how to add an RSS feed to your own Next.js site.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F05%2Fhow-i-added-an-rss-feed-to-my-nextjs-site%2FHowIAddedAnRSSFeedToMyNextJSSite.png?alt=media&token=4442df96-b2f4-4dcb-8dc8-02da99da9522
