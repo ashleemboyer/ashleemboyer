@@ -1,7 +1,7 @@
 ---
 title: How to Create Your Own Next.js RSS Reader App
 date: 2021-05-25
-description: Learn how to build your own RSS Reader App with Firebase Authentication and RSS to JSON API.
+description: Learn how to build your own RSS Reader App with Firebase Authentication and the RSS to JSON API.
 image: https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/images%2F2021%2F05%2Fcreate-your-own-nextjs-rss-reader-app%2FHowtoCreateYourOwnNextJSRSSReaderApp.png?alt=media&token=73f69a7b-42a5-4fab-aeb6-eff1788aac07
 tags: [rss, react, nextjs, firebase, web-development]
 ---
