@@ -1,4 +1,4 @@
-const Feed = require('feed').Feed;
+import { Feed } from 'feed';
 import fs from 'fs';
 import { getAllPosts } from '../lib/api';
 import { Layout, PostList } from '../components';
@@ -16,40 +16,32 @@ const HomePage = ({ posts }) => (
   </Layout>
 );
 
-const generateRSSFeed = (forRSSFeed) => {
+const generateRSSFeed = (articles) => {
   const baseUrl = 'https://ashleemboyer.com';
-  const date = new Date();
   const author = {
     name: 'Ashlee Boyer',
     email: 'hello@ashleemboyer.com',
-    link: 'https://twitter.com',
+    link: 'https://twitter.com/ashleemboyer',
   };
   const feed = new Feed({
-    title: 'Ashlee M Boyer',
+    title: 'Articles by Ashlee M Boyer',
     description:
       "You can find me talking about issues surrounding Disability, Accessibility, and Mental Health on Twitter, or you can find me regularly live-knitting or live-coding on Twitch. I'm @AshleeMBoyer on all the platforms I use.",
     id: baseUrl,
     link: baseUrl,
     language: 'en',
-    updated: date,
     feedLinks: {
       rss2: `${baseUrl}/rss.xml`,
     },
     author,
   });
 
-  forRSSFeed.sort((a, b) => {
-    if (a.meta.date < b.meta.date) {
-      return 1;
-    }
-
-    return -1;
-  });
-  forRSSFeed.forEach((post) => {
+  articles.sort((a, b) => (a.meta.date < b.meta.date ? 1 : -1));
+  articles.forEach((post) => {
     const {
       content,
       fileName,
-      meta: { date, title },
+      meta: { date, description, title },
     } = post;
     const url = `${baseUrl}/${fileName}`;
 
@@ -57,9 +49,9 @@ const generateRSSFeed = (forRSSFeed) => {
       title,
       id: url,
       link: url,
-      description: content,
+      description,
+      content,
       author: [author],
-      contributor: [author],
       date: new Date(date),
     });
   });
@@ -67,18 +59,14 @@ const generateRSSFeed = (forRSSFeed) => {
   fs.writeFileSync('public/rss.xml', feed.rss2());
 };
 
+const sortArticles = (a, b) => (a.meta.date < b.meta.date ? 1 : -1);
+
 export async function getStaticProps() {
   let { forSite, forRSSFeed } = getAllPosts();
+  forSite.sort(sortArticles);
+  forRSSFeed.sort(sortArticles);
 
   generateRSSFeed(forRSSFeed);
-
-  forSite.sort((a, b) => {
-    if (a.meta.date < b.meta.date) {
-      return 1;
-    }
-
-    return -1;
-  });
 
   return { props: { posts: forSite } };
 }
