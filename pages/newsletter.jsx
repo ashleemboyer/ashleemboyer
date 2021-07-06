@@ -3,6 +3,12 @@ import { useRouter } from 'next/router';
 import { subscribe } from '../lib/subscribe';
 import { Form, Layout } from '../components';
 
+const SOCIAL_IMAGE_DESCRIPTION =
+  'Where I keep you up-to-date with new articles and other exciting projects I’m working on.';
+const SOCIAL_IMAGE_SLUG = 'newsletter';
+const SOCIAL_IMAGE_URL =
+  'https://firebasestorage.googleapis.com/v0/b/ashleemboyer-2018.appspot.com/o/headers%2FNewsletter.png?alt=media&token=56cdb1e2-c71a-4e22-a1ca-31fcd67e8e7b';
+
 const Message = ({ message }) => {
   return (
     <>
@@ -115,7 +121,16 @@ const Newsletter = (props) => {
     }
   };
 
-  return <Layout title="Newsletter">{getPageContents()}</Layout>;
+  return (
+    <Layout
+      description={SOCIAL_IMAGE_DESCRIPTION}
+      image={SOCIAL_IMAGE_URL}
+      slug={SOCIAL_IMAGE_SLUG}
+      title="Newsletter"
+    >
+      {getPageContents()}
+    </Layout>
+  );
 };
 
 export async function getServerSideProps({ query }) {
