@@ -22,7 +22,7 @@ The way we pronounce "K8s" is different than the way we pronounce "a11y" because
 
 ## The How
 
-So how to do we pronounce "a11y"? We say "aye-eleven-why". Pronunciations like "al-ee" or "al-eye" don't quite fit like most other pronunciations of numeronyms because they're not saying the number in the middle at all. This isn't to say that all numeronyms are said the same way, but most that use this format follow this idea.
+So how to do we pronounce "a11y"? We say "ay-eleven-why". Pronunciations like "al-ee" or "al-eye" don't quite fit like most other pronunciations of numeronyms because they're not saying the number in the middle at all. This isn't to say that all numeronyms are said the same way, but most that use this format follow this idea.
 
 ## The Why
 
