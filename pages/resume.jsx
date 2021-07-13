@@ -5,13 +5,16 @@ const workExperiences = [
     company: 'All Campus',
     location: 'Chicago, Illinois (remote)',
     timeframe: 'Nov 2020 - present',
-    title: 'Front-end Web Developer II',
+    title: 'Front-end Web Developer',
     items: [
       'Upgraded webpack from version 4 to version 5, decreasing production build size by 75% (51MB to 13MB)',
       'Built multiple React hooks for making API requests and easily tracking their loading states to provide better UI/UX feedback for users',
       'Migrated several pages using legacy Redux and React class components to function components written in TypeScript and little to no Redux, enabling the use of React hooks and improving overall performance',
       'Incorporated the use of tools that improve developer experience and the code review process: the Prettier code formatter with CircleCI checks on PRs and the classnames package for conditional styles',
       'Proposed and created the first integration tests between the frontend and backend repositories to catch breaking changes in PR checks before code is reviewed or merged',
+      'Analyzed dozens of years-old dependencies, created a plan for updating or removing each one, and designed a process for keeping dependencies up-to-date',
+      'Wrote multiple scripts for automating part of the frontend release process using the GitHub CLI',
+      'Planned and led the beginning of the migration of test suites from Enzyme to React Testing Library'
     ],
   },
   {
@@ -50,19 +53,19 @@ const workExperiences = [
 
 const speakingExperiences = [
   {
-    label:
-      '"Build an Accessible React Component" live-coding series (since April 2020)',
-    link:
-      'https://youtube.com/playlist?list=PLOmKTF_wUDoydvtwWrzEw7DZ9VboV51py',
-  },
-  {
-    label: 'Accessibility Live Q&A with Kevin Powell (March 2021)',
-    link: 'https://www.twitch.tv/videos/955311597',
+    label: '"Getting started with web accessibility" interview with Kevin Powell (released July 2021)',
+    link: 'https://www.youtube.com/watch?v=qr0ujkLLgmE',
   },
   {
     label: '"Building an Accessible Modal" at React.Indy (October 2020)',
     link:
       'https://github.com/ashleemboyer/react-indy-20201028#building-an-accessible-modal--reactindy-on-october-28th-2020',
+  },
+  {
+    label:
+      '"Build an Accessible React Component" live-coding series (2020)',
+    link:
+      'https://youtube.com/playlist?list=PLOmKTF_wUDoydvtwWrzEw7DZ9VboV51py',
   },
   {
     label: '"Disability in UX" Panel for Twitter (July 2020)',
@@ -131,7 +134,7 @@ const ResumePage = () => (
             <ul>
               <li>
                 Comfortable with or without frameworks: Bulk of experience is
-                with React, Redux, TypeScript, Jest, and Enzyme
+                with React, Redux, TypeScript, Jest, Enzyme, and React Testing Library
               </li>
               <li>
                 Specializes in building accessible components and user
