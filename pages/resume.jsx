@@ -12,7 +12,7 @@ const workExperiences = [
       'Migrated several pages using legacy Redux and React class components to function components written in TypeScript and little to no Redux, enabling the use of React hooks and improving overall performance',
       'Incorporated the use of tools that improve developer experience and the code review process: the Prettier code formatter with CircleCI checks on PRs and the classnames package for conditional styles',
       'Proposed and created the first integration tests between the frontend and backend repositories to catch breaking changes in PR checks before code is reviewed or merged',
-      'Analyzed dozens of years-old dependencies, created a plan for updating or removing each one, and designed a process for keeping dependencies up-to-date',
+      'Analyzed dozens of project dependencies, created a plan for updating or removing each one, and designed a process for keeping dependencies up to date',
       'Wrote multiple scripts for automating part of the frontend release process using the GitHub CLI',
       'Planned and led the beginning of the migration of test suites from Enzyme to React Testing Library'
     ],
