@@ -26,7 +26,7 @@ So how to do we pronounce "a11y"? We say "ay-eleven-why". Pronunciations like "a
 
 ## The Why
 
-Numeronyms are often used when their original word is a lot of characters or difficult to pronounce. [According to Wikipedia](https://en.wikipedia.org/wiki/Numeronym), the first numeronym was created in the 1980s for a software account owner's surname because it was too long for the system to handle. "Accessibility" is 7 syllables whereas its numeronym is 1 less. That's not a huge amount of savings, but the phonetics of "a11y" are easier for many people to verbalize than "accessibility" because the there are less "harsh" syllables in comparison.
+Numeronyms are often used when their original word is a lot of characters or difficult to pronounce. [According to Wikipedia](https://en.wikipedia.org/wiki/Numeronym), the first numeronym was created in the 1980s for a software account owner's surname because it was too long for the system to handle. "Accessibility" is 6 syllables whereas its numeronym is 1 less. That's not a huge amount of savings, but the phonetics of "a11y" are easier for many people to verbalize than "accessibility" because the there are less "harsh" syllables in comparison.
 
 Numeronyms are also helpful where brevity is important, such as in tweets because Twitter enforces a character maximum. Since there are less characters to type, it can also be more efficient once you get used to using it. For me personally, it's also easier to remember how to spell!
 
