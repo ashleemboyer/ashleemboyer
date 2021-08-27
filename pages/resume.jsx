@@ -193,7 +193,10 @@ const ResumePage = () => (
       <section className={styles.history}>
         <h2>Professional Experience</h2>
         {workExperiences.map(
-          ({ company, location, timeframe, title, items }, experienceIndex) => (
+          (
+            { company, location, timeframe, title, items, tech },
+            experienceIndex,
+          ) => (
             <ul key={`experience-${experienceIndex}`}>
               <li className={styles.purpleBox}>
                 <div className={styles.workExperienceHeading}>
@@ -208,6 +211,7 @@ const ResumePage = () => (
                     <li key={`item-${itemIndex}`}>{item}</li>
                   ))}
                 </ul>
+                <p className={styles.workExperienceTech}>Tech: {tech}</p>
               </li>
             </ul>
           ),
