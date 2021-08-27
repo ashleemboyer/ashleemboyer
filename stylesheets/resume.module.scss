@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
+
 $mobileWidth: 820px;
 
 .ResumePage {
+  h1,
+  h2,
+  h3 {
+    font-family: 'Titan One';
+    font-weight: 400;
+  }
+
   *:not(h1, h2, h3) {
     font-family: 'Roboto Mono', monospace;
   }
@@ -16,7 +25,7 @@ $mobileWidth: 820px;
   & > div {
     padding: 8vw 24px;
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 
     .Intro {
@@ -51,17 +60,46 @@ $mobileWidth: 820px;
         font-family: 'Roboto Mono', monospace;
         font-size: 1rem;
         margin: 64px auto;
-        margin-top: 32px;
+        margin-top: 24px;
         max-width: 80%;
 
         @media only screen and (max-width: $mobileWidth) {
           max-width: 100%;
         }
       }
+
+      .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4px;
+
+        & > div {
+          display: flex;
+          align-items: center;
+
+          svg {
+            position: relative;
+            margin-right: 8px;
+          }
+
+          p {
+            margin: 0;
+          }
+
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+        }
+
+        @media only screen and (max-width: $mobileWidth) {
+          display: block;
+        }
+      }
     }
 
     section {
-      margin-top: 32px;
+      margin-top: 24px;
 
       h2 {
         margin-bottom: 16px;
@@ -100,18 +138,21 @@ $mobileWidth: 820px;
         & > li {
           padding: 16px;
 
-          .company {
+          .workExperienceHeading {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             h3 {
-              font-size: 1.8rem;
+              font-family: 'Roboto Mono', monospace;
+              font-size: 1.2rem;
+              font-weight: bold;
             }
 
             span {
+              font-family: 'Roboto Mono', monospace;
               font-size: 1.2rem;
-              font-family: 'Lora';
+              font-weight: bold;
             }
 
             @media only screen and (max-width: $mobileWidth) {
@@ -119,13 +160,8 @@ $mobileWidth: 820px;
             }
           }
 
-          .location {
-            margin-bottom: 16px;
-          }
-
-          .title {
-            font-weight: bold;
-            font-size: 1.2rem;
+          .workExperienceSubheading {
+            font-style: italic;
           }
 
           ul {
@@ -155,8 +191,8 @@ $mobileWidth: 820px;
       width: 50%;
 
       &:first-child {
-        margin-right: 32px;
-        padding-top: 32px;
+        margin-right: 24px;
+        padding-top: 24px;
       }
 
       &:last-child {
@@ -181,7 +217,7 @@ $mobileWidth: 820px;
 
         &:last-child {
           section:first-child {
-            margin-top: 32px;
+            margin-top: 24px;
           }
         }
       }
