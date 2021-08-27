@@ -1,3 +1,5 @@
+import type { AppProps } from 'next/app';
+
 import '../stylesheets/global.scss';
 import '../stylesheets/typography.scss';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -6,8 +8,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 
 library.add(fab, fas);
 
-function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }: AppProps) => {
   return <Component {...pageProps} />;
-}
+};
 
-export default MyApp;
+export default App;
