@@ -154,6 +154,12 @@ const speakingExperiences = [
 
 const ResumePage = () => (
   <div className={styles.ResumePage}>
+    <a
+      className={styles.pdfLink}
+      href="https://drive.google.com/file/d/1409rL4z-SZA5T5pP6OsouVRaOHNdfYby"
+    >
+      View as PDF
+    </a>
     <div>
       <div className={styles.Intro}>
         <img

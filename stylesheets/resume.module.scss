@@ -3,6 +3,14 @@
 $mobileWidth: 820px;
 
 .ResumePage {
+  .pdfLink {
+    display: block;
+    margin-left: auto;
+    margin-right: 24px;
+    margin-top: 24px;
+    width: fit-content;
+  }
+
   h1,
   h2,
   h3 {
