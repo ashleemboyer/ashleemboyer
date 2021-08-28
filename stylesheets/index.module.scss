@@ -1,0 +1,127 @@
+$pagePadding: 24px;
+
+.IndexPage {
+  padding: $pagePadding;
+  padding-bottom: 100px;
+  max-width: 900px + $pagePadding;
+  margin: 0 auto;
+
+  .intro {
+    align-items: center;
+    display: flex;
+    margin-bottom: 75px;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+      border: 2px solid black;
+      margin-right: 20px;
+    }
+
+    a {
+      display: block;
+      font-family: 'Titan One', serif;
+      font-size: 2.5rem;
+      color: black;
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-weight: normal;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      max-width: 50ch;
+      font-size: 1.25rem;
+      line-height: 1.875rem;
+    }
+  }
+
+  .body {
+    display: flex;
+    align-items: flex-start;
+
+    .left {
+      margin-right: 96px;
+      max-width: 252px;
+      min-width: 252px;
+      width: 252px;
+
+      .searchAndFeaturedBox,
+      .subscribeBox {
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 12px;
+        padding-bottom: 36px;
+        background-color: white;
+
+        & > p {
+          font-family: 'Titan One', serif;
+          font-size: 1.5rem;
+          margin-bottom: 8px;
+
+          &:not(:first-child) {
+            margin-top: 32px;
+          }
+        }
+      }
+
+      .searchAndFeaturedBox {
+        margin-bottom: 34px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            margin: 0;
+            line-height: 1.125rem;
+
+            &:not(:last-child) {
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+
+      .subscribeBox {
+        p {
+          margin-bottom: 24px;
+        }
+
+        & > div {
+          margin-bottom: 20px;
+        }
+
+        button {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .right {
+      article {
+        h2 {
+          font-size: 2.25rem;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 1.25rem;
+          line-height: 1.875rem;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+}

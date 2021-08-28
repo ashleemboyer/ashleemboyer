@@ -1,6 +1,9 @@
-export { Button } from './Button';
-export { CodeBlock } from './CodeBlock';
-export { Form } from './Form';
-export { Icon } from './Icon';
-export { Layout } from './Layout';
-export { PostList } from './PostList';
+import Button from './Button/Button';
+import CodeBlock from './CodeBlock/CodeBlock';
+import Form from './Form/Form';
+import Icon from './Icon/Icon';
+import Input from './Input/Input';
+import Layout from './Layout/Layout';
+import PostList from './PostList/PostList';
+
+export { Button, CodeBlock, Form, Icon, Input, Layout, PostList };

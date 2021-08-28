@@ -4,13 +4,12 @@
   border-radius: 4px;
   background-color: #c2185b;
   color: white;
+  font-size: 1rem;
+  font-family: 'Titan One', sans-serif;
+  min-width: 162px;
+  min-height: 32px;
 
   &:hover {
     cursor: pointer;
-    text-decoration: underline;
-  }
-
-  &:disabled {
-    visibility: hidden;
   }
 }
