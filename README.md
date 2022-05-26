@@ -1,7 +1,3 @@
 # Hey, friend! 👋🏻
 
-## What I'm currently working on
-
-- [egghead.io course: Build an Accessible Blog with Next.js and Semantic HTML](https://github.com/ashleemboyer/egghead-accessible-nextjs-blog-course)
-- [StaySemantic.com](https://staysemantic.com)
-- [No-Code Overlays](https://nocodeoverlays.com/blog)
+I'm not actively working on a ton at the moment. My spoons are a bit low as I navigate my healthcare and I've chosen to put side projects on hold for now. I'll be back at working on those projects as soon as I determine is healthy. 💖
